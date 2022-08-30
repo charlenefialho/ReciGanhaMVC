@@ -1,0 +1,70 @@
+<!-- Namespace da classe de Modelo-->
+@model Reciganha_MVC.Models.ClienteViewModel
+
+<!-- Erro not found-->
+
+
+<!-- Titulo da view-->
+@{
+    ViewBag.Title = "Registrar";
+}
+
+<!--Configuração da mensagem Temporaria-->
+@if (@TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["MensagemErro"]
+    </div>
+}
+
+<div class="background">
+    <div class="container">
+        <div class="darkBox">
+            <div class="row">
+                <div class="col-6">
+                    <div class="center">
+                        <!--LOGO-->
+                        <img id="logo" [src]="logo" alt="Logo ReciGanha">
+
+                        <h1 id="bem-vindo">BEM-VINDO</h1>
+
+
+                        <p id="contaExist" >Já possui uma conta?</p>
+                        <a class="nav-link" [routerLink]="[ '/login'] " routerLinkActive="router-link-active"><button type="button" class="entrar btn text-white rounded-pill">Entrar</button></a>
+                    </div><!--FIM CENTER-->
+                </div><!--FIM COLUNA-->
+
+                <div class="col-6">
+                    <div class="greenBox">
+                        <div class="center">
+                            <h1 id="h1">Crie sua conta</h1>
+                            <h3 id="h3">Preencha seus dados</h3>
+
+                            <div class="input">
+                                <img class="icon" [src]="iconNome" alt="">
+                                <span>Nome:</span>
+                                <input type="text">
+                            </div>
+
+                            <div class="input">
+                                <img class="icon" [src]="iconEmail" alt="">
+                                <span>Email:</span>
+                                <input type="text">
+                            </div>
+
+                            <div class="input">
+                                <img class="icon" [src]="iconSenha" alt="">
+                                <span>Senha:</span>
+                                <input type="password">
+                            </div>
+
+                            <a class="nav-link" href="#"><button type="button" class="cadastrar btn text-white rounded-pill">Cadastrar</button></a>
+                        </div><!--FIM CENTER-->
+                    </div><!--FIM GREENBOX-->
+                </div><!--FIM COLUNA-->
+            </div><!--FIM LINHA-->
+        </div><!--FIM DARKBOX-->
+        
+    </div><!--FIM CONTAINER-->
+</div><!--FIM BACKGROUND-->
+

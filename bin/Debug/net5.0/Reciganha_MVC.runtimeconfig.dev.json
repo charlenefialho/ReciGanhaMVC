@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\etechas\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\etechas\\.nuget\\packages"
+    ]
+  }
+}
