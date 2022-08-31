@@ -3,12 +3,46 @@ using Reciganha_MVC.Models;
 using System.Threading.Tasks;//Uso para Try/Catch
 using System.Net.Http;//Using para JsonConvert
 using Newtonsoft.Json;//Using para HttpClient
+using Microsoft.AspNetCore.Http;
+using System.Net.Http.Headers;
 
 namespace Reciganha_MVC.Controllers
 {
-    public class ClienteController : Controller
+    public class ClientesController : Controller
     {
-        public string uriBase = "xyz/Cliente/";
+        public string uriBase = "http://localhost:5000/Cliente/";
+
+        [HttpPost]
+        public async Task<ActionResult> AutenticarAsync(ClienteViewModel c)
+        {
+            try
+            {
+                HttpClient httpClient = new HttpClient();//Instancia do objeto HttpClient
+                string uriComplementar = "Autenticar";
+
+                var content = new StringContent(JsonConvert.SerializeObject(c));//serialização do objeto c
+                content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+                HttpResponseMessage response = await httpClient.PostAsync(uriBase + uriComplementar,content);
+
+                string serialized = await response.Content.ReadAsStringAsync();
+
+                if(response.StatusCode == System.Net.HttpStatusCode.OK)//Consultando qual foi o status da requisição, se foi Ok
+                {
+                    HttpContext.Session.SetString("SessionTokenCliente", serialized);
+                    TempData["Mensagem"] = string.Format("Bem-vindo{0}!!", c.NomeCliente);
+                    return RedirectToAction("IndexCadastro");
+                }
+                else
+                {
+                    throw new System.Exception(serialized); 
+                }
+            }
+            catch(System.Exception ex)
+            {
+                TempData["MensagemErro"] = ex.Message;
+                return IndexLogin();;// caso de erro -> irá direcionar para Index exibir mensagem
+            }
+        }
 
         [HttpPost]
         public async Task<ActionResult> RegistrarAsync(ClienteViewModel c)
@@ -37,15 +71,21 @@ namespace Reciganha_MVC.Controllers
             catch(System.Exception ex)
             {
                 TempData["MensagemErro"] = ex.Message;
-                return RedirectToAction("Index");// caso de erro -> irá direcionar para Index exibir mensagem
+                return RedirectToAction("IndexLogin");// caso de erro -> irá direcionar para Index exibir mensagem
             }
         }
 
         //carregar a view inicialmente *mudar para a home*
         [HttpGet]
-        public ActionResult Index()
+        public ActionResult IndexCadastro()
         {
             return View("CadastrarCliente");
+        }
+
+        [HttpGet]
+        public ActionResult IndexLogin()
+        {
+            return View("AutenticarCliente");
         }
 
     }

@@ -42,4 +42,5 @@ E:\MVC\Reciganha_MVC\obj\Debug\net5.0\refint\Reciganha_MVC.dll
 E:\MVC\Reciganha_MVC\obj\Debug\net5.0\Reciganha_MVC.pdb
 E:\MVC\Reciganha_MVC\obj\Debug\net5.0\Reciganha_MVC.genruntimeconfig.cache
 E:\MVC\Reciganha_MVC\obj\Debug\net5.0\ref\Reciganha_MVC.dll
-E:\MVC\Reciganha_MVC\obj\Debug\net5.0\Razor\Views\Shared\_RegistrarCliente.cshtml.g.cs
+E:\MVC\Reciganha_MVC\obj\Debug\net5.0\Razor\Views\Clientes\AutenticarCliente.cshtml.g.cs
+E:\MVC\Reciganha_MVC\obj\Debug\net5.0\Razor\Views\Shared\_LoginPartialCliente.cshtml.g.cs
