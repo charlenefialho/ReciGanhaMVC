@@ -1,0 +1,104 @@
+.background{
+    background-image: url(https://i.pinimg.com/736x/92/09/38/9209386930c447fed5ea99f88dc9aa0c.jpg);
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+}
+
+.darkBox{
+    background-color: rgba(000, 000, 000, 0.58);
+    position: relative;
+    top: 10vh;
+    height: 80vh;
+    width: 60vw;
+    border-radius: 50px;
+}
+
+.greenBox{
+    height: 76vh;
+    width: 30vw;
+    background-color: rgba(89, 174, 51, 0.6);
+    border-radius: 60px;
+    position: relative;
+    top: 2vh;
+    right: 2vw;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#logo{
+    position: relative;
+    width: 17vw;
+    top: 7.5vh;
+    padding-bottom: 19vh;
+}
+
+#bem-vindo{
+    color: white;
+    text-shadow: 3px 3px black;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 18vh;
+}
+
+#contaExist{
+    width: 100%;
+    text-align: center;
+    color: aliceblue;
+    font-size: 20px;
+}
+
+.entrar{
+    background-color: rgb(89, 174, 51);
+    padding: 10px 60px 10px 60px;
+}
+
+#h1{
+    color: white;
+    font-size: 55px;
+    padding-top: 3vh;
+    padding-bottom: 2.5vh;
+    text-shadow: 3px 3px black;
+}
+
+#h3{
+    color: white;
+    font-size: 30px;
+    text-shadow: 3px 3px black;
+    padding-bottom: 6vh;
+
+}
+
+.form-group{
+    width: 80%;
+    height: 5vh;
+    background-color: rgba(89, 174, 51, 0.3);
+    margin-bottom: 5vh;
+    color: white;
+    text-shadow: 2px 1px black;
+}
+
+.formcontrol{
+    background-color: rgba(red, green, blue, 0.0);
+    background-color: rgba(0, 0, 0, 0.0);
+    margin: 7px;
+    margin-left: 15px;
+    width: 15vw;
+    border: none;
+}
+
+.cadastrar{
+    margin-top: 6vh;
+    background-color: #f2b035;
+    padding: 10px 60px 10px 60px;
+}
+
+.icon{
+    height: 30px;
+    width: 30px;
+    margin: 7px;
+}
