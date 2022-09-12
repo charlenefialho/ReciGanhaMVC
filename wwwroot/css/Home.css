@@ -1,30 +1,54 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+.linhaUm{
+  padding-top: 40vh;
+}
 
-.container-fluid{
-  width: 100vw;
+p{
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+img{
+  height: 40px;
+  width: 100px;
+}
+
+.backgroundUm{
+  width: 100%;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.3) url("../assets/img/ImageHome.jpeg");
+  background-image: url("../assets/img/ImageHome.jpeg");
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   background-blend-mode: darken;
-  
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+ 
+}
+
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  font-size: 14px;
   
 }
 
-.cen{
-height: 40vh;
-}
-.sla{
- height: 30vh;
-}
 
 #textbox{
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 25px;
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  color: white;
+  
   padding-top: 4vh;
   padding-bottom: 4vh;
   min-height: 18vh;
@@ -37,16 +61,10 @@ height: 40vh;
 .header-padding{
   height: 80px;
 }
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
+/* Sticky footer styles*/
+-------------------------------------------------- 
+
+
 
 .border-top {
   border-top: 1px solid #e5e5e5;
@@ -64,21 +82,21 @@ button.accept-policy {
   line-height: inherit;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
+/* Sticky footer styles*/
+
+
 html {
   position: relative;
   min-height: 100%;
 }
 
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
+
+/*
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
-}
+  line-height: 60px; /* Vertically center the text there 
+}*/
+
