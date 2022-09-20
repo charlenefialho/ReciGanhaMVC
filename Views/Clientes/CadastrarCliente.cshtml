@@ -18,23 +18,12 @@
     </div>
 }
 
-<!--<div class="background">
+<div class="background">
     <div class="container-fluid">
         <section>
-
-        </section>
-    </div>
-</div>-->
-
-
-
-<div class="background">
-    <div class="container">
-        <div class="darkBox">
-            <div class="row">
-                <div class="col-6">
-                    <div class="center">
-                        <!--LOGO-->
+            <div class="darkgreenbox row">
+                <div class="col-6 text-center">
+                     <!--LOGO-->
                         <img id="logo" src="~/assets/img/Logo.png" alt="Logo ReciGanha">
 
                         <h1 id="bem-vindo">BEM-VINDO</h1>
@@ -44,15 +33,9 @@
                         @{
                             <a class="nav-link" asp-area="" asp-controller="Clientes" asp-action="IndexLogin" ><button type="button" class="entrar btn text-white rounded-pill">Entrar</button></a>
                         }
-
-                        
-                    </div><!--FIM CENTER-->
-                </div><!--FIM COLUNA-->
-
-                <div class="col-6">
-                    <div class="greenBox">
-                        <div class="center">
-                            <h1 id="h1">Crie sua conta</h1>
+                </div>
+                <div class="col-6 text-center">
+                   <h1 id="h1">Crie sua conta</h1>
                             <h3 id="h3">Preencha seus dados</h3>
                             <!--método que será chamado/ controller/tipo Post-->
                             @using(Html.BeginForm("Registrar", "Clientes", FormMethod.Post))
@@ -81,6 +64,14 @@
                                     <input type="submit" value="Cadastrar" class="cadastrar btn text-white rounded-pill"/>
                                 </div> 
                             }
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+                            
 
 
 
@@ -106,15 +97,6 @@
                                Exemplo de Link (Texto, View, Controller) 
                                     Html.ActionLink("Retornar", "index", "Home", null, new {  class = "btn text-white rounded-pill" })
                             </div>-->
-
-                        </div><!--FIM CENTER-->
-                    </div><!--FIM GREENBOX-->
-                </div><!--FIM COLUNA-->
-            </div><!--FIM LINHA-->
-        </div><!--FIM DARKBOX-->
-        
-    </div><!--FIM CONTAINER-->
-</div><!--FIM BACKGROUND-->
 
 
 
