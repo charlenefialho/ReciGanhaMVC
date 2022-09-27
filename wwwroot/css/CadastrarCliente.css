@@ -1,7 +1,7 @@
 .background{
     background-image: url(https://i.pinimg.com/736x/92/09/38/9209386930c447fed5ea99f88dc9aa0c.jpg);
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background-size: cover;
 }
 
@@ -14,30 +14,35 @@
     border-radius: 50px;
 }
 
-.greenBox{
+.col-sm-12{
+
+    color: aqua;
+}
+/*.greenBox{
     height: 76vh;
-    width: 30vw;
     background-color: rgba(89, 174, 51, 0.6);
     border-radius: 60px;
     position: relative;
     top: 2vh;
     right: 2vw;
 }
-
+*/
 .center{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
+/*
 #logo{
     position: relative;
     width: 17vw;
     top: 7.5vh;
     padding-bottom: 19vh;
-}
+}*/
 
-#bem-vindo{
+
+.bem-vindo{
     color: white;
     text-shadow: 3px 3px black;
     width: 100%;

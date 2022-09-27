@@ -18,23 +18,28 @@
     </div>
 }
 
-<div class="background">
-    <div class="container-fluid">
-        <section>
-            <div class="darkgreenbox row">
-                <div class="col-6 text-center">
+
+
+
+
+
+
+
+
+<div class="background container-fluid  d-flex flex-sm-wrap ">
+        <section class="darkgreenbox row mx-auto w-75 ">
+                <div class="col-md-6 col-sm-12 text-center border border-dark d-flex flex-column  justify-content-around">
                      <!--LOGO-->
-                        <img id="logo" src="~/assets/img/Logo.png" alt="Logo ReciGanha">
+                        <div><img class="w-25" id="logo" src="wwwroot/assets/img/Logo.png" alt="Logo ReciGanha"></div>
 
-                        <h1 id="bem-vindo">BEM-VINDO</h1>
-
+                        <h1 class="bem-vindo " >BEM-VINDO</h1>
 
                         <p id="contaExist" >Já possui uma conta?</p>
                         @{
-                            <a class="nav-link" asp-area="" asp-controller="Clientes" asp-action="IndexLogin" ><button type="button" class="entrar btn text-white rounded-pill">Entrar</button></a>
+                            <a class="nav-link" asp-area="" asp-controller="Clientes" asp-action="IndexLogin" ><button type="button" class="entrar  btn text-white rounded-pill ">Entrar</button></a>
                         }
                 </div>
-                <div class="col-6 text-center">
+                <div class="cadastro col-md-6 text-center border border-dark d-flex flex-column">
                    <h1 id="h1">Crie sua conta</h1>
                             <h3 id="h3">Preencha seus dados</h3>
                             <!--método que será chamado/ controller/tipo Post-->
@@ -65,9 +70,7 @@
                                 </div> 
                             }
                 </div>
-            </div>
         </section>
-    </div>
 </div>
 
 
