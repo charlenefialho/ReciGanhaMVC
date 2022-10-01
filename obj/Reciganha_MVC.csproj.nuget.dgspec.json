@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\PTCC\\ReciGanhaMVC\\Reciganha_MVC.csproj": {}
+    "E:\\PTCC\\ReciGanhaMVC\\Reciganha_MVC.csproj": {}
   },
   "projects": {
-    "F:\\PTCC\\ReciGanhaMVC\\Reciganha_MVC.csproj": {
+    "E:\\PTCC\\ReciGanhaMVC\\Reciganha_MVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\PTCC\\ReciGanhaMVC\\Reciganha_MVC.csproj",
+        "projectUniqueName": "E:\\PTCC\\ReciGanhaMVC\\Reciganha_MVC.csproj",
         "projectName": "Reciganha_MVC",
-        "projectPath": "F:\\PTCC\\ReciGanhaMVC\\Reciganha_MVC.csproj",
-        "packagesPath": "C:\\Users\\Sonia\\.nuget\\packages\\",
-        "outputPath": "F:\\PTCC\\ReciGanhaMVC\\obj\\",
+        "projectPath": "E:\\PTCC\\ReciGanhaMVC\\Reciganha_MVC.csproj",
+        "packagesPath": "C:\\Users\\etechas\\.nuget\\packages\\",
+        "outputPath": "E:\\PTCC\\ReciGanhaMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Sonia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\etechas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -51,11 +51,16 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.17, 5.0.17]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -64,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

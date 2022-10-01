@@ -1,14 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "CwBmEB/o5o++mNiPbZskptOm/RUNTxFaBCRAGr6Gs+oNGRYTXZJfPK8v4xZZo/rXcmbPn3EnpG4YdmoMVwX76g==",
+  "dgSpecHash": "ndDmCjFFeQc46WgA1Wnae420wZvcA+STbVJObV1pJGT+oGOfRGuisFKbgQB5KHXakI0lKWue/XC4ZKY639elYw==",
   "success": true,
-  "projectFilePath": "F:\\PTCC\\ReciGanhaMVC\\Reciganha_MVC.csproj",
+  "projectFilePath": "E:\\PTCC\\ReciGanhaMVC\\Reciganha_MVC.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Sonia\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.15\\microsoft.aspnetcore.jsonpatch.5.0.15.nupkg.sha512",
-    "C:\\Users\\Sonia\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\5.0.15\\microsoft.aspnetcore.mvc.newtonsoftjson.5.0.15.nupkg.sha512",
-    "C:\\Users\\Sonia\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
-    "C:\\Users\\Sonia\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
-    "C:\\Users\\Sonia\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512"
+    "C:\\Users\\etechas\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.15\\microsoft.aspnetcore.jsonpatch.5.0.15.nupkg.sha512",
+    "C:\\Users\\etechas\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\5.0.15\\microsoft.aspnetcore.mvc.newtonsoftjson.5.0.15.nupkg.sha512",
+    "C:\\Users\\etechas\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\etechas\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\etechas\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
+    "C:\\Users\\etechas\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
   ],
   "logs": []
 }
