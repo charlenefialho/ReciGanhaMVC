@@ -1,0 +1,9 @@
+.row{
+    margin-top: 4vh;
+    justify-content: center;
+}
+
+.container-fluid{
+    margin-top: 9vh;
+    text-align: center;
+}

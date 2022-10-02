@@ -45,7 +45,7 @@
                             <!--método que será chamado/ controller/tipo Post-->
                             @using(Html.BeginForm("Registrar", "Clientes", FormMethod.Post))
                             {
-                                @Html.AntiForgeryToken()
+                                @Html.AntiForgeryToken()<!--É um método que gera e insere no HTML gerado na view um código para evitar que se falsifique o envio de dados para o servidor.-->
                                 <div class="form-group">
                                     <img  alt="" class="icon" src="https://cdn-icons-png.flaticon.com/512/1828/1828439.png">
                                     <span>Nome:</span>
