@@ -25,7 +25,7 @@ namespace ReciGanhaMVC.Controllers
 
                 //declaração da variavel que armazena token qeu está na string e passagem do token recuperado para a propiedade Authorization do objeto httpClient
                 
-                string token = "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwidW5pcXVlX25hbWUiOiJQb3N0byDDoWd1YSBmcmlhIiwibmJmIjoxNjY0NzM3MjUyLCJleHAiOjE2NjQ4MjM2NTIsImlhdCI6MTY2NDczNzI1Mn0.Za1Z1tKfipzWqjGfv77ec6Sy626BRBUd8vPgWIM8zkfYDGTxX16vjDcyxRq2PT3wzsTAqH6vg_y7hiuP8eKF4w";
+                string token = "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwidW5pcXVlX25hbWUiOiJQb3N0byDDoWd1YSBmcmlhIiwibmJmIjoxNjY0ODQwMDQ1LCJleHAiOjE2NjQ5MjY0NDUsImlhdCI6MTY2NDg0MDA0NX0.XV3dP8B1qLBgskjoL_EVp1wJYFp49-e_ijVr4aF4lXr14-8nhxpyIc_gpqiXdD3_hCBtuG4PYn2Q3BSjDcEtyA";
                 /*string token = HttpContext.Session.GetString("SessionTokenPostoColeta");*/
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
