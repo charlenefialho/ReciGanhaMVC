@@ -1,85 +1,99 @@
 @model ReciGanhaMVC.Models.NewColetaViewModel
 
 @{
-    ViewBag.Title = "inclusão de coleta";
+  ViewBag.Title = "Inclusão de Coleta";
 }
 
 
-<div class="container-fluid  text-align-ceter" >
 
-  <h3>Selecione os materiais e indique os seus respectivos pesos:</h3>
 
-<section class="row d-flex" >
-  @using(Html.BeginForm("Insert", "Coleta", FormMethod.Post, new{@class="form"}))
-  {
-    @Html.AntiForgeryToken()
-    <div class="row">
-      <div class="col" >
-        <div class="card" id="plastico" style="width: 18rem;"  onclick="selecionar(this.id)">
-        <img src="assets/img/plastico.jpg" class="card-img-top h-25" alt="plastico">
-        <div class="card-body" >
-          <h5 class="card-title text-dark ">Plastico</h5>
-          <div class="form-group">
-                  <span>tipo:</span>
-                  @Html.EditorFor(model => model.TipMat, new {@class="Tipo form-control", @min = "0",required = "required"})
-      
-                </div>
-              <div class="form-group">
-                  <span>Peso:</span>
-                   @Html.TextBoxFor(model => model.Pes, new {@type= "number", @class="form-control", @min = "0"})
-      
-              </div>
-        </div>
-          </div>
-      </div>
-      <div class="col" >
-        <div class="card " id="aluminio" onclick="selecionar(this.id)"style="width: 18rem;">
-          <img src="assets/img/metal.jpg"  class="card-img-top" style="height: 140px" alt="aluminio">
-          <div class="card-body"  >
-            <h5 class="card-title text-dark">Aluminio</h5>
-            <div class="form-group">
-                  <span>tipo:</span>
-                  @Html.TextBoxFor(model => model.TipMat , new {@type= "number", @class="Tipo form-control", @min = "0" })
-      
-                </div>
-            <div class="form-group">
-                    <span>Peso:</span>
-                  @Html.TextBoxFor(model => model.Pes, new {@type= "number", @class="form-control", @min = "0"})
-            </div>
-        </div>
-      </div>
-        </div>
-    </div>
-  <div><input type="submit" value="Enviar" class="cadastrar btn text-white rounded-pill"/></div>
-}
-
-    
-</section>
-
-</div>
-    
-
-<script>
+<main>
 
  
-  function selecionar(clicked_id)
-  {
-    if(clicked_id == 'plastico')
+
+  <article id="list-cards">
+    @using (Html.BeginForm("Insert", "Coleta", FormMethod.Post))
     {
-      document.getElementById('plastico').style.borderWidth = "1px"
-      document.getElementById('plastico').style.borderColor = "green"
-      return document.getElementsByClassName('Tipo') = 1
+       <!--Configuração da mensagem Temporaria-->
+      @if (@TempData["MensagemErro"] != null)
+      {
+        <div class="alert alert-danger" role="alert">
+          @TempData["MensagemErro"]
+        </div>
+      }
+      @if (@TempData["Mensagem"] != null)
+      {
+        <div class="alert alert-danger" role="alert">
+          @TempData["Mensagem"]
+        </div>
+      }
+      
 
+      <!--<form action="POST">-->
+      <section id="botao">
+        <button type="submit" class="btnInserir btn btn-primary">Inserir coleta</button>
+      </section>
+
+      <section class="cards">
+        <div class="card" style="width: 18rem;">
+          <img src="assets/img/plastico.jpg" class="card-img-top " alt="garrafas de plastico">
+          <div class="card-body">
+            <h5 class="card-title text-dark">Plastico</h5>
+            <select>
+              <option value="1">
+                Plastico
+              </option>
+            </select>
+            <span>Insira o peso em Kg</span>
+            <!--<input type="number" name="Peso" id="plastico">-->
+            @Html.TextBoxFor(model => model.PesoPlastico, new { htmlAttributes = new { @class = "form-control" } })
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="assets/img/metal.jpg" class="card-img-top " alt="garrafas de plastico">
+          <div class="card-body">
+            <h5 class="card-title text-dark">Aluminio</h5>
+            <select>
+              <option value="2">
+                Aluminio
+              </option>
+            </select>
+            <span>Insira o peso em Kg</span>
+            @Html.TextBoxFor(model => model.PesoMetal, new { htmlAttributes = new { @class = "form-control" } })
+            <!--<input type="number" name="Peso" id="aluminio">-->
+          </div>
+        </div>
+      </section>
+      <!--</form>-->
     }
+    <!--
+<div class="form-group">
+                            <span>tipo:</span>
+    @Html.TextBoxFor(model => model.TipMat, new {@type= "number", @class="form-control", @min = "0"})
 
-    if(clicked_id == 'aluminio')
-    {
-      document.getElementById('aluminio').style.borderWidth = "1px"
-      document.getElementById('aluminio').style.borderColor = "green"
-    }
+                          </div>
+                        <div class="form-group">
+                            <span>Peso:</span>
+    @Html.TextBoxFor(model => model.Pes, new {@type= "number", @class="form-control", @min = "0"})
 
-    return true;
-  }
+                        </div>
+                  </div>
+                    </div>
+                </div>
+                      <div class="form-group">
+                            <span>tipo:</span>
+    @Html.TextBoxFor(model => model.TipMat , new {@type= "number", @class="form-control", @min = "0" })
+
+                          </div>
+                      <div class="form-group">
+                              <span>Peso:</span>
+    @Html.TextBoxFor(model => model.Pes, new {@type= "number", @class="form-control", @min = "0"})
+
+            -->
 
 
-</script>
+
+
+  </article>
+
+</main>
