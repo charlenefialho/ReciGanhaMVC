@@ -1,0 +1,54 @@
+@model ReciGanhaMVC.Models.PostoDeColetaViewModel;
+
+@{
+    ViewBag.Title = "RegistrarPostoDeColeta";
+}
+
+@if (@TempData["Mensagem"] != null)
+{
+    <div class="alert alert-succes" role="alert">
+    @TempData["Mensagem"]</div>
+}
+
+<!--Configuração da mensagem Temporaria-->
+@if (@TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["MensagemErro"]
+    </div>
+}
+
+<main id="viewRegistrarPosto">
+    <article id="Registro">
+        @using (Html.BeginForm("Registrar", "PostoDeColeta",FormMethod.Post,  new {hmlAttributes= new {@id="formRegistro"} }))
+        {
+            @Html.AntiForgeryToken()
+            <div class="form-group">
+                <label for="nomePosto">Nome do Posto</label>
+                @Html.TextBoxFor(model => model.NomePosto, new {hmlAttributes= new {@class = "form-control", @name ="nomePosto"} })
+            </div>
+
+            <div class="form-group">
+                <label for="CNPJ">CNPJ</label>
+                @Html.EditorFor(model => model.CNPJ, new {hmlAttributes= new {@class = "form-control", @name ="CNPJ"} })
+            </div>
+
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                @Html.PasswordFor(model => model.PasswordString, new {hmlAttributes= new {@class = "form-control", @name ="senha"} })
+            </div>
+
+            <div>
+                <button type="submit" value="Cadastrar" class="cadastrar btn text-white rounded-pill">Cadastrar</button>
+            </div>
+
+            <div>
+                <p>
+                    <a  asp-area="AutenticarPostoDeColeta" asp-controller="PostoDeColeta" asp-action="IndexAutenticarPosto">
+                     Ja é cadastrado?Faça o login
+                    </a>
+                </p>
+            </div>
+        }
+    </article>
+</main>

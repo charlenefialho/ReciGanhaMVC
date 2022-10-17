@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using Reciganha_MVC.Models;
 using ReciGanhaMVC.Models;
 using System.Threading.Tasks;//Uso para Try/Catch
 using System.Net.Http;//Using para JsonConvert
@@ -8,7 +7,7 @@ using Microsoft.AspNetCore.Http;
 using System.Net.Http.Headers;
 using System;
 
-namespace Reciganha_MVC.Controllers
+namespace ReciGanhaMVC.Controllers
 {
     public class ClientesController : Controller
     {
@@ -20,16 +19,22 @@ namespace Reciganha_MVC.Controllers
             try
             {
                 int codColeta = c.IdColeta;
-                string uriComplementar = "Pontos/";
+
+                string uriComplementar = string.Format("Pontos/{0}",codColeta);
+
                 HttpClient httpClient = new HttpClient();
                 string token = HttpContext.Session.GetString("SessionTokenCliente");
                 httpClient.DefaultRequestHeaders.Authorization  = new AuthenticationHeaderValue("Bearer", token);
-                HttpResponseMessage response = await httpClient.GetAsync(uriBase + uriComplementar + codColeta.ToString());
+                HttpResponseMessage response = await httpClient.GetAsync(uriBase + uriComplementar);
                 string serialized = await response.Content.ReadAsStringAsync();
+
                 if(response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
-                    TempData["Mensagem"] = string.Format(serialized);
-                    return RedirectToAction("IndexHomeCliente");
+                    string msg = await Task.Run(() =>
+                    JsonConvert.DeserializeObject<string>(serialized));
+
+                    TempData["Mensagem"] = string.Format(msg);
+                    return RedirectToAction("IndexPageCliente");
                 }
                 else
                 {
@@ -38,8 +43,8 @@ namespace Reciganha_MVC.Controllers
             }
             catch(Exception ex)
             {
-                TempData["Mensagemerro"] = ex.Message;
-                return RedirectToAction("IndexHomeCliente");
+                TempData["MensagemErro"] = ex.Message;
+                return RedirectToAction("IndexPageCliente");
             }
                 
             
@@ -66,7 +71,7 @@ namespace Reciganha_MVC.Controllers
                 {
                     HttpContext.Session.SetString("SessionTokenCliente", serialized);
                     TempData["Mensagem"] = string.Format("Bem-vindo{0}!!", c.NomeCliente);
-                    return RedirectToAction("IndexCadastro");
+                    return RedirectToAction("IndexPageCliente");
                 }
                 else
                 {
@@ -112,6 +117,13 @@ namespace Reciganha_MVC.Controllers
         }
 
         //carregar a view inicialmente *mudar para a home*
+        [HttpGet]
+        public ActionResult IndexPageCliente()
+        {
+            return View("PageCliente");
+        }
+
+
         [HttpGet]
         public ActionResult IndexCadastro()
         {

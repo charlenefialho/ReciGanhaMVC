@@ -9,7 +9,6 @@ using System;
 
 namespace ReciGanhaMVC.Controllers
 {
-    [Route("[controller]")]
     public class PostoDeColetaController : Controller
     {
         public string uriBase = "http://localhost:5000/PostoDeColeta/";
@@ -25,7 +24,7 @@ namespace ReciGanhaMVC.Controllers
 
                 var content = new StringContent(JsonConvert.SerializeObject(p));//serialização do objeto c
                 content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-                HttpResponseMessage response = await httpClient.PostAsync(uriBase + uriComplementar,content);
+                HttpResponseMessage response = await httpClient.PostAsync(uriBase + uriComplementar ,content);
 
                 string serialized = await response.Content.ReadAsStringAsync();
 
@@ -33,7 +32,7 @@ namespace ReciGanhaMVC.Controllers
                 {
                     HttpContext.Session.SetString("SessionTokenPostoColeta", serialized);
                     TempData["Mensagem"] = string.Format("Bem-vindo{0}!!", p.NomePosto);
-                    return RedirectToAction("IndexColeta");
+                    return View("NewColeta");
                 }
                 else
                 {
@@ -43,7 +42,7 @@ namespace ReciGanhaMVC.Controllers
             catch(Exception ex)
             {
                  TempData["MensagemErro"] = ex.Message;
-                return IndexLogin();// caso de erro -> irá direcionar para Index exibir mensagem
+                return View("AutenticarPostoDeColeta");// caso de erro -> irá direcionar para Index exibir mensagem
             }
         }
 
@@ -64,7 +63,7 @@ namespace ReciGanhaMVC.Controllers
                 if(response.StatusCode == System.Net.HttpStatusCode.OK)//Consultando qual foi o status da requisição, se foi Ok
                 {
                     TempData["Mensagem"] = string.Format("{0} foi registrado com sucesso! Faça o login para acessar.", p.NomePosto);//exibir mensagem temporaria
-                    return RedirectToAction("Indexlogin"); //redirecionar para a view de login
+                    return View("AutenticarPostoDeColeta"); //redirecionar para a view de login
                 }
                 else
                 {
@@ -74,27 +73,21 @@ namespace ReciGanhaMVC.Controllers
             catch(Exception ex)
             {
                 TempData["MensagemErro"] = ex.Message;
-                return RedirectToAction("IndexCadastro");
+                return View("RegistrarPostoDeColeta");
             }
         }
-        
         [HttpGet]
-        public ActionResult IndexColeta()
-        {
-            return View("NewColeta");
-        }
-
-
-        [HttpGet]
-        public ActionResult IndexLogin()
-        {
-            return View("AutenticarPostoDeColeta");
-        }
-
-        [HttpGet]
-        public ActionResult IndexCadastro()
+        public ActionResult IndexCadastroPosto()
         {
             return View("RegistrarPostoDeColeta");
         }
+
+        [HttpGet]
+        public ActionResult IndexAutenticarPosto()
+        {
+            return View("AutenticarPostoDeColeta");
+        }
     }
+
+    
 }

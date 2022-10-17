@@ -36,6 +36,16 @@ namespace ReciGanhaMVC.Controllers
                 itemMetal.Pes = c.Metal;
                 c.MaterialCadastro.Add(itemMetal);
 
+                NewColetaViewModel itemPapel = new NewColetaViewModel();
+                itemPapel.TipMat = (int)Models.Enuns.TipoMaterialEnum.Papel;
+                itemPapel.Pes = c.Papel;
+                c.MaterialCadastro.Add(itemPapel);
+
+                NewColetaViewModel itemVidro = new NewColetaViewModel();
+                itemVidro.TipMat = (int)Models.Enuns.TipoMaterialEnum.Vidro;
+                itemVidro.Pes = c.Vidro;
+                c.MaterialCadastro.Add(itemVidro);
+
 
 
 
@@ -63,7 +73,9 @@ namespace ReciGanhaMVC.Controllers
 
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
-                    TempData["Mensagem"] = string.Format("Coleta {0} incluida com sucesso!", serialized);
+                    ColetaViewModel n = await Task.Run(() =>
+                    JsonConvert.DeserializeObject<ColetaViewModel>(serialized));
+                    TempData["Mensagem"] = string.Format("Coleta {0} incluida com sucesso!", n.IdColeta);
                     //return RedirectToAction("Index");
                     return View("NewColeta");
                 }

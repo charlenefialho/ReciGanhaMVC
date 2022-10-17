@@ -136,5 +136,8 @@ D:\charlene\ReciGanhaMVC\obj\Debug\net5.0\refint\Reciganha_MVC.dll
 D:\charlene\ReciGanhaMVC\obj\Debug\net5.0\Reciganha_MVC.pdb
 D:\charlene\ReciGanhaMVC\obj\Debug\net5.0\Reciganha_MVC.genruntimeconfig.cache
 D:\charlene\ReciGanhaMVC\obj\Debug\net5.0\ref\Reciganha_MVC.dll
-C:\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\Coleta\NewColeta.cshtml.g.cs
 D:\charlene\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\Coleta\NewColeta.cshtml.g.cs
+C:\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\PostoDeColeta\AutenticarPostoDecoleta.cshtml.g.cs
+C:\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\PostoDeColeta\RegistrarPostoDeColeta.cshtml.g.cs
+C:\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\Shared\NewColeta.cshtml.g.cs
+C:\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\Clientes\PageCliente.cshtml.g.cs

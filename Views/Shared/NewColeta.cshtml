@@ -47,13 +47,14 @@
             @Html.TextBoxFor(model => model.Plastico, new { htmlAttributes = new { @class = "form-control" } })
           </div>
         </div>
+
         <div class="card">
-          <img src="assets/img/metal.jpg" class="card-img-top " alt="garrafas de plastico">
+          <img src="assets/img/metal.jpg" class="card-img-top " alt="latas de refrigerante">
           <div class="card-body">
-            <h5 class="card-title text-dark">Aluminio</h5>
+            <h5 class="card-title text-dark">Metal</h5>
             <select>
               <option value="2">
-                Aluminio
+                Metal
               </option>
             </select>
             <span>Insira o peso em Kg</span>
@@ -61,9 +62,43 @@
             <!--<input type="number" name="Peso" id="aluminio">-->
           </div>
         </div>
+
+        <div class="card">
+          <img src="assets/img/papel.jpg" class="card-img-top " alt="papel">
+          <div class="card-body">
+            <h5 class="card-title text-dark">Papel</h5>
+            <select>
+              <option value="3">
+                Papel
+              </option>
+            </select>
+            <span>Insira o peso em Kg</span>
+            @Html.TextBoxFor(model => model.Papel, new { htmlAttributes = new { @class = "form-control" } })
+            <!--<input type="number" name="Peso" id="aluminio">-->
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="assets/img/vidro.jpg" class="card-img-top " alt="caixa com vidro">
+          <div class="card-body">
+            <h5 class="card-title text-dark">vidro</h5>
+            <select>
+              <option value="4">
+                Vidro
+              </option>
+            </select>
+            <span>Insira o peso em Kg</span>
+            @Html.TextBoxFor(model => model.Vidro, new { htmlAttributes = new { @class = "form-control" } })
+            <!--<input type="number" name="Peso" id="aluminio">-->
+          </div>
+        </div>
+
       </section>
       <!--</form>-->
     }
+
+
+
     <!--<div class="form-group">
                             <span>tipo:</span>
     @Html.TextBoxFor(model => model.TipMat, new {@type= "number", @class="form-control", @min = "0"})

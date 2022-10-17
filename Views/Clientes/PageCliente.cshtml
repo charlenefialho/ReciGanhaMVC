@@ -1,0 +1,44 @@
+@model ReciGanhaMVC.Models.ClienteViewModel
+
+@{
+    ViewBag.Title = "ClienteHome";
+}
+
+
+<!--Configuração da mensagem Temporaria-->
+
+
+<main id="viewHomeCliente">
+    <article id="acoesAmbiente">
+        @if (@TempData["Mensagem"] != null)
+        {
+            <div class="alert alert-succes" role="alert">
+            @TempData["Mensagem"]</div>
+        }
+
+        @if (@TempData["MensagemErro"] != null)
+            {
+            <div class="alert alert-danger" role="alert">
+                @TempData["MensagemErro"]
+            </div>
+            }
+
+        @using (Html.BeginForm("ResgatarPontos", "Clientes", FormMethod.Get))
+        {
+
+
+            
+            <div class="form-group">
+                <label class="control-label col-md-2">Código da coleta</label>
+                <div class="col-md-6">
+                    @Html.EditorFor(model => model.IdCliente, new { htmlAttributes = new { @class = "form-control"}} )
+                </div>
+                
+            </div>
+            <div>
+                <button type="submit">Resgatar</button>
+            </div>
+        }
+    </article>
+</main>
+
