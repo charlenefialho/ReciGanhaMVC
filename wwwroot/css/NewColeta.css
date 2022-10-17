@@ -2,18 +2,12 @@ span{
     display: block;
     padding-top: 1.5vh;
 }
-body{
-    margin: 0;
-    height: 100vh;
+#mainColeta{
     background: rgb(30,32,69);
     background: linear-gradient(0deg, rgba(30,32,69,1) 0%, rgba(79,91,170,1) 100%);
-}
-
-main{
-    /*background-color: rgb(32, 85, 131);*/
     display: flex;
     flex-wrap: wrap;
-    height: 100%;
+    height: 100vh;
 }
 
 #list-cards{
@@ -29,6 +23,7 @@ main{
     background-color: #ad7c01;
 }
 .card{
+    width: 18rem;
     height: 25rem;
     margin-bottom:  3rem;
     margin-right: 20px;

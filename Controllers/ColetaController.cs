@@ -2,11 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Threading.Tasks;
+using System.Threading.Tasks;//Uso para Try/Catch
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using System.Net.Http;
+using Newtonsoft.Json;//Using para HttpClient
+using System.Net.Http;//Using para JsonConvert
 using System.Net.Http.Headers;
+using Microsoft.AspNetCore.Http;//using para session.GetString
 using ReciGanhaMVC.Models;
 
 namespace ReciGanhaMVC.Controllers
@@ -26,13 +27,13 @@ namespace ReciGanhaMVC.Controllers
 
                 NewColetaViewModel itemPlastico = new NewColetaViewModel();
                 itemPlastico.TipMat = (int)Models.Enuns.TipoMaterialEnum.Plastico;
-                itemPlastico.Pes = c.PesoPlastico;
+                itemPlastico.Pes = c.Plastico;
                 c.MaterialCadastro.Add(itemPlastico);
 
 
                 NewColetaViewModel itemMetal = new NewColetaViewModel();
                 itemMetal.TipMat = (int)Models.Enuns.TipoMaterialEnum.Metal;
-                itemMetal.Pes = c.PesoMetal;
+                itemMetal.Pes = c.Metal;
                 c.MaterialCadastro.Add(itemMetal);
 
 
@@ -47,8 +48,8 @@ namespace ReciGanhaMVC.Controllers
 
                 //declaração da variavel que armazena token qeu está na string e passagem do token recuperado para a propiedade Authorization do objeto httpClient
 
-                string token = "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwidW5pcXVlX25hbWUiOiJQb3N0byDDoWd1YSBmcmlhIiwibmJmIjoxNjY1NjA4ODE2LCJleHAiOjE2NjU2OTUyMTYsImlhdCI6MTY2NTYwODgxNn0.hrAM5rO6liUXIL28tCUNLay2KQ1259cTs7_afzZ0izPTfE67yngmTDt5klw6826hl3go5JYiCznOsIrsSqK2Pw";
-                /*string token = HttpContext.Session.GetString("SessionTokenPostoColeta");*/
+                string token = HttpContext.Session.GetString("SessionTokenPostoColeta");
+
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
                 //objeto c está sendo serializado no formato json e armazenado na variel content

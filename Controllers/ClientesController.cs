@@ -1,16 +1,52 @@
 using Microsoft.AspNetCore.Mvc;
 using Reciganha_MVC.Models;
+using ReciGanhaMVC.Models;
 using System.Threading.Tasks;//Uso para Try/Catch
 using System.Net.Http;//Using para JsonConvert
 using Newtonsoft.Json;//Using para HttpClient
 using Microsoft.AspNetCore.Http;
 using System.Net.Http.Headers;
+using System;
 
 namespace Reciganha_MVC.Controllers
 {
     public class ClientesController : Controller
     {
         public string uriBase = "http://localhost:5000/Cliente/";
+
+        [HttpGet]
+        public async Task<ActionResult> ResgatarPontosAsync(ColetaViewModel c)
+        {
+            try
+            {
+                int codColeta = c.IdColeta;
+                string uriComplementar = "Pontos/";
+                HttpClient httpClient = new HttpClient();
+                string token = HttpContext.Session.GetString("SessionTokenCliente");
+                httpClient.DefaultRequestHeaders.Authorization  = new AuthenticationHeaderValue("Bearer", token);
+                HttpResponseMessage response = await httpClient.GetAsync(uriBase + uriComplementar + codColeta.ToString());
+                string serialized = await response.Content.ReadAsStringAsync();
+                if(response.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    TempData["Mensagem"] = string.Format(serialized);
+                    return RedirectToAction("IndexHomeCliente");
+                }
+                else
+                {
+                    throw new System.Exception(serialized);
+                }
+            }
+            catch(Exception ex)
+            {
+                TempData["Mensagemerro"] = ex.Message;
+                return RedirectToAction("IndexHomeCliente");
+            }
+                
+            
+        }
+
+
+
 
         [HttpPost]
         public async Task<ActionResult> AutenticarAsync(ClienteViewModel c)
@@ -40,7 +76,7 @@ namespace Reciganha_MVC.Controllers
             catch(System.Exception ex)
             {
                 TempData["MensagemErro"] = ex.Message;
-                return IndexLogin();;// caso de erro -> irá direcionar para Index exibir mensagem
+                return IndexLogin();// caso de erro -> irá direcionar para Index exibir mensagem
             }
         }
 

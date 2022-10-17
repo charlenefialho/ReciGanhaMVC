@@ -11,7 +11,11 @@ namespace ReciGanhaMVC.Models
         public float Pes{get; set;}
         public List<NewColetaViewModel> MaterialCadastro { get; set; }
 
-        public float PesoPlastico { get; set; }
-        public float PesoMetal { get; set; }
+        public float Plastico { get; set; }
+        public float Metal { get; set; }
+
+        public float Papel { get; set; }
+
+        public float Vidro { get; set; }
     }
 }
