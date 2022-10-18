@@ -8,6 +8,8 @@ namespace ReciGanhaMVC.Models
     public class ClienteViewModel
     {
         public int IdCliente {get; set;}
+
+        public int IdColeta { get; set; }  
         public string NomeCliente{get; set;}
 
         public string EmailCliente {get; set;}

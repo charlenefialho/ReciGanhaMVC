@@ -13,14 +13,15 @@ namespace ReciGanhaMVC.Controllers
     {
         public string uriBase = "http://localhost:5000/Cliente/";
 
+
+
         [HttpGet]
         public async Task<ActionResult> ResgatarPontosAsync(ColetaViewModel c)
         {
             try
             {
-                int codColeta = c.IdColeta;
-
-                string uriComplementar = string.Format("Pontos/{0}",codColeta);
+                
+                string uriComplementar ="Pontos/" + c.IdColeta.ToString();
 
                 HttpClient httpClient = new HttpClient();
                 string token = HttpContext.Session.GetString("SessionTokenCliente");
@@ -30,10 +31,10 @@ namespace ReciGanhaMVC.Controllers
 
                 if(response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
-                    string msg = await Task.Run(() =>
-                    JsonConvert.DeserializeObject<string>(serialized));
+                    /*string msg = await Task.Run(() =>
+                    JsonConvert.DeserializeObject<string>(serialized));*/
 
-                    TempData["Mensagem"] = string.Format(msg);
+                    TempData["Mensagem"] = string.Format(serialized);
                     return RedirectToAction("IndexPageCliente");
                 }
                 else

@@ -73,9 +73,9 @@ namespace ReciGanhaMVC.Controllers
 
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
-                    ColetaViewModel n = await Task.Run(() =>
-                    JsonConvert.DeserializeObject<ColetaViewModel>(serialized));
-                    TempData["Mensagem"] = string.Format("Coleta {0} incluida com sucesso!", n.IdColeta);
+                    /*ColetaViewModel n = await Task.Run(() =>
+                    JsonConvert.DeserializeObject<ColetaViewModel>(serialized));*/
+                    TempData["Mensagem"] = string.Format("Coleta {0} incluida com sucesso!", serialized);
                     //return RedirectToAction("Index");
                     return View("NewColeta");
                 }
