@@ -6,6 +6,7 @@ using Newtonsoft.Json;//Using para HttpClient
 using Microsoft.AspNetCore.Http;
 using System.Net.Http.Headers;
 using System;
+using System.Collections.Generic;
 
 namespace ReciGanhaMVC.Controllers
 {
@@ -13,6 +14,41 @@ namespace ReciGanhaMVC.Controllers
     {
         public string uriBase = "http://localhost:5000/Cliente/";
 
+
+        [HttpGet]
+        public async Task<ActionResult> GetAll()
+        {
+            try
+            {
+                string uriBaseColeta = "http://localhost:5000/Coleta/";
+                string uriComplementar = "GetAll";
+                HttpClient httpClient = new HttpClient();
+                string token = HttpContext.Session.GetString("SessionTokenCliente");
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+                HttpResponseMessage response = await httpClient.GetAsync(uriBaseColeta + uriComplementar);
+                string serialized = await response.Content.ReadAsStringAsync();
+
+                if(response.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    List<ColetaViewModel> listaColetas = await Task.Run(() =>
+                    JsonConvert.DeserializeObject<
+                    List<ColetaViewModel>>(serialized));
+
+                    return View("PageCliente");
+                }
+                else
+                    throw new Exception(serialized);
+            }
+            catch(Exception ex)
+            {
+                TempData["MensagemErro"] = ex.Message;
+                return View("PageCliente");
+            }
+
+            
+
+        }
 
 
         [HttpGet]

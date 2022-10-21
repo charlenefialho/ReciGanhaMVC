@@ -12,10 +12,12 @@ using ReciGanhaMVC.Models;
 
 namespace ReciGanhaMVC.Controllers
 {
-    [Route("[controller]")]
     public class Coleta : Controller
     {
         public string uriBase = "http://localhost:5000/Coleta/";
+
+
+        
 
         [HttpPost]
         public async Task<ActionResult> InsertAsync(NewColetaViewModel c)
