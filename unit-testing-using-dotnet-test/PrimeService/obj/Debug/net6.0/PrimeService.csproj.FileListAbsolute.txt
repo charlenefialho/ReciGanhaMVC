@@ -1,0 +1,12 @@
+C:\ReciGanhaMVC\unit-testing-using-dotnet-test\PrimeService\bin\Debug\net6.0\PrimeService.deps.json
+C:\ReciGanhaMVC\unit-testing-using-dotnet-test\PrimeService\bin\Debug\net6.0\PrimeService.dll
+C:\ReciGanhaMVC\unit-testing-using-dotnet-test\PrimeService\bin\Debug\net6.0\PrimeService.pdb
+C:\ReciGanhaMVC\unit-testing-using-dotnet-test\PrimeService\obj\Debug\net6.0\PrimeService.csproj.AssemblyReference.cache
+C:\ReciGanhaMVC\unit-testing-using-dotnet-test\PrimeService\obj\Debug\net6.0\PrimeService.GeneratedMSBuildEditorConfig.editorconfig
+C:\ReciGanhaMVC\unit-testing-using-dotnet-test\PrimeService\obj\Debug\net6.0\PrimeService.AssemblyInfoInputs.cache
+C:\ReciGanhaMVC\unit-testing-using-dotnet-test\PrimeService\obj\Debug\net6.0\PrimeService.AssemblyInfo.cs
+C:\ReciGanhaMVC\unit-testing-using-dotnet-test\PrimeService\obj\Debug\net6.0\PrimeService.csproj.CoreCompileInputs.cache
+C:\ReciGanhaMVC\unit-testing-using-dotnet-test\PrimeService\obj\Debug\net6.0\PrimeService.dll
+C:\ReciGanhaMVC\unit-testing-using-dotnet-test\PrimeService\obj\Debug\net6.0\refint\PrimeService.dll
+C:\ReciGanhaMVC\unit-testing-using-dotnet-test\PrimeService\obj\Debug\net6.0\PrimeService.pdb
+C:\ReciGanhaMVC\unit-testing-using-dotnet-test\PrimeService\obj\Debug\net6.0\ref\PrimeService.dll
