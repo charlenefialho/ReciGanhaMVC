@@ -10,9 +10,11 @@ namespace ReciGanhaMVC.Models
         public int IdPosto { get; set; }
         public string NomePosto { get; set; }
         public string CNPJ { get; set; }
+        #nullable enable
         public string? EmailPosto { get; set; }
         public string? TelefonePosto { get; set; }
         public string? WebSite { get; set; }
+        #nullable disable
         public string Latitude { get; set; }
         public string Longitude { get; set; }
         public DateTime DataLimiteExibicao { get; set; }
