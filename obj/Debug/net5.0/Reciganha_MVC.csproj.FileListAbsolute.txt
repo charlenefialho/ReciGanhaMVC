@@ -196,3 +196,5 @@ D:\yuritcc\ReciGanhaMVC\obj\Debug\net5.0\Reciganha_MVC.pdb
 D:\yuritcc\ReciGanhaMVC\obj\Debug\net5.0\Reciganha_MVC.genruntimeconfig.cache
 D:\yuritcc\ReciGanhaMVC\obj\Debug\net5.0\ref\Reciganha_MVC.dll
 D:\yuritcc\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\Apoiador\PageApoiadores.cshtml.g.cs
+D:\charlene\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\Apoiador\PageApoiadores.cshtml.g.cs
+D:\charlene\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\Clientes\BuscarPostosCliente.cshtml.g.cs

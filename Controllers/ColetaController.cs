@@ -14,7 +14,7 @@ namespace ReciGanhaMVC.Controllers
 {
     public class Coleta : Controller
     {
-        public string uriBase = "http://localhost:5000/Coleta/";
+        public string uriBase = "http://reciganha.somee.com/API/Coleta/";
 
 
         

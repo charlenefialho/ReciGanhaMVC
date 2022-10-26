@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\yuritcc\\ReciGanhaMVC\\Reciganha_MVC.csproj": {}
+    "D:\\charlene\\ReciGanhaMVC\\Reciganha_MVC.csproj": {}
   },
   "projects": {
-    "D:\\yuritcc\\ReciGanhaMVC\\Reciganha_MVC.csproj": {
+    "D:\\charlene\\ReciGanhaMVC\\Reciganha_MVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\yuritcc\\ReciGanhaMVC\\Reciganha_MVC.csproj",
+        "projectUniqueName": "D:\\charlene\\ReciGanhaMVC\\Reciganha_MVC.csproj",
         "projectName": "Reciganha_MVC",
-        "projectPath": "D:\\yuritcc\\ReciGanhaMVC\\Reciganha_MVC.csproj",
+        "projectPath": "D:\\charlene\\ReciGanhaMVC\\Reciganha_MVC.csproj",
         "packagesPath": "C:\\Users\\etechas\\.nuget\\packages\\",
-        "outputPath": "D:\\yuritcc\\ReciGanhaMVC\\obj\\",
+        "outputPath": "D:\\charlene\\ReciGanhaMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\etechas\\AppData\\Roaming\\NuGet\\NuGet.Config",

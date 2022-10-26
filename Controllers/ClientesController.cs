@@ -12,7 +12,7 @@ namespace ReciGanhaMVC.Controllers
 {
     public class ClientesController : Controller
     {
-        public string uriBase = "http://localhost:5000/Cliente/";
+        public string uriBase = "http://reciganha.somee.com/API/Cliente/";
 
 
         [HttpGet]
@@ -20,7 +20,7 @@ namespace ReciGanhaMVC.Controllers
         {
             try
             {
-                string uriBaseColeta = "http://localhost:5000/Coleta/";
+                string uriBaseColeta = "http://reciganha.somee.com/API/Coleta/";
                 string uriComplementar = "GetAll";
                 HttpClient httpClient = new HttpClient();
                 string token = HttpContext.Session.GetString("SessionTokenCliente");
@@ -31,11 +31,11 @@ namespace ReciGanhaMVC.Controllers
 
                 if(response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
-                    List<ColetaViewModel> listaColetas = await Task.Run(() =>
+                    List<ClienteColetaViewModel> listaColetas = await Task.Run(() =>
                     JsonConvert.DeserializeObject<
-                    List<ColetaViewModel>>(serialized));
+                    List<ClienteColetaViewModel>>(serialized));
 
-                    return View("PageCliente");
+                    return View("PageCliente", listaColetas);
                 }
                 else
                     throw new Exception(serialized);

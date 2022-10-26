@@ -30,6 +30,7 @@
       <!--<form action="POST">-->
       <section id="botao">
         <button type="submit" class="btnInserir btn btn-primary">Inserir coleta</button>
+        @Html.TextBoxFor(model => model.EmailCliente, new { htmlAttributes = new { @class = "form-control" ,@placeholder="Digite o email do cliente"} })
       </section>
 
       <section class="cards">

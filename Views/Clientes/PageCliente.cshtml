@@ -1,5 +1,8 @@
-@model ReciGanhaMVC.Models.ClienteViewModel
-<!--IEnumerable<ReciGanhaMVC.Models.ClienteViewModel>-->
+@model IEnumerable<ReciGanhaMVC.Models.ClienteColetaViewModel>
+
+<!-- IEnumerable<ReciGanhaMVC.Models.ClienteColetaViewModel> -->
+
+    <!--ReciGanhaMVC.Models.ClienteViewModel-->
 @{
     ViewBag.Title = "ClienteHome";
 }
@@ -24,26 +27,19 @@
             }
 
         <table>
-            <tr>
+            <tr>             
                 <td>
-                    @using (Html.BeginForm("ResgatarPontos", "Clientes", FormMethod.Get))
-                    {
-                        <div class="form-group">
-                            <label for="codigoColeta" class="control-label col-md-2">Código da coleta</label>
-                            <div class="col-md-6">
-                                @Html.EditorFor(model => model.IdColeta, new { htmlAttributes = new { @class = "form-control" ,@name="codigoColeta"}} )
-                            </div>
-                
-                        </div>
-                        <div>
-                            <button type="submit">Resgatar</button>
-                        </div>
-                    }
-                </td>
-                <!--<td>
                     <section id="listagemColetas">
+                        @foreach(var item in Model)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.IdColeta)</td>
+                                <td>@Html.DisplayFor(modelItem => item.dataColeta)</td>
+                                <td>@Html.DisplayFor(modelItem => item.resultadoDePontos)</td>
+                            </tr>
+                        }
                     </section>
-                </td>-->
+                </td>
             </tr>
         </table>
     </article>
