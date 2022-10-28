@@ -2,7 +2,7 @@
 
 <!-- IEnumerable<ReciGanhaMVC.Models.ClienteColetaViewModel> -->
 
-    <!--ReciGanhaMVC.Models.ClienteViewModel-->
+<!--ReciGanhaMVC.Models.ClienteViewModel-->
 @{
     ViewBag.Title = "ClienteHome";
 }
@@ -16,32 +16,42 @@
         @if (@TempData["Mensagem"] != null)
         {
             <div class="alert alert-succes" role="alert">
-            @TempData["Mensagem"]</div>
+                @TempData["Mensagem"]</div>
         }
 
         @if (@TempData["MensagemErro"] != null)
-            {
+        {
             <div class="alert alert-danger" role="alert">
                 @TempData["MensagemErro"]
             </div>
-            }
+        }
 
         <table>
-            <tr>             
-                <td>
-                    <section id="listagemColetas">
-                        @foreach(var item in Model)
-                        {
-                            <tr>
-                                <td>@Html.DisplayFor(modelItem => item.IdColeta)</td>
-                                <td>@Html.DisplayFor(modelItem => item.dataColeta)</td>
-                                <td>@Html.DisplayFor(modelItem => item.resultadoDePontos)</td>
-                            </tr>
-                        }
-                    </section>
-                </td>
-            </tr>
+            <thead style="background-color: #c3e4f4;"></thead>
+                <tr>
+                    <th>                    
+                        @Html.Label("Id")
+                    </th>
+                    <th>
+                        @Html.Label("Data Coleta")
+                    </th>
+                    <th>
+                        @Html.Label("Resultado de Pontos")
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.IdColeta)</td>
+                        <td>@Convert.ToDateTime(item.dataColeta).ToString("dd/MM/yyyy")</td>
+                        <td>@Html.DisplayFor(modelItem => item.resultadoDePontos)</td>
+                    </tr>
+               
+                }
+            </tbody>
         </table>
+
     </article>
 </main>
-

@@ -10,7 +10,7 @@ namespace ReciGanhaMVC.Models
     {
         public int IdColeta {get;set;}
         public float resultadoDePontos{get; set;}
-         public DateTime dataColeta {get; set;}
+        public DateTime dataColeta {get; set;}
         public string NomeCliente{get; set;}
     }
 }

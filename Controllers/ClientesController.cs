@@ -15,8 +15,15 @@ namespace ReciGanhaMVC.Controllers
         public string uriBase = "http://reciganha.somee.com/API/Cliente/";
 
 
+        //carregar a view inicialmente *mudar para a home*
+        /*[HttpGet]
+        public ActionResult IndexPageCliente()
+        {
+            return View("PageCliente");
+        }*/
+
         [HttpGet]
-        public async Task<ActionResult> GetAll()
+        public async Task<ActionResult> IndexPageCliente()
         {
             try
             {
@@ -29,11 +36,17 @@ namespace ReciGanhaMVC.Controllers
                 HttpResponseMessage response = await httpClient.GetAsync(uriBaseColeta + uriComplementar);
                 string serialized = await response.Content.ReadAsStringAsync();
 
+                /*List<ClienteColetaViewModel> listaColetas = new List<ClienteColetaViewModel>();                
+                ClienteColetaViewModel c1 =new ClienteColetaViewModel();
+                c1.IdColeta = 1;
+                c1.dataColeta = DateTime.Now;
+                 return View("PageCliente", listaColetas);*/
+
                 if(response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
                     List<ClienteColetaViewModel> listaColetas = await Task.Run(() =>
-                    JsonConvert.DeserializeObject<
-                    List<ClienteColetaViewModel>>(serialized));
+                    
+                    JsonConvert.DeserializeObject<List<ClienteColetaViewModel>>(serialized));
 
                     return View("PageCliente", listaColetas);
                 }
@@ -153,12 +166,7 @@ namespace ReciGanhaMVC.Controllers
             }
         }
 
-        //carregar a view inicialmente *mudar para a home*
-        [HttpGet]
-        public ActionResult IndexPageCliente()
-        {
-            return View("PageCliente");
-        }
+        
 
 
         [HttpGet]

@@ -6,6 +6,7 @@ using Newtonsoft.Json;//Using para HttpClient
 using Microsoft.AspNetCore.Http;
 using System.Net.Http.Headers;
 using System;
+using ReciGanhaMVC.Utils;
 
 namespace ReciGanhaMVC.Controllers
 {
@@ -51,8 +52,14 @@ namespace ReciGanhaMVC.Controllers
         {
             try
             {
-                HttpClient httpClient = new HttpClient();
+                if(string.IsNullOrEmpty(p.CNPJ))
+                    throw new Exception("Digite o CNPJ");
+                    
+                if(Validacoes.ValidarTamanhoCnpj(p.CNPJ) == false)
+                    throw new Exception("O cnpj deve ter 14 caracteres");
 
+
+                HttpClient httpClient = new HttpClient();
                 string uriComplementar = "Registrar";
                 var content = new StringContent(JsonConvert.SerializeObject(p));//serialização do objeto c
                 content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
@@ -73,7 +80,7 @@ namespace ReciGanhaMVC.Controllers
             catch(Exception ex)
             {
                 TempData["MensagemErro"] = ex.Message;
-                return View("RegistrarPostoDeColeta");
+                return View("RegistrarPostoDeColeta", p);
             }
         }
         [HttpGet]
