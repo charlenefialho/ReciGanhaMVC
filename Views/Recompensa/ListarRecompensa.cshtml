@@ -1,0 +1,56 @@
+@model IEnumerable<ReciGanhaMVC.Models.RecompensaViewModel>
+
+@{
+ViewBag.Title = "Recompensas" ; 
+}
+
+<div class="background">
+    <div class="container-fluid">
+        @if (@TempData["Mensagem"] != null)
+        {
+            <div class="alert alert-succes" role="alert">
+            @TempData["Mensagem"]</div>
+        }
+
+        <!--Configuração para exibir mensagem de erro -->
+        @if (@TempData["MensagemErro"] != null)
+        {
+            <div class="alert alert-danger" role="alert">
+                @TempData["MensagemErro"]
+            </div>
+        }
+
+<style>
+    .table{
+        margin-top: 15vh;
+    }
+
+    h2{
+        margin-top: 5vh;
+    }
+</style>
+
+<h2>recompensas</h2>
+<table class="table">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.idRecompensa)</th>
+        <th>@Html.DisplayNameFor(model => model.nomeRecompensa)</th>
+        <th>@Html.DisplayNameFor(model => model.descricao)</th>
+        <th>@Html.DisplayNameFor(model => model.custodePontos)</th>
+        <th>@Html.DisplayNameFor(model => model.qtdeRecomepensas)</th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.idRecompensa)</td>
+            <td>@Html.DisplayFor(modelItem => item.nomeRecompensa)</td>
+            <td>@Html.DisplayFor(modelItem => item.descricao)</td>
+            <td>@Html.DisplayFor(modelItem => item.custodePontos)</td>
+            <td>@Html.DisplayFor(modelItem => item.qtdeRecomepensas)</td>
+            <td>
+                @Html.ActionLink("Resgatar", "Resgate", new{id = item.idRecompensa,onclick="return confirm('Deseja mesmo regaatar essa recomepnsa?');"})
+            </td>
+        </tr>
+    }
+</table>

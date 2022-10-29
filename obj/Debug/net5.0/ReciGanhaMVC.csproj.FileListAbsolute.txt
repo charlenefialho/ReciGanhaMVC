@@ -102,3 +102,4 @@ C:\ReciGanhaMVC\obj\Debug\net5.0\refint\ReciGanhaMVC.dll
 C:\ReciGanhaMVC\obj\Debug\net5.0\ReciGanhaMVC.pdb
 C:\ReciGanhaMVC\obj\Debug\net5.0\ReciGanhaMVC.genruntimeconfig.cache
 C:\ReciGanhaMVC\obj\Debug\net5.0\ref\ReciGanhaMVC.dll
+C:\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\Recompensa\ListarRecompensa.cshtml.g.cs
