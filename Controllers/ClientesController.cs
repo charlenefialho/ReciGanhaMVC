@@ -27,13 +27,12 @@ namespace ReciGanhaMVC.Controllers
         {
             try
             {
-                string uriBaseColeta = "http://reciganha.somee.com/API/Coleta/";
-                string uriComplementar = "GetAll";
+                string uriComplementar = "HistColetas";
                 HttpClient httpClient = new HttpClient();
                 string token = HttpContext.Session.GetString("SessionTokenCliente");
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
-                HttpResponseMessage response = await httpClient.GetAsync(uriBaseColeta + uriComplementar);
+                HttpResponseMessage response = await httpClient.GetAsync(uriBase + uriComplementar);
                 string serialized = await response.Content.ReadAsStringAsync();
 
                 /*List<ClienteColetaViewModel> listaColetas = new List<ClienteColetaViewModel>();                
@@ -120,7 +119,7 @@ namespace ReciGanhaMVC.Controllers
                 if(response.StatusCode == System.Net.HttpStatusCode.OK)//Consultando qual foi o status da requisição, se foi Ok
                 {
                     HttpContext.Session.SetString("SessionTokenCliente", serialized);
-                    TempData["Mensagem"] = string.Format("Bem-vindo{0}!!", c.NomeCliente);
+                    TempData["Mensagem"] = string.Format("Bem-vindo {0} !!", c.NomeCliente);
                     return RedirectToAction("IndexPageCliente");
                 }
                 else
@@ -167,6 +166,11 @@ namespace ReciGanhaMVC.Controllers
         }
 
         
+        [HttpGet]
+        public ActionResult IndexBuscarPostos()
+        {
+            return View("BuscarPostosCliente");
+        }
 
 
         [HttpGet]

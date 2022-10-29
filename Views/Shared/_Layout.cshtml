@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="~/css/PageCliente.css"/>
     <link rel="stylesheet" href="~/css/AutenticarPostoDeColeta.css"/>
     <link rel="stylesheet" href="~/css/RegistrarPostoDeColeta.css"/>
+    <link rel="stylesheet" href="~/css/BuscarPostosCliente.css"/>
+    
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -31,7 +33,7 @@
                 <a class="nav-link text-white " asp-area="" asp-controller="" asp-action="">Sobre</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link text-white " asp-area="" asp-controller="" asp-action="">Postos de Coleta</a>
+                <a class="nav-link text-white " asp-area="" asp-controller="Clientes" asp-action="IndexBuscarPostos">Postos de Coleta</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link text-white " asp-area="Cadastrar" asp-controller="PostoDeColeta" asp-action="IndexCadastroPosto">Coleta</a>

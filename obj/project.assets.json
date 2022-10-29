@@ -224,19 +224,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\luizs\\.nuget\\packages\\": {}
+    "C:\\Users\\chazi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Work\\Etec\\2022_2-PAMII\\Alunos\\TCC_CharleneGabrielV3\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
+      "projectUniqueName": "c:\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
       "projectName": "ReciGanhaMVC",
-      "projectPath": "D:\\Work\\Etec\\2022_2-PAMII\\Alunos\\TCC_CharleneGabrielV3\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
-      "packagesPath": "C:\\Users\\luizs\\.nuget\\packages\\",
-      "outputPath": "D:\\Work\\Etec\\2022_2-PAMII\\Alunos\\TCC_CharleneGabrielV3\\ReciGanhaMVC\\obj\\",
+      "projectPath": "c:\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
+      "packagesPath": "C:\\Users\\chazi\\.nuget\\packages\\",
+      "outputPath": "c:\\ReciGanhaMVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\luizs\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\chazi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -285,7 +285,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
