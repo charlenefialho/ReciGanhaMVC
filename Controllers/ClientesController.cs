@@ -27,12 +27,12 @@ namespace ReciGanhaMVC.Controllers
         {
             try
             {
-                string uriComplementar = "HistColetas";
+                string uriComplementar = "GetHist";
                 HttpClient httpClient = new HttpClient();
                 string token = HttpContext.Session.GetString("SessionTokenCliente");
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
-                HttpResponseMessage response = await httpClient.GetAsync(uriBase + uriComplementar);
+                HttpResponseMessage response = await httpClient.GetAsync("http://reciganha.somee.com/API/Coleta/" + uriComplementar);
                 string serialized = await response.Content.ReadAsStringAsync();
 
                 /*List<ClienteColetaViewModel> listaColetas = new List<ClienteColetaViewModel>();                

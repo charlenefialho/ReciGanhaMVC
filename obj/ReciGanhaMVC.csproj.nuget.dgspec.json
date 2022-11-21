@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ReciGanhaMVC\\ReciGanhaMVC.csproj": {}
+    "D:\\TCC\\ReciGanhaMVC\\ReciGanhaMVC.csproj": {}
   },
   "projects": {
-    "C:\\ReciGanhaMVC\\ReciGanhaMVC.csproj": {
+    "D:\\TCC\\ReciGanhaMVC\\ReciGanhaMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
+        "projectUniqueName": "D:\\TCC\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
         "projectName": "ReciGanhaMVC",
-        "projectPath": "C:\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
-        "packagesPath": "C:\\Users\\chazi\\.nuget\\packages\\",
-        "outputPath": "C:\\ReciGanhaMVC\\obj\\",
+        "projectPath": "D:\\TCC\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
+        "packagesPath": "C:\\Users\\gmbel\\.nuget\\packages\\",
+        "outputPath": "D:\\TCC\\ReciGanhaMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\chazi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gmbel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
