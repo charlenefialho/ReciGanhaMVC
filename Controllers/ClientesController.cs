@@ -14,6 +14,7 @@ namespace ReciGanhaMVC.Controllers
     public class ClientesController : Controller
     {
         public string uriBase = "http://reciganha.somee.com/API/Cliente/";
+        
 
 
         //carregar a view inicialmente *mudar para a home*
@@ -28,19 +29,24 @@ namespace ReciGanhaMVC.Controllers
         {
             try
             {
-                string uriComplementar = "HistColetas";
+                string uriComplementar = "GetHist";
                 HttpClient httpClient = new HttpClient();
                 string token = HttpContext.Session.GetString("SessionTokenCliente");
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
-                HttpResponseMessage response = await httpClient.GetAsync(uriBase + uriComplementar);
+                HttpResponseMessage response = await httpClient.GetAsync("http://reciganha.somee.com/API/Coleta/" + uriComplementar);
                 string serialized = await response.Content.ReadAsStringAsync();
 
-                /*List<ClienteColetaViewModel> listaColetas = new List<ClienteColetaViewModel>();                
-                ClienteColetaViewModel c1 =new ClienteColetaViewModel();
-                c1.IdColeta = 1;
-                c1.dataColeta = DateTime.Now;
-                 return View("PageCliente", listaColetas);*/
+                //Get pontos do cliente
+                string uriComplementar2 ="GetPoints";
+
+                HttpResponseMessage responseInfo = await httpClient.GetAsync(uriBase + uriComplementar2);
+                string serializedInfo = await responseInfo.Content.ReadAsStringAsync();
+
+                if(responseInfo.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    ViewBag.Message = serializedInfo;
+                }
 
                 if(response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
