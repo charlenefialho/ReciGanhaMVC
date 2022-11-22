@@ -25,7 +25,7 @@
             @Html.AntiForgeryToken()
             <div class="form-group">
                 <label for="CNPJ">CNPJ</label>
-                @Html.EditorFor(model => model.CNPJ, new {hmlAttributes= new {@class = "form-control", @name ="CNPJ"} })
+                @Html.EditorFor(model => model.CNPJ, new {hmlAttributes= new {@class = "form-control", @name ="CNPJ", @maxlength="14"} })
             </div>
 
             //XX.XXX.XXX/0001-XX
