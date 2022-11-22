@@ -80,7 +80,6 @@ C:\ReciGanhaMVC\obj\Debug\net5.0\ReciGanhaMVC.RazorCoreGenerate.cache
 C:\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\Clientes\AutenticarCliente.cshtml.g.cs
 C:\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\Clientes\BuscarPostosCliente.cshtml.g.cs
 C:\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\Clientes\CadastrarCliente.cshtml.g.cs
-C:\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\Clientes\PageCliente.cshtml.g.cs
 C:\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\Parceiro\PageParceiro.cshtml.g.cs
@@ -156,3 +155,4 @@ D:\TCC\ReciGanhaMVC\obj\Debug\net5.0\refint\ReciGanhaMVC.dll
 D:\TCC\ReciGanhaMVC\obj\Debug\net5.0\ReciGanhaMVC.pdb
 D:\TCC\ReciGanhaMVC\obj\Debug\net5.0\ReciGanhaMVC.genruntimeconfig.cache
 D:\TCC\ReciGanhaMVC\obj\Debug\net5.0\ref\ReciGanhaMVC.dll
+C:\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\Clientes\PageCliente.cshtml.g.cs

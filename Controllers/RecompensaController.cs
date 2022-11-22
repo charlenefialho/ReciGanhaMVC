@@ -12,8 +12,53 @@ namespace ReciGanhaMVC.Controllers
 {
     public class RecompensaController : Controller
     {
-        //public string uriBase = "http://reciganha.somee.com/API/Recompensa/";
-        public string uriBase = "http://localhost:5000/Recompensa/";
+        public string uriBase = "http://reciganha.somee.com/API/Recompensa/";
+        //public string uriBase = "http://localhost:5000/Recompensa/";]
+
+        
+
+        [HttpGet]
+        public async Task<ActionResult> Resgatar(int? id)
+        {
+            try
+            {
+                string uriComplementar = "Resgatar/";
+                HttpClient httpClient = new HttpClient();
+                string token = HttpContext.Session.GetString("SessionTokenCliente");
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+                HttpResponseMessage response = await httpClient.GetAsync("http://reciganha.somee.com/API/Recompensa/"+ uriComplementar + id.ToString());
+                string serialized = await response.Content.ReadAsStringAsync();
+
+                //get recompensas
+                    string uriComplementarInfo = "GetAll";
+                    HttpResponseMessage responseInfo = await httpClient.GetAsync(uriBase + uriComplementarInfo );
+                    string serializedInfo = await responseInfo.Content.ReadAsStringAsync();
+                    
+
+                //&& response.StatusCode == System.Net.HttpStatusCode.BadRequest
+
+                if(responseInfo.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    List<RecompensaViewModel> listaRecompensas= await Task.Run(() =>
+                    
+                    JsonConvert.DeserializeObject<List<RecompensaViewModel>>(serializedInfo));
+
+                    TempData["CodigoRecompensa"] = serialized;
+
+                    return View("ListarRecompensa", listaRecompensas);
+                }
+                else
+                    throw new Exception(serialized);
+            }
+            catch(Exception ex)
+            {
+                TempData["MensagemErro"] = ex.Message;
+                return View("ListarRecompensa");
+            }
+        }
+
+
 
         [HttpGet]
         public async Task<ActionResult> IndexRecompensa()
@@ -31,7 +76,7 @@ namespace ReciGanhaMVC.Controllers
 
                 if(response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
-                    List<RecompensaViewModel> listaRecompensas = await Task.Run(() =>
+                    List<RecompensaViewModel> listaRecompensas= await Task.Run(() =>
                     
                     JsonConvert.DeserializeObject<List<RecompensaViewModel>>(serialized));
 
@@ -44,7 +89,7 @@ namespace ReciGanhaMVC.Controllers
             catch(Exception ex)
             {
                 TempData["MensagemErro"] = ex.Message;
-                return View("PageCliente");
+                return View("ListarRecompensa");
             }
         }
     }
