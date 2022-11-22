@@ -76,7 +76,7 @@
             <td>@Html.DisplayFor(modelItem => item.custodePontos)</td>
             <td>@Html.DisplayFor(modelItem => item.qtdeRecomepensas)</td>
             <td>
-                @Html.ActionLink("Resgatar", "ResgatarRecompensa", new{ id = item.idRecompensa, htmlAtributtes = new{ @onclick="return confirm('Deseja mesmo regaatar essa recompensa?');"}})
+                @Html.ActionLink("Resgatar", "Resgatar", new{ id = item.idRecompensa})
             </td>
         </tr>
     }
