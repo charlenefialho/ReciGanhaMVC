@@ -20,6 +20,15 @@ namespace ReciGanhaMVC.Controllers
         {
             try
             {
+                if(string.IsNullOrEmpty(p.CNPJ))
+                    throw new Exception("Digite o CNPJ");
+                    
+                if(Validacoes.ValidarTamanhoCnpj(p.CNPJ) == false)
+                    throw new Exception("O cnpj deve ter 14 caracteres");
+
+                if(Validacoes.IsCnpj(p.CNPJ) == false)
+                    throw new Exception("Insira um CNPJ Válido");
+
                 HttpClient httpClient = new HttpClient();//Instancia do objeto HttpClient
                 string uriComplementar = "Autenticar";
 
@@ -54,9 +63,15 @@ namespace ReciGanhaMVC.Controllers
             {
                 if(string.IsNullOrEmpty(p.CNPJ))
                     throw new Exception("Digite o CNPJ");
+
+                if(string.IsNullOrEmpty(p.NomePosto))
+                    throw new Exception("Digite o nome do posto de coleta");
                     
                 if(Validacoes.ValidarTamanhoCnpj(p.CNPJ) == false)
                     throw new Exception("O cnpj deve ter 14 caracteres");
+
+                if(Validacoes.IsCnpj(p.CNPJ) == false)
+                    throw new Exception("Insira um CNPJ Válido");
 
 
                 HttpClient httpClient = new HttpClient();

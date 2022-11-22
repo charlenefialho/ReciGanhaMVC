@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using System.Net.Http.Headers;
 using System;
 using System.Collections.Generic;
+using ReciGanhaMVC.Utils;
 
 namespace ReciGanhaMVC.Controllers
 {
@@ -113,6 +114,15 @@ namespace ReciGanhaMVC.Controllers
         {
             try
             {
+                if(string.IsNullOrEmpty(c.PasswordString))
+                    throw new Exception("Digite a senha");
+
+                if(string.IsNullOrEmpty(c.EmailCliente))
+                    throw new Exception("Digite o Email");
+
+                if(Validacoes.ValidarEmail(c.EmailCliente) == false)
+                    throw new Exception("Digite um email válido");
+
                 HttpClient httpClient = new HttpClient();//Instancia do objeto HttpClient
                 string uriComplementar = "Autenticar";
 
@@ -136,7 +146,7 @@ namespace ReciGanhaMVC.Controllers
             catch(System.Exception ex)
             {
                 TempData["MensagemErro"] = ex.Message;
-                return IndexLogin();// caso de erro -> irá direcionar para Index exibir mensagem
+                return RedirectToAction("IndexLogin");// caso de erro -> irá direcionar para Index exibir mensagem
             }
         }
 
@@ -145,6 +155,18 @@ namespace ReciGanhaMVC.Controllers
         {
             try
             {
+                 if(string.IsNullOrEmpty(c.NomeCliente))
+                    throw new Exception("Digite um nome de usuário");
+
+                if(string.IsNullOrEmpty(c.PasswordString))
+                    throw new Exception("Digite a senha");
+
+                if(string.IsNullOrEmpty(c.EmailCliente))
+                    throw new Exception("Digite o Email");
+
+                if(Validacoes.ValidarEmail(c.EmailCliente) == false)
+                    throw new Exception("Digite um email válido");
+
                 HttpClient httpClient = new HttpClient();//Instancia do objeto HttpClient
                 string uriComplementar = "Registrar"; //endpoint da rota do método da API
 
@@ -167,7 +189,7 @@ namespace ReciGanhaMVC.Controllers
             catch(System.Exception ex)
             {
                 TempData["MensagemErro"] = ex.Message;
-                return RedirectToAction("IndexLogin");// caso de erro -> irá direcionar para Index exibir mensagem
+                return RedirectToAction("IndexCadastro");// caso de erro -> irá direcionar para Index exibir mensagem  e envia o objeto para nao perder no input
             }
         }
 

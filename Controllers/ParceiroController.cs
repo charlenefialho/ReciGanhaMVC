@@ -21,7 +21,7 @@ namespace ReciGanhaMVC.Controllers
             return View("PageParceiro");
         }
 
-
+         
 
 
     }

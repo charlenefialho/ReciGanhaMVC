@@ -30,7 +30,7 @@
 
             <div class="form-group">
                 <label for="CNPJ">CNPJ</label>
-                @Html.EditorFor(model => model.CNPJ, new {hmlAttributes= new {@class = "form-control", @name ="CNPJ"} })
+                @Html.TextBoxFor(model => model.CNPJ, new {hmlAttributes= new {@placeholder="XX.XXX.XXX/YYYY-ZZ", @class = "form-control",@name ="CNPJ", @maxlength="14", @id="CNPJ", onfocus="cnpj(this.value)"} })
             </div>
 
             <div class="form-group">
