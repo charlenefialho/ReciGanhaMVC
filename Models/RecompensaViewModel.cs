@@ -12,5 +12,6 @@ namespace ReciGanhaMVC.Models
         public string descricao { get; set; }   
         public float custodePontos { get; set; } 
         public int qtdeRecomepensas { get; set; }
+
     }
 }

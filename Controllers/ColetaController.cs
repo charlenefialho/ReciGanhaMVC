@@ -24,7 +24,7 @@ namespace ReciGanhaMVC.Controllers
         {
             try
             {
-                //
+                
                 c.MaterialCadastro = new List<NewColetaViewModel>();
 
                 NewColetaViewModel itemPlastico = new NewColetaViewModel();
@@ -55,7 +55,7 @@ namespace ReciGanhaMVC.Controllers
                 //return View("NewColeta");
                 //
 
-                string uriComplementar = "Insert";
+                string uriComplementar = "Insert/" + c.EmailCliente.ToString();
                 HttpClient httpClient = new HttpClient();//Declaração Objeto Httpclient responsavel pelo trafego de dados na  internet
 
                 //declaração da variavel que armazena token qeu está na string e passagem do token recuperado para a propiedade Authorization do objeto httpClient

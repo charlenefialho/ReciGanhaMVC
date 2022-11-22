@@ -1,10 +1,36 @@
 @model IEnumerable<ReciGanhaMVC.Models.RecompensaViewModel>
 
 @{
-ViewBag.Title = "Recompensas" ; 
+    ViewBag.Title = "Recompensas" ; 
 }
 
 <div class="background">
+@if (@TempData["CodigoRecompensa"] != null)
+{
+    
+        <div class="modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Código</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    
+                        <p>@TempData["CodigoRecompensa"]</p>
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+                </div>
+            </div>
+            </div>
+}
+
+
     <div class="container-fluid">
         @if (@TempData["Mensagem"] != null)
         {
@@ -31,6 +57,7 @@ ViewBag.Title = "Recompensas" ;
 </style>
 
 <h2>recompensas</h2>
+
 <table class="table">
     <tr>
         <th>@Html.DisplayNameFor(model => model.idRecompensa)</th>
@@ -49,7 +76,7 @@ ViewBag.Title = "Recompensas" ;
             <td>@Html.DisplayFor(modelItem => item.custodePontos)</td>
             <td>@Html.DisplayFor(modelItem => item.qtdeRecomepensas)</td>
             <td>
-                @Html.ActionLink("Resgatar", "Resgate", new{id = item.idRecompensa,onclick="return confirm('Deseja mesmo regaatar essa recomepnsa?');"})
+                @Html.ActionLink("Resgatar", "ResgatarRecompensa", new{ id = item.idRecompensa, htmlAtributtes = new{ @onclick="return confirm('Deseja mesmo regaatar essa recompensa?');"}})
             </td>
         </tr>
     }
