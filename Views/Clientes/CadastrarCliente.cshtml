@@ -1,5 +1,5 @@
 <!-- Namespace da classe de Modelo-->
-@model Reciganha_MVC.Models.ClienteViewModel
+@model ReciGanhaMVC.Models.ClienteViewModel
 
 
 <!-- Erro not found-->
@@ -18,69 +18,68 @@
     </div>
 }
 
-<!--<div class="background">
-    <div class="container-fluid">
-        <section>
-
-        </section>
-    </div>
-</div>-->
 
 
 
-<div class="background">
-    <div class="container">
-        <div class="darkBox">
-            <div class="row">
-                <div class="col-6">
-                    <div class="center">
-                        <!--LOGO-->
-                        <img id="logo" src="~/assets/img/Logo.png" alt="Logo ReciGanha">
 
-                        <h1 id="bem-vindo">BEM-VINDO</h1>
 
+
+
+
+<div class="background container-fluid  d-flex flex-sm-wrap ">
+    @if (@TempData["Mensagem"] != null)
+        {
+            <div class="alert alert-succes" role="alert">
+            @TempData["Mensagem"]</div>
+        }
+        <section class="darkgreenbox row mx-auto w-75 ">
+                <div class="col-md-6 col-sm-12 text-center border border-dark d-flex flex-column  justify-content-around">
+                     <!--LOGO-->
+                        <div><img class="w-25" id="logo" src="wwwroot/assets/img/Logo.png" alt="Logo ReciGanha"></div>
+
+                        <h1 class="bem-vindo " >BEM-VINDO</h1>
 
                         <p id="contaExist" >Já possui uma conta?</p>
                         @{
-                            <a class="nav-link" asp-area="" asp-controller="Clientes" asp-action="IndexLogin" ><button type="button" class="entrar btn text-white rounded-pill">Entrar</button></a>
+                            <a class="nav-link" asp-area="" asp-controller="Clientes" asp-action="IndexLogin" ><button type="button" class="entrar  btn text-white rounded-pill ">Entrar</button></a>
                         }
-
-                        
-                    </div><!--FIM CENTER-->
-                </div><!--FIM COLUNA-->
-
-                <div class="col-6">
-                    <div class="greenBox">
-                        <div class="center">
-                            <h1 id="h1">Crie sua conta</h1>
+                </div>
+                <div class="cadastro col-md-6 text-center border border-dark d-flex flex-column">
+                   <h1 id="h1">Crie sua conta</h1>
                             <h3 id="h3">Preencha seus dados</h3>
                             <!--método que será chamado/ controller/tipo Post-->
                             @using(Html.BeginForm("Registrar", "Clientes", FormMethod.Post))
                             {
-                                @Html.AntiForgeryToken()
+                                @Html.AntiForgeryToken()<!--É um método que gera e insere no HTML gerado na view um código para evitar que se falsifique o envio de dados para o servidor.-->
+
                                 <div class="form-group">
                                     <img  alt="" class="icon" src="https://cdn-icons-png.flaticon.com/512/1828/1828439.png">
-                                    <span>Nome:</span>
-                                    <!--Campo TextBox -->
-                                    @Html.EditorFor(model => model.NomeCliente, new { htmlAttributes = new { @class = "form-control", @name = "nome"} })
+                                    <label for="NomeCliente">nome</label>
+                                    @Html.TextBoxFor(model => model.NomeCliente, new { htmlAttributes = new { @class = "form-control", @name = "NomeCliente"} })
                                 </div>
 
                                 <div class="form-group">
                                     <img  alt="" class="icon" src="https://cdn-icons-png.flaticon.com/512/4213/4213922.png">
-                                    <span>Email:</span>   
-                                    @Html.EditorFor(model => model.EmailCliente, new { htmlAttributes= new{ @class = "form-control", @name = "email"}})
+                                    <label for="EmailCliente">email</label>  
+                                    @Html.TextBoxFor(model => model.EmailCliente, new { htmlAttributes= new{ @class = "form-control", @name = "EmailCliente", @type="email"}})
                                     
                                 </div>
 
                                 <div class="form-group">
                                     <img  alt="" class="icon" src="https://cdn-icons-png.flaticon.com/512/102/102643.png">
-                                    <span> Senha: </span>
+                                    <label for="senha">senha</label>
                                         @Html.PasswordFor(model => model.PasswordString, new {htmlAttributes = new {@class = "form-control", @name = "senha"}})
                                 </div>
                                 <div> 
-                                    <input type="submit" value="Cadastrar" class="cadastrar btn text-white rounded-pill"/>
+                                    <button type="submit" value="Cadastrar" class="cadastrar btn text-white rounded-pill">Cadastrar</button>
                                 </div> 
                             }
+                </div>
+        </section>
+</div>
+
+
+                            
 
 
 
@@ -106,15 +105,6 @@
                                Exemplo de Link (Texto, View, Controller) 
                                     Html.ActionLink("Retornar", "index", "Home", null, new {  class = "btn text-white rounded-pill" })
                             </div>-->
-
-                        </div><!--FIM CENTER-->
-                    </div><!--FIM GREENBOX-->
-                </div><!--FIM COLUNA-->
-            </div><!--FIM LINHA-->
-        </div><!--FIM DARKBOX-->
-        
-    </div><!--FIM CONTAINER-->
-</div><!--FIM BACKGROUND-->
 
 
 

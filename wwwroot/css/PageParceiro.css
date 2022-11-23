@@ -1,0 +1,54 @@
+
+.background{
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+}
+
+.darkgreenbox{
+
+    /* font size */
+    background-color: rgba(000, 000, 000, 0.58);
+    position: relative;
+    top: 10vh;
+    height: 80vh;
+    width: 60vw;
+    border-radius: 50px;
+}
+
+.greenBox{
+    /* font size */
+    height: 76vh;
+    width: 30vw;
+    background-color: rgba(89, 174, 51, 0.6);
+    border-radius: 60px;
+    position: relative;
+    top: 2vh;
+    right: 2vw;
+}
+
+.form-group{
+    font-family: 'Ubuntu', sans-serif;
+    width: 80%;
+    height: 5vh;
+    background-color: rgba(89, 174, 51, 0.3);
+    margin-bottom: 5vh;
+    color: white;
+    text-shadow: 2px 1px black;
+}
+
+.form-control{
+    font-family: 'Ubuntu', sans-serif;
+    background-color: rgba(red, green, blue, 0.0);
+    background-color: rgba(0, 0, 0, 0.0);
+    margin: 7px;
+    margin-left: 15px;
+    width: 15vw;
+    border: none;
+}
+
+.imagemcentral {
+   float: left;
+   height: 800px;
+   width: 600px;
+}

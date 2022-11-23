@@ -1,0 +1,58 @@
+span{
+    display: block;
+    padding-top: 1.5vh;
+}
+#mainColeta{
+    background: rgb(30,32,69);
+    background: linear-gradient(0deg, rgba(30,32,69,1) 0%, rgba(79,91,170,1) 100%);
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+#list-cards{
+    margin: 8vh 2vw 2vh 2vw;
+    /*background-color: rgb(22, 22, 172)*/;
+    width: 100vw;
+    height: auto;
+}
+.btnInserir{
+    position: relative;
+    left: 46vw;
+    margin-bottom: 2vh;
+    background-color: #ad7c01;
+}
+.card{
+    width: 18rem;
+    height: 25rem;
+    margin-bottom:  3rem;
+    margin-right: 20px;
+    padding: 5px 4px 5px 4px;
+    border-color: rgba(5, 5, 163, 0.897);
+    border-width: 3px;
+    border-radius: 12px;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+input{
+    height: 2.5rem;
+    border-color: rgba(0, 0, 255, 0.479);
+    border-width: 2px;
+    margin-top: 20px;
+    border-radius: 7px;
+}
+
+.card > img{
+    height: 8rem;
+    width: 17rem;
+    width: auto;
+}
+
+form{
+    padding-top: 3rem;
+}

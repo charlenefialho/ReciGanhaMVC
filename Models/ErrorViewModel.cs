@@ -1,6 +1,6 @@
 using System;
 
-namespace Reciganha_MVC.Models
+namespace ReciGanhaMVC.Models
 {
     public class ErrorViewModel
     {

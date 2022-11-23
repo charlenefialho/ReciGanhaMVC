@@ -1,0 +1,79 @@
+@model ReciGanhaMVC.Models.ParceiroViewModel
+
+@{
+    ViewBag.Title = "ParceiroHome";
+}
+
+@if (@TempData["Mensagem"] != null)
+{
+    <div class="alert alert-succes" role="alert">
+    @TempData["Mensagem"]</div>
+}
+
+<!--Configuração da mensagem Temporaria-->
+@if (@TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["MensagemErro"]
+    </div>
+}
+
+<div class="background container-fluid  d-flex flex-sm-wrap ">
+    @if (@TempData["Mensagem"] != null)
+        {
+            <div class="alert alert-succes" role="alert">
+            @TempData["Mensagem"]</div>
+        }
+
+        <img  alt="" class="imagemcentral" src="../assets/img/Parceiros.jpeg">
+
+        <section class="darkgreenbox row mx-auto w-75 ">
+                <div class="col-md-6 col-sm-12 text-center border border-dark d-flex flex-column  justify-content-around">
+                     <!--LOGO-->
+                        <div><img class="w-25" id="logo" src="wwwroot/assets/img/Logo.png" alt="Logo ReciGanha"></div>
+
+                        <h1 class="bem-vindo " >Prazer, somos a Parceiros Associados</h1>
+
+                        <!--<p >Acreditamos em transformar o mundo em um lugar melhor e mais sustentável.
+                            Mas mudar o mundo não é algo que se faça sozinho, não é mesmo?! Com tecnologias sociais e soluções personalizadas
+                            para nossos parceiros com foco no desenvolvimento sustentável das comunidades e territórios, acreditamos que podemos
+                            contribuir um pouco mais juntando nossas forças!
+
+                        </p> -->
+                </div>
+                <div class="cadastro col-md-6 text-center border border-dark d-flex flex-column">
+                   <h1 id="h1">Seja nosso parceiro!</h1>
+                            <h3 id="h3">Preencha seus dados</h3>
+                            <!--método que será chamado/ controller/tipo Post-->
+                            @using(Html.BeginForm("Registrar", "Clientes", FormMethod.Post))
+                            {
+                                @Html.AntiForgeryToken()<!--É um método que gera e insere no HTML gerado na view um código para evitar que se falsifique o envio de dados para o servidor.-->
+
+                                <div class="form-group">
+                                    <img  alt="" class="icon" src="">
+                                    <label for="nome">Empresa</label>
+                                    @Html.TextBoxFor(model => model.NomeParceiro, new { htmlAttributes = new { @class = "form-control", @name = "nome"} })
+                                </div>
+
+                                <div class="form-group">
+                                    <img  alt="" class="icon" src="">
+                                    <label for="email">CNPJ</label>  
+                                    @Html.TextBoxFor(model => model.CnpjParceiro, new { htmlAttributes= new{ @class = "form-control", @name = "cnpj", @type="cnpj"}})
+                                    
+                                </div>
+
+                                <div> 
+                                    <button type="submit" value="Cadastrar" class="cadastrar btn text-white rounded-pill">Cadastrar</button>
+                                </div> 
+                            }
+                </div>
+        </section>
+
+        <p >Acreditamos em transformar o mundo em um lugar melhor e mais sustentável.
+                            Mas mudar o mundo não é algo que se faça sozinho, não é mesmo?! Com tecnologias sociais e soluções personalizadas
+                            para nossos parceiros com foco no desenvolvimento sustentável das comunidades e territórios, acreditamos que podemos
+                            contribuir um pouco mais juntando nossas forças!
+
+                        </p>
+                        
+</div>

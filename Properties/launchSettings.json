@@ -3,8 +3,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:48548",
-      "sslPort": 44389
+      "applicationUrl": "http://localhost:5411",
+      "sslPort": 44306
     }
   },
   "profiles": {
@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Reciganha_MVC": {
+    "ReciGanhaMVC": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,

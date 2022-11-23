@@ -224,19 +224,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\etechas\\.nuget\\packages\\": {}
+    "C:\\Users\\chazi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "E:\\PTCC\\ReciGanhaMVC\\Reciganha_MVC.csproj",
       "projectName": "Reciganha_MVC",
       "projectPath": "E:\\PTCC\\ReciGanhaMVC\\Reciganha_MVC.csproj",
       "packagesPath": "C:\\Users\\etechas\\.nuget\\packages\\",
       "outputPath": "E:\\PTCC\\ReciGanhaMVC\\obj\\",
+=======
+      "projectUniqueName": "C:\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
+      "projectName": "ReciGanhaMVC",
+      "projectPath": "C:\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
+      "packagesPath": "C:\\Users\\chazi\\.nuget\\packages\\",
+      "outputPath": "C:\\ReciGanhaMVC\\obj\\",
+>>>>>>> 6cb938645672b1d9e30b139c1ef70d71b0ff97f2
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\etechas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\chazi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -277,12 +285,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.17, 5.0.17]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -291,7 +293,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

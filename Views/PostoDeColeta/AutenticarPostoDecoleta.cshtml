@@ -1,0 +1,52 @@
+@model ReciGanhaMVC.Models.PostoDeColetaViewModel;
+
+@{
+    ViewBag.Title = "AutenticarPostoDeColeta";
+}
+
+@if (@TempData["Mensagem"] != null)
+{
+    <div class="alert alert-succes" role="alert">
+    @TempData["Mensagem"]</div>
+}
+
+<!--Configuração da mensagem Temporaria-->
+@if (@TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["MensagemErro"]
+    </div>
+}
+
+<main id="viewAutenticarPosto">
+    <article id="Autenticacao">
+        @using (Html.BeginForm("Autenticar", "PostoDeColeta",FormMethod.Post,  new {hmlAttributes= new {@id="formLogin"} }))
+        {
+            @Html.AntiForgeryToken()
+            <div class="form-group">
+                <label for="CNPJ">CNPJ</label>
+                @Html.EditorFor(model => model.CNPJ, new {hmlAttributes= new {@class = "form-control", @name ="CNPJ", @maxlength="14"} })
+            </div>
+
+            //XX.XXX.XXX/0001-XX
+            // \d{2}\.\d{3}\.\d{3}\/\000\d{*}\-\d{2}
+
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                @Html.PasswordFor(model => model.PasswordString, new {hmlAttributes= new {@class = "form-control", @name ="senha"} })
+            </div>
+
+            <div>
+                <button type="submit" value="Logar" class="cadastrar btn text-white rounded-pill">Logar</button>
+            </div>
+
+            <div>
+                <p>
+                    <a  asp-area="AutenticarPostoDeColeta" asp-controller="PostoDeColeta" asp-action="IndexLogin">
+                     Ja é cadastrado?Faça o login
+                    </a>
+                </p>
+            </div>
+        }
+    </article>
+</main>

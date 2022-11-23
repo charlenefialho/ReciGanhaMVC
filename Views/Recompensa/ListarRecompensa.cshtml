@@ -1,0 +1,83 @@
+@model IEnumerable<ReciGanhaMVC.Models.RecompensaViewModel>
+
+@{
+    ViewBag.Title = "Recompensas" ; 
+}
+
+<div class="background">
+@if (@TempData["CodigoRecompensa"] != null)
+{
+    
+        <div class="modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Código</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    
+                        <p>@TempData["CodigoRecompensa"]</p>
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+                </div>
+            </div>
+            </div>
+}
+
+
+    <div class="container-fluid">
+        @if (@TempData["Mensagem"] != null)
+        {
+            <div class="alert alert-succes" role="alert">
+            @TempData["Mensagem"]</div>
+        }
+
+        <!--Configuração para exibir mensagem de erro -->
+        @if (@TempData["MensagemErro"] != null)
+        {
+            <div class="alert alert-danger" role="alert">
+                @TempData["MensagemErro"]
+            </div>
+        }
+
+<style>
+    .table{
+        margin-top: 15vh;
+    }
+
+    h2{
+        margin-top: 5vh;
+    }
+</style>
+
+<h2>recompensas</h2>
+
+<table class="table">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.idRecompensa)</th>
+        <th>@Html.DisplayNameFor(model => model.nomeRecompensa)</th>
+        <th>@Html.DisplayNameFor(model => model.descricao)</th>
+        <th>@Html.DisplayNameFor(model => model.custodePontos)</th>
+        <th>@Html.DisplayNameFor(model => model.qtdeRecomepensas)</th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.idRecompensa)</td>
+            <td>@Html.DisplayFor(modelItem => item.nomeRecompensa)</td>
+            <td>@Html.DisplayFor(modelItem => item.descricao)</td>
+            <td>@Html.DisplayFor(modelItem => item.custodePontos)</td>
+            <td>@Html.DisplayFor(modelItem => item.qtdeRecomepensas)</td>
+            <td>
+                @Html.ActionLink("Resgatar", "Resgatar", new{ id = item.idRecompensa})
+            </td>
+        </tr>
+    }
+</table>

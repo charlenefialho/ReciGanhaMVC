@@ -1,0 +1,14 @@
+#viewHomeCliente{
+    width: 100%;
+    height: 100vh;
+}
+
+#acoesAmbiente{
+    margin: 10vh 2vw 2vh 2vw;
+    width: 100vw;
+}
+
+#listagemColetas{
+    width: 30vw;
+    height: 30vh;
+}
