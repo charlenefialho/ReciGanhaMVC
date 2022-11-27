@@ -1,4 +1,4 @@
-@model ReciGanhaMVC.Models.PostoDeColetaViewModel;
+@model ReciGanhaMVC.Models.PostoDeColetaViewModel 
 
 @{
     ViewBag.Title = "RegistrarPostoDeColeta";
@@ -30,16 +30,29 @@
 
             <div class="form-group">
                 <label for="CNPJ">CNPJ</label>
-                @Html.TextBoxFor(model => model.CNPJ, new {hmlAttributes= new {@placeholder="XX.XXX.XXX/YYYY-ZZ", @class = "form-control",@name ="CNPJ", @maxlength="14", @id="CNPJ", onfocus="cnpj(this.value)"} })
+                @Html.TextBoxFor(model => model.CNPJ, new {hmlAttributes= new { @class = "form-control",@name ="CNPJ", @maxlength="14", @id="CNPJ"} })
             </div>
 
             <div class="form-group">
                 <label for="senha">Senha</label>
                 @Html.PasswordFor(model => model.PasswordString, new {hmlAttributes= new {@class = "form-control", @name ="senha"} })
             </div>
+            <div class="form-group">
+                <label for="Plastico">Plástico</label>
+                @Html.CheckBoxFor(model => model.SelecionadoPlastico, new {hmlAttributes= new {@id="Plastico", @name ="Plastico"} })
+
+                 <label for="Metal">Metal</label>
+                @Html.CheckBoxFor(model => model.SelecionadoMetal , new {hmlAttributes= new {@id="Metal", @name ="Metal"} })
+
+                 <label for="Papel">Papel</label>
+                @Html.CheckBoxFor(model => model.SelecionadoPapel , new {hmlAttributes= new {@id="Papel", @name ="Papel"} })
+
+                 <label for="Vidro">Vidro</label>
+                @Html.CheckBoxFor(model => model.SelecionadoVidro , new {hmlAttributes= new {@id="Vidro", @name ="Vidro"} })
+            </div>
 
             <div>
-                <button type="submit" value="Cadastrar" class="cadastrar btn text-white rounded-pill">Cadastrar</button>
+                <button type="submit" value="Cadastrar" class="cadastrar btn text-white rounded-pill" id="botaoDialog">Cadastrar</button>
             </div>
 
             <div>

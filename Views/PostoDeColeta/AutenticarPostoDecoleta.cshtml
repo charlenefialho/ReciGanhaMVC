@@ -6,8 +6,9 @@
 
 @if (@TempData["Mensagem"] != null)
 {
-    <div class="alert alert-succes" role="alert">
-    @TempData["Mensagem"]</div>
+    <dialog open id="dialog">
+        @TempData["Mensagem"]
+    </dialog>
 }
 
 <!--Configuração da mensagem Temporaria-->
@@ -50,3 +51,4 @@
         }
     </article>
 </main>
+
