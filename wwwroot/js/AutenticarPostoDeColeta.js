@@ -1,8 +1,8 @@
 (function() {
 var modal = document.getElementById('dialog');
-var botaoTeste = document.getElementById('botaoDialog');
+var cancel = document.getElementById('cancel');
 
-    botaoTeste.addEventListener('click', function() {
-        modal.showModal();
+    cancel.addEventListener('click', function() {
+        modal.close();
       });
     });

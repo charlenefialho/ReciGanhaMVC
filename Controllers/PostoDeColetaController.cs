@@ -62,7 +62,7 @@ namespace ReciGanhaMVC.Controllers
         {
             try
             {
-                /*if(string.IsNullOrEmpty(p.CNPJ))
+                if(string.IsNullOrEmpty(p.CNPJ))
                     throw new Exception("Digite o CNPJ");
 
                 if(string.IsNullOrEmpty(p.NomePosto))
@@ -72,7 +72,7 @@ namespace ReciGanhaMVC.Controllers
                     throw new Exception("O cnpj deve ter 14 caracteres");
 
                 if(Validacoes.IsCnpj(p.CNPJ) == false)
-                    throw new Exception("Insira um CNPJ Válido");*/
+                    throw new Exception("Insira um CNPJ Válido");
 
 
                 p.MateriaisAceitos = new List<MateriaisAceitos>();
