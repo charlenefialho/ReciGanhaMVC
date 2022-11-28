@@ -25,5 +25,11 @@ namespace ReciGanhaMVC.Models
         public string PasswordString { get; set; }
         
         public List<MateriaisAceitos> MateriaisAceitos { get; set; }
+        public bool SelecionadoPlastico { get; set; }
+        public bool SelecionadoMetal{ get; set; }
+        public bool SelecionadoPapel{ get; set; }
+        public bool SelecionadoVidro{ get; set; }
+
     }
+
 }
