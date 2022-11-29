@@ -136,6 +136,7 @@ D:\charlene\ReciGanhaMVC\obj\Debug\net5.0\refint\Reciganha_MVC.dll
 D:\charlene\ReciGanhaMVC\obj\Debug\net5.0\Reciganha_MVC.pdb
 D:\charlene\ReciGanhaMVC\obj\Debug\net5.0\Reciganha_MVC.genruntimeconfig.cache
 D:\charlene\ReciGanhaMVC\obj\Debug\net5.0\ref\Reciganha_MVC.dll
+<<<<<<< HEAD
 C:\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\Coleta\NewColeta.cshtml.g.cs
 E:\PTCC\ReciGanhaMVC\bin\Debug\net5.0\appsettings.Development.json
 E:\PTCC\ReciGanhaMVC\bin\Debug\net5.0\appsettings.json
@@ -184,6 +185,8 @@ E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\refint\Reciganha_MVC.dll
 E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Reciganha_MVC.pdb
 E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Reciganha_MVC.genruntimeconfig.cache
 E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\ref\Reciganha_MVC.dll
+=======
+>>>>>>> e61fe17621721f1f6cf7db04bead304c1e77c55f
 F:\PTCC\ReciGanhaMVC\bin\Debug\net5.0\appsettings.Development.json
 F:\PTCC\ReciGanhaMVC\bin\Debug\net5.0\appsettings.json
 F:\PTCC\ReciGanhaMVC\bin\Debug\net5.0\Reciganha_MVC.exe
@@ -213,7 +216,10 @@ F:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Reciganha_MVC.TagHelpers.output.cache
 F:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Reciganha_MVC.RazorCoreGenerate.cache
 F:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\Clientes\AutenticarCliente.cshtml.g.cs
 F:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\Clientes\CadastrarCliente.cshtml.g.cs
+<<<<<<< HEAD
 F:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\Coleta\NewColeta.cshtml.g.cs
+=======
+>>>>>>> e61fe17621721f1f6cf7db04bead304c1e77c55f
 F:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 F:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 F:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
@@ -231,3 +237,52 @@ F:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\refint\Reciganha_MVC.dll
 F:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Reciganha_MVC.pdb
 F:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Reciganha_MVC.genruntimeconfig.cache
 F:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\ref\Reciganha_MVC.dll
+<<<<<<< HEAD
+=======
+E:\PTCC\ReciGanhaMVC\bin\Debug\net5.0\appsettings.Development.json
+E:\PTCC\ReciGanhaMVC\bin\Debug\net5.0\appsettings.json
+E:\PTCC\ReciGanhaMVC\bin\Debug\net5.0\Reciganha_MVC.exe
+E:\PTCC\ReciGanhaMVC\bin\Debug\net5.0\Reciganha_MVC.deps.json
+E:\PTCC\ReciGanhaMVC\bin\Debug\net5.0\Reciganha_MVC.runtimeconfig.json
+E:\PTCC\ReciGanhaMVC\bin\Debug\net5.0\Reciganha_MVC.runtimeconfig.dev.json
+E:\PTCC\ReciGanhaMVC\bin\Debug\net5.0\Reciganha_MVC.dll
+E:\PTCC\ReciGanhaMVC\bin\Debug\net5.0\Reciganha_MVC.pdb
+E:\PTCC\ReciGanhaMVC\bin\Debug\net5.0\Reciganha_MVC.Views.dll
+E:\PTCC\ReciGanhaMVC\bin\Debug\net5.0\Reciganha_MVC.Views.pdb
+E:\PTCC\ReciGanhaMVC\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+E:\PTCC\ReciGanhaMVC\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+E:\PTCC\ReciGanhaMVC\bin\Debug\net5.0\Newtonsoft.Json.dll
+E:\PTCC\ReciGanhaMVC\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Reciganha_MVC.csproj.AssemblyReference.cache
+E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Reciganha_MVC.GeneratedMSBuildEditorConfig.editorconfig
+E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Reciganha_MVC.AssemblyInfoInputs.cache
+E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Reciganha_MVC.AssemblyInfo.cs
+E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Reciganha_MVC.csproj.CoreCompileInputs.cache
+E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Reciganha_MVC.MvcApplicationPartsAssemblyInfo.cache
+E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Reciganha_MVC.RazorAssemblyInfo.cache
+E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Reciganha_MVC.RazorAssemblyInfo.cs
+E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\scopedcss\bundle\Reciganha_MVC.styles.css
+E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\staticwebassets\Reciganha_MVC.StaticWebAssets.Manifest.cache
+E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Reciganha_MVC.TagHelpers.input.cache
+E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Reciganha_MVC.TagHelpers.output.cache
+E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Reciganha_MVC.RazorCoreGenerate.cache
+E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\Clientes\AutenticarCliente.cshtml.g.cs
+E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\Clientes\CadastrarCliente.cshtml.g.cs
+E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\Shared\_LoginPartialCliente.cshtml.g.cs
+E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Reciganha_MVC.RazorTargetAssemblyInfo.cache
+E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Reciganha_MVC.RazorTargetAssemblyInfo.cs
+E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Reciganha_MVC.Views.pdb
+E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Reciganha_MVC.csproj.CopyComplete
+E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Reciganha_MVC.dll
+E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\refint\Reciganha_MVC.dll
+E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Reciganha_MVC.pdb
+E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\Reciganha_MVC.genruntimeconfig.cache
+E:\PTCC\ReciGanhaMVC\obj\Debug\net5.0\ref\Reciganha_MVC.dll
+>>>>>>> e61fe17621721f1f6cf7db04bead304c1e77c55f

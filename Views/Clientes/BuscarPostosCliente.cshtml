@@ -1,0 +1,50 @@
+
+<!-- Titulo da view-->
+@{
+    ViewBag.Title = "BuscarPostos";
+}
+
+<!--Configuração da mensagem Temporaria-->
+@if (@TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["MensagemErro"]
+    </div>
+}
+
+
+
+<main id="viewBuscarPostos">
+        <article class="row" id="article">
+            <section id="inputs" class="col-md-6">
+                <h2 class="titulosPostos">Encontre o ponto mais próximo de você</h2>
+                <h5 class="titulosPostos">Digite o seu CEP para bscarmos o posto mais proximo de você!</h5>
+                <div class="cep">
+                        <label for="cep" id="textCep">CEP</label>
+                    <input type="text" id="cepInput" name="cep"placeholder="000-000-000-00" maxlength="14">
+                </div>
+                <div class="opcaoProduto">
+                    <label for="produto" id="textProduto">Produto</label>
+                    <select name="produto" id="produto">
+                        <optgroup>
+                            <option value="papel">Papel</option>
+                            <option value="metal">Metal</option>
+                            <option value="plastico">Plástico</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </section>
+            <section id="map" class="col-md-6">
+                                <iframe
+                width="600"
+                height="450"
+                style="border:0"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDJ5hajTuoPhXvvlj7Sd97xEi7g7SDaPdc
+                    &q=Space+Needle,Seattle+WA">
+                </iframe>
+            </section>
+        </article>
+    </main>

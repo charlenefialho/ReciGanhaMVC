@@ -6,10 +6,17 @@
     <title>@ViewData["Title"] - Reciganha_MVC</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/Style.css" />
     <link rel="stylesheet" href="~/css/Home.css" />
     <link rel="stylesheet" href="~/css/CadastrarCliente.css"/>
     <link rel="stylesheet" href="~/css/Header.css"/>
     <link rel="stylesheet" href="~/css/NewColeta.css"/>
+    <link rel="stylesheet" href="~/css/AutenticarCliente.css"/>
+    <link rel="stylesheet" href="~/css/PageCliente.css"/>
+    <link rel="stylesheet" href="~/css/AutenticarPostoDeColeta.css"/>
+    <link rel="stylesheet" href="~/css/RegistrarPostoDeColeta.css"/>
+    <link rel="stylesheet" href="~/css/BuscarPostosCliente.css"/>
+    
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -21,29 +28,33 @@
     <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
         <ul class="navbar-nav align-items-center">
             <li class="nav-item active">
-                <a class="nav-link text-white"  asp-area="" asp-controller="Home" asp-action="Index" >HOME</a>
+                <a class="nav-link text-white"  asp-area="" asp-controller="Home" asp-action="Index" >Home</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link text-white " asp-area="" asp-controller="" asp-action="">SOBRE</a>
+                <a class="nav-link text-white " asp-area="" asp-controller="" asp-action="">Sobre</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link text-white " asp-area="" asp-controller="" asp-action="">POSTOS DE COLETA</a>
+                <a class="nav-link text-white " asp-area="" asp-controller="Clientes" asp-action="IndexBuscarPostos">Postos de Coleta</a>
             </li>
             <li class="nav-item active">
+<<<<<<< HEAD
                 <a class="nav-link text-white " asp-area="NewColeta" asp-controller="Coleta" asp-action="InsertColeta">COLETA</a>
+=======
+                <a class="nav-link text-white " asp-area="Cadastrar" asp-controller="PostoDeColeta" asp-action="IndexCadastroPosto">Coleta</a>
+>>>>>>> e61fe17621721f1f6cf7db04bead304c1e77c55f
             </li>
             <li class="nav-item active">
-                <a class="nav-link text-white " asp-area="" asp-controller="" asp-action="">PARCEIROS</a>
+                <a class="nav-link text-white " asp-area="Cadastrar" asp-controller="Parceiro" asp-action="IndexPageParceiro">Parceiros</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link text-white " asp-area="" asp-controller="" asp-action="">CONSULTAR PONTOS</a>
+                <a class="nav-link text-white " asp-area="" asp-controller="" asp-action="">Consultar Pontos</a>
             </li>
         </ul>
     </div>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav align-items-center">
             <li class="nav-item active">
-                <a class="nav-link text-white " asp-area="" asp-controller="" asp-action="">FAÇA A SUA DOAÇÃO</a>
+                <a class="nav-link text-white " asp-area="" asp-controller="" asp-action="">Faça sua doação</a>
             </li>
             <li class="nav-item">
                 <partial name="_LoginPartialCliente"></partial>
@@ -54,9 +65,12 @@
 
 
      @RenderBody()
+<<<<<<< HEAD
         
     
 
+=======
+>>>>>>> e61fe17621721f1f6cf7db04bead304c1e77c55f
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/NewColeta.js" asp-append-version="true"></script>

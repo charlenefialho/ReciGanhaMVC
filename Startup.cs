@@ -9,7 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace Reciganha_MVC
+namespace ReciGanhaMVC
 {
     public class Startup
     {
@@ -24,6 +24,7 @@ namespace Reciganha_MVC
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
             //Armazenamento de token do usuario no servidor com expiração após 60 min
             services.AddSession(option =>{option.IdleTimeout = System.TimeSpan.FromSeconds(3600);});
         }
@@ -47,8 +48,8 @@ namespace Reciganha_MVC
             app.UseRouting();
 
             app.UseAuthorization();
-            
-            //uso de sessão
+
+             //uso de sessão
             app.UseSession();
 
             app.UseEndpoints(endpoints =>

@@ -1,0 +1,18 @@
+is_global = true
+build_property.TargetFramework = net5.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+<<<<<<< HEAD:obj/Debug/net5.0/Reciganha_MVC.GeneratedMSBuildEditorConfig.editorconfig
+build_property.RootNamespace = Reciganha_MVC
+build_property.ProjectDir = E:\PTCC\ReciGanhaMVC\
+<<<<<<< HEAD:obj/Debug/net5.0/Reciganha_MVC.GeneratedMSBuildEditorConfig.editorconfig
+=======
+=======
+build_property.RootNamespace = ReciGanhaMVC
+build_property.ProjectDir = C:\ReciGanhaMVC\
+>>>>>>> 6cb938645672b1d9e30b139c1ef70d71b0ff97f2:obj/Debug/net5.0/ReciGanhaMVC.GeneratedMSBuildEditorConfig.editorconfig
+>>>>>>> e61fe17621721f1f6cf7db04bead304c1e77c55f:obj/Debug/net5.0/ReciGanhaMVC.GeneratedMSBuildEditorConfig.editorconfig
