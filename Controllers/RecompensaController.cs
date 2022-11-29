@@ -44,7 +44,7 @@ namespace ReciGanhaMVC.Controllers
                     
                     JsonConvert.DeserializeObject<List<RecompensaViewModel>>(serializedInfo));
 
-                    //TempData["CodigoRecompensa"] = string.Format(serialized);
+                    TempData["CodigoRecompensa"] = string.Format(serialized);
 
                     return View("ListarRecompensa", listaRecompensas);
                 }

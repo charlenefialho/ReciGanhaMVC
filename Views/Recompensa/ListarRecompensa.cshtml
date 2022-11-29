@@ -5,31 +5,6 @@
 }
 
 <div class="background">
-@if (@TempData["CodigoRecompensa"] != null)
-{
-    
-        <div class="modal" tabindex="-1">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Código</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    
-                        <p>@TempData["CodigoRecompensa"]</p>
-                    
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-                </div>
-            </div>
-            </div>
-}
-
 
     <div class="container-fluid">
         @if (@TempData["Mensagem"] != null)
@@ -54,9 +29,17 @@
     h2{
         margin-top: 5vh;
     }
+
+    #mensagem-modal{
+        color: black;
+    }
 </style>
 
 <h2>recompensas</h2>
+
+<button class="btn btn-primary" data-toggle="modal" data-target="#modal-mensagem" asp-controller="Recompensa" asp-action="Resgatar">
+Exibir mensagem
+</button>
 
 <table class="table">
     <tr>
@@ -76,13 +59,19 @@
             <td>@Html.DisplayFor(modelItem => item.custodePontos)</td>
             <td>@Html.DisplayFor(modelItem => item.qtdeRecomepensas)</td>
             <td>
-                @Html.ActionLink("Resgatar", "Resgatar", new{ id = item.idRecompensa})
+               <button class="btn btn-primary" asp-controller="Recompensa" asp-action="Resgatar">
+                Resgatar
+                </button>
             </td>
         </tr>
     }
 </table>
+<!--
+ @Html.ActionLink("Resgatar", "Resgatar","Recompensa", new{ htmlAttributes= new { @class = "btn btn-primary", @name="btn-mensagem-modal"}});-->
 
- <div class="modal" tabindex="-1">
+<!--<p>@TempData["CodigoRecompensa"]</p>-->
+
+ <div class="modal" id="modal-mensagem" tabindex="-1">
             <div class="modal-dialog">
                 <div class="modal-content">
                 <div class="modal-header">
@@ -92,9 +81,10 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    
-                        <p>@TempData["CodigoRecompensa"]</p>
-                    
+                             @if (@TempData["CodigoRecompensa"] != null)
+                            {
+                                <p id="mensagem-modal">@TempData["CodigoRecompensa"]</p>
+                            }
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
