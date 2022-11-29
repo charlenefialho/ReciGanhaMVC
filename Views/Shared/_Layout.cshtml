@@ -13,10 +13,11 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-    <a class="navbar-brand" href="#"><img src="assets/img/Logo.png" id="logoNav" ></a>
+    <a class="navbar-brand <a "href="#"><img src="assets/img/Logo.png" id="logoNav" ></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+       <span class="navbar-toggler-icon"></span>
+    </button>
+    
     <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
         <ul class="navbar-nav align-items-center">
             <li class="nav-item active">
@@ -29,7 +30,7 @@
                 <a class="nav-link text-white " asp-area="" asp-controller="" asp-action="">POSTOS DE COLETA</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link text-white " asp-area="NewColeta" asp-controller="Coleta" asp-action="InsertColeta">Coleta</a>
+                <a class="nav-link text-white " asp-area="NewColeta" asp-controller="Coleta" asp-action="InsertColeta">COLETA</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link text-white " asp-area="" asp-controller="" asp-action="">PARCEIROS</a>
@@ -55,9 +56,6 @@
      @RenderBody()
         
     
-
-    
-
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

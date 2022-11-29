@@ -1,81 +1,70 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
-
-.linhaUm{
-  padding-top: 40vh;
+.backgroundUm{
+  background-image: url("../assets/img/ImageHome.jpeg");
+  background-size: cover; /*mantem a tela inteira*/
+  background-repeat: no-repeat;
+  background-position: left;
+  
+  width: 100vw; /*area vizivel*/
+  height: 70vw;
+  margin: auto;
+}
+img{
+  height: 70px;
+  width: 100px;
+  padding: 0;
 }
 
-p{
-  font-family: Arial, Helvetica, sans-serif;
-  color: white;
+
+h1 {
+  padding-top: 50vh;
+  font-size: 50px;
+  font-weight: 800;
+  text-shadow: 4px 4px 5px black; /*sombreamento*/
+  color: white; 
+}
+h2{
+  padding-top: 0vh;
+  font-size: 50px;
+  font-weight: 800;
+  text-shadow: 2px 1px 2px white; /*sombreamento*/
+  color: #0E531D;
 }
 
 footer{
-  background-color: gray;
+  width: 100%;
+  min-height: 20px;
 }
 
 .row{
   color: white;
+  margin-top: 9.1vh;
 }
 
-img{
-  height: 40px;
-  width: 100px;
-}
 
-.backgroundUm{
-  width: 100%;
-  height: 100vh;
-  background-image: url("../assets/img/ImageHome.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-blend-mode: darken;
- 
-}
-
-/*#footer {
-  margin-left: 0.1vh;
+#footer {
+  background-color: #0E531D;
+  margin-top: -25vh;
   margin-right: 0.1vh;
-}*/
+}
+
 
 #rowFooter{
-  padding-left: 1vh;
-  padding-top: 4vh;
+  background-color: #003829;
+  padding-left: 5vh;
+  padding-top: 5vh;
 }
-
 
 @media (min-width: 768px) {
   html {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
 html {
   font-size: 14px;
-  
 }
-
-
-#textbox{
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 25px;
-  text-align: center;
-  
-  padding-top: 4vh;
-  padding-bottom: 4vh;
-  min-height: 18vh;
-  max-height: 30vh;    
-}
-#text{
-  padding-top: 3.5vh;
-}
-
-.header-padding{
-  height: 80px;
-}
-/* Sticky footer styles*/
--------------------------------------------------- 
 
 
 
@@ -103,11 +92,5 @@ html {
   min-height: 100%;
 }
 
-.footer {
-  
-  position: sticky;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-}
+
 
