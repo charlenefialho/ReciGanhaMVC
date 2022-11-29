@@ -59,9 +59,9 @@ Exibir mensagem
             <td>@Html.DisplayFor(modelItem => item.custodePontos)</td>
             <td>@Html.DisplayFor(modelItem => item.qtdeRecomepensas)</td>
             <td>
-               <button class="btn btn-primary" asp-controller="Recompensa" asp-action="Resgatar">
-                Resgatar
-                </button>
+            @Html.ActionLink("Resgatar", "Resgatar", new{id = @item.idRecompensa},new { @class = "btn btn-primary btnResgate"});
+
+              <!-- <a href="#" class="btn btn-default btnResgate" data-value="item.idRecompensa">Resgatar</a>-->
             </td>
         </tr>
     }
@@ -80,11 +80,10 @@ Exibir mensagem
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                             @if (@TempData["CodigoRecompensa"] != null)
-                            {
-                                <p id="mensagem-modal">@TempData["CodigoRecompensa"]</p>
-                            }
+                <div class="modal-body" id="conteudo-modal">
+
+                    <p id="mensagem-modal" >@TempData["CodigoRecompensa"]</p>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -92,5 +91,3 @@ Exibir mensagem
                 </div>
             </div>
             </div>
-
-            
