@@ -13,6 +13,10 @@ build_property.ProjectDir = E:\PTCC\ReciGanhaMVC\
 =======
 =======
 build_property.RootNamespace = ReciGanhaMVC
+<<<<<<< HEAD
 build_property.ProjectDir = C:\ReciGanhaMVC\
 >>>>>>> 6cb938645672b1d9e30b139c1ef70d71b0ff97f2:obj/Debug/net5.0/ReciGanhaMVC.GeneratedMSBuildEditorConfig.editorconfig
 >>>>>>> e61fe17621721f1f6cf7db04bead304c1e77c55f:obj/Debug/net5.0/ReciGanhaMVC.GeneratedMSBuildEditorConfig.editorconfig
+=======
+build_property.ProjectDir = D:\tccteste2311\ReciGanhaMVC\
+>>>>>>> 79a0beaa6eb31391b565b9442560754a89662ffb

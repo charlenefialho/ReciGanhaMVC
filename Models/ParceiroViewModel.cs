@@ -12,6 +12,7 @@ namespace ReciGanhaMVC.Models
         public string EmailParceiro {get; set;}
         public string CnpjParceiro{get; set;}
         public byte[] FotoParceiro { get; set; } 
+        public string RegiaoParceiro {get; set;}
         
 
     }
