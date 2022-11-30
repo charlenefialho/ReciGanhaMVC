@@ -16,6 +16,7 @@ namespace ReciGanhaMVC.Models
         public string? WebSite { get; set; }
         #nullable disable
         public string Latitude { get; set; }
+        
         public string Longitude { get; set; }
         public DateTime DataLimiteExibicao { get; set; }
         public int StatusPosto { get; set; }
@@ -23,6 +24,7 @@ namespace ReciGanhaMVC.Models
         public byte[] PasswordSalt { get; set; }
 
         public string PasswordString { get; set; }
+        
         
         public List<MateriaisAceitos> MateriaisAceitos { get; set; }
         public bool SelecionadoPlastico { get; set; }

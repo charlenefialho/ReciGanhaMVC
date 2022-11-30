@@ -12,7 +12,7 @@
 function abrirModalCodigo(id){
   //alert(id);
   $.ajax({
-     url: "@Url.Action("Resgatar","Recompensa")",
+     url: "@Url.Action("Resgatar","Recompensa")"  ,
     success: function (retorno) {
         alert(retorno);
         $("#conteudo-modal").modal("show")
