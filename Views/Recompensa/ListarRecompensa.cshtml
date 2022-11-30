@@ -59,16 +59,13 @@ Exibir mensagem
             <td>@Html.DisplayFor(modelItem => item.custodePontos)</td>
             <td>@Html.DisplayFor(modelItem => item.qtdeRecomepensas)</td>
             <td>
-            @Html.ActionLink("Resgatar", "Resgatar", new{id = @item.idRecompensa},new { @class = "btn btn-primary btnResgate"});
+              @Html.ActionLink("Resgatar", "Resgatar", new{id = item.idRecompensa},new { @class = "btn btn-primary btnResgate", onclick="abrirModalCodigo(@item.idRecompensa)"})
 
-              <!-- <a href="#" class="btn btn-default btnResgate" data-value="item.idRecompensa">Resgatar</a>-->
+              <!--<a href="#" class="btn btn-default btnResgate" data-value="@item.idRecompensa" onclick="abrirModalCodigo(@item.idRecompensa)">Resgatar</a>-->
             </td>
         </tr>
     }
 </table>
-<!--
- @Html.ActionLink("Resgatar", "Resgatar","Recompensa", new{ htmlAttributes= new { @class = "btn btn-primary", @name="btn-mensagem-modal"}});-->
-
 <!--<p>@TempData["CodigoRecompensa"]</p>-->
 
  <div class="modal" id="modal-mensagem" tabindex="-1">
@@ -81,8 +78,9 @@ Exibir mensagem
                     </button>
                 </div>
                 <div class="modal-body" id="conteudo-modal">
+                     <p id="mensagem-modal" >@TempData["CodigoRecompensa"]</p>
+                 
 
-                    <p id="mensagem-modal" >@TempData["CodigoRecompensa"]</p>
 
                 </div>
                 <div class="modal-footer">

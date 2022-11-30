@@ -1,6 +1,6 @@
-﻿
+﻿/*
 window.onload = function(){
-  fetch('http://localhost:5000/TipoMaterial',{
+  fetch('http://localhost:5000/TipoMaterial'),{
     "mode": "no-cors",
     "method": "GET"
   }).then(data => {
@@ -26,6 +26,8 @@ window.onload = function(){
     });
 });
 */
+
+/*
 function adicionarCardsMaterial(materiais){
     let section = document.getElementsByClassName("cards");
 
@@ -35,7 +37,7 @@ function adicionarCardsMaterial(materiais){
         card.classList.add("card");
         card.innerHTML = '<img src="assets/img/metal.jpg" class="card-img-top " alt="latinhas de refrigerante"/>'
         '<div class="card-body">'
-          '<h5 class="card-title text-dark">Aluminio</h5>'
+          '<h5 class="card-title text-dark">element.nomeMaterial</h5>'
           '<select>'
             '<option value="' + element.idTipoMaterial +'">'
               + element.nomeMaterial +
@@ -47,3 +49,4 @@ function adicionarCardsMaterial(materiais){
           section.appendChild(card)
     });
 }
+*/
