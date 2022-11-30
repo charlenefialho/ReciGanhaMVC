@@ -1,47 +1,17 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-<<<<<<< HEAD:obj/Reciganha_MVC.csproj.nuget.dgspec.json
-=======
-<<<<<<< HEAD:obj/Reciganha_MVC.csproj.nuget.dgspec.json
->>>>>>> e61fe17621721f1f6cf7db04bead304c1e77c55f:obj/ReciGanhaMVC.csproj.nuget.dgspec.json
-    "E:\\PTCC\\ReciGanhaMVC\\Reciganha_MVC.csproj": {}
+    "E:\\TCC\\MVC\\ReciGanhaMVC\\ReciGanhaMVC.csproj": {}
   },
   "projects": {
-    "E:\\PTCC\\ReciGanhaMVC\\Reciganha_MVC.csproj": {
+    "E:\\TCC\\MVC\\ReciGanhaMVC\\ReciGanhaMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\PTCC\\ReciGanhaMVC\\Reciganha_MVC.csproj",
-        "projectName": "Reciganha_MVC",
-        "projectPath": "E:\\PTCC\\ReciGanhaMVC\\Reciganha_MVC.csproj",
-        "packagesPath": "C:\\Users\\etechas\\.nuget\\packages\\",
-        "outputPath": "E:\\PTCC\\ReciGanhaMVC\\obj\\",
-<<<<<<< HEAD:obj/Reciganha_MVC.csproj.nuget.dgspec.json
-=======
-=======
-    "C:\\ReciGanhaMVC\\ReciGanhaMVC.csproj": {}
-=======
-    "D:\\tccteste2311\\ReciGanhaMVC\\ReciGanhaMVC.csproj": {}
->>>>>>> 79a0beaa6eb31391b565b9442560754a89662ffb
-  },
-  "projects": {
-    "D:\\tccteste2311\\ReciGanhaMVC\\ReciGanhaMVC.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\tccteste2311\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
+        "projectUniqueName": "E:\\TCC\\MVC\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
         "projectName": "ReciGanhaMVC",
-<<<<<<< HEAD
-        "projectPath": "C:\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
-        "packagesPath": "C:\\Users\\chazi\\.nuget\\packages\\",
-        "outputPath": "C:\\ReciGanhaMVC\\obj\\",
->>>>>>> 6cb938645672b1d9e30b139c1ef70d71b0ff97f2:obj/ReciGanhaMVC.csproj.nuget.dgspec.json
->>>>>>> e61fe17621721f1f6cf7db04bead304c1e77c55f:obj/ReciGanhaMVC.csproj.nuget.dgspec.json
-=======
-        "projectPath": "D:\\tccteste2311\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
+        "projectPath": "E:\\TCC\\MVC\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
         "packagesPath": "C:\\Users\\etechas\\.nuget\\packages\\",
-        "outputPath": "D:\\tccteste2311\\ReciGanhaMVC\\obj\\",
->>>>>>> 79a0beaa6eb31391b565b9442560754a89662ffb
+        "outputPath": "E:\\TCC\\MVC\\ReciGanhaMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\etechas\\AppData\\Roaming\\NuGet\\NuGet.Config",

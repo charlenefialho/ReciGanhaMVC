@@ -1,6 +1,5 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
-<<<<<<< HEAD
 .backgroundUm{
   background-image: url("../assets/img/ImageHome.jpeg");
   background-size: cover; /*mantem a tela inteira*/
@@ -47,58 +46,10 @@ footer{
 #footer {
   background-color: #0E531D;
   margin-top: -25vh;
-=======
-
-.linhaUm {
-    padding-top: 30vh;
-}
-
-h1,h2  {
-    font-family: 'Times New Roman', Times, serif;
-    font-style: normal
-    color white;
-}
-
-/* 
-mudar fonte personalisada!
-@font-face {
-  font-family: 'Open Sans';
-  src: url('OpenSans-Regular.ttf') format('truetype');
-}
-*/
-
-footer {
-    background-color: transparent;
-}
-
-.row {
-    color: white;
-}
-
-img {
-    height: 40px;
-    width: 100px;
-}
-
-.backgroundUm {
-    width: 100%;
-    height: 100vh;
-    background-image: url("../assets/img/ImageHome.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-blend-mode: darken;
-}
-
-
-/*#footer {
-  margin-left: 0.1vh;
->>>>>>> e61fe17621721f1f6cf7db04bead304c1e77c55f
   margin-right: 0.1vh;
 }
 
 
-<<<<<<< HEAD
 #rowFooter{
   background-color: #003829;
   padding-left: 5vh;
@@ -119,46 +70,6 @@ html {
 
 .border-top {
   border-top: 1px solid #e5e5e5;
-=======
-#rowFooter {
-    padding-left: 1vh;
-    padding-top: 4vh;
-}
-
-@media (min-width: 768px) {
-    html {
-        font-size: 16px;
-    }
-}
-
-html {
-    font-size: 14px;
-}
-
-#textbox {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 25px;
-    text-align: center;
-    padding-top: 4vh;
-    padding-bottom: 4vh;
-    min-height: 18vh;
-    max-height: 30vh;
-}
-
-#text {
-    padding-top: 3.5vh;
-}
-
-.header-padding {
-    height: 80px;
-}
-
-
-/* Sticky footer styles*/
-
--------------------------------------------------- .border-top {
-    border-top: 1px solid #e5e5e5;
->>>>>>> e61fe17621721f1f6cf7db04bead304c1e77c55f
 }
 
 .border-bottom {
@@ -182,14 +93,5 @@ html {
     min-height: 100%;
 }
 
-<<<<<<< HEAD
 
 
-=======
-.footer {
-    position: sticky;
-    bottom: 0;
-    width: 100%;
-    white-space: nowrap;
-}
->>>>>>> e61fe17621721f1f6cf7db04bead304c1e77c55f
