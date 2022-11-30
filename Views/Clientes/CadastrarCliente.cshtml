@@ -18,73 +18,68 @@
     </div>
 }
 
+<div class="content">
+    <div class="container">
+        <div class="row greenBox">
+            <div class="col-md-6 ">
+                <img class="img-fluid img-cadastro" id="logo" src="assets/img/Logo.png" alt="Logo ReciGanha">
+            </div>
+            <div class="col-md-6 contents">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 darkgreenbox">
+                        <div class="mb-4">
+                            <h3>Sign In</h3>
+                            <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur
+                                adipisicing.</p>
+                        </div>
 
+                        @using (Html.BeginForm("Registrar", "Clientes", FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
+                                <!--É um método que gera e insere no HTML gerado na view um código para evitar que se falsifique o envio de dados para o servidor.-->
 
-
-
-
-
-
-
-<div class="background container-fluid  d-flex flex-sm-wrap ">
-    @if (@TempData["Mensagem"] != null)
-        {
-            <div class="alert alert-succes" role="alert">
-            @TempData["Mensagem"]</div>
-        }
-        <section class="darkgreenbox row mx-auto w-75 ">
-                <div class="col-md-6 col-sm-12 text-center border border-dark d-flex flex-column  justify-content-around">
-                     <!--LOGO-->
-                        <div><img class="w-25" id="logo" src="wwwroot/assets/img/Logo.png" alt="Logo ReciGanha"></div>
-
-                        <h1 class="bem-vindo " >BEM-VINDO</h1>
-
-                        <p id="contaExist" >Já possui uma conta?</p>
-                        @{
-                            <a class="nav-link" asp-area="" asp-controller="Clientes" asp-action="IndexLogin" ><button type="button" class="entrar  btn text-white rounded-pill ">Entrar</button></a>
-                        }
-                </div>
-                <div class="cadastro col-md-6 text-center border border-dark d-flex flex-column">
-                   <h1 id="h1">Crie sua conta</h1>
-                            <h3 id="h3">Preencha seus dados</h3>
-                            <!--método que será chamado/ controller/tipo Post-->
-                            @using(Html.BeginForm("Registrar", "Clientes", FormMethod.Post))
-                            {
-                                @Html.AntiForgeryToken()<!--É um método que gera e insere no HTML gerado na view um código para evitar que se falsifique o envio de dados para o servidor.-->
-
-                                <div class="form-group">
-                                    <img  alt="" class="icon" src="https://cdn-icons-png.flaticon.com/512/1828/1828439.png">
-                                    <label for="NomeCliente">nome</label>
+                            <div class="form-group first">
+                                <label for="NomeCliente">nome</label>
                                     @Html.TextBoxFor(model => model.NomeCliente, new { htmlAttributes = new { @class = "form-control", @name = "NomeCliente"} })
-                                </div>
+                            </div>
+                            <div class="form-group middle mb-4">
+                                <label for="EmailCliente">email</label>
+                                    @Html.TextBoxFor(model => model.EmailCliente, new { htmlAttributes = new { @class = "form-control", @name = "EmailCliente", @type="email"}})
+                            </div>
 
-                                <div class="form-group">
-                                    <img  alt="" class="icon" src="https://cdn-icons-png.flaticon.com/512/4213/4213922.png">
-                                    <label for="EmailCliente">email</label>  
-                                    @Html.TextBoxFor(model => model.EmailCliente, new { htmlAttributes= new{ @class = "form-control", @name = "EmailCliente", @type="email"}})
-                                    
-                                </div>
-
-                                <div class="form-group">
-                                    <img  alt="" class="icon" src="https://cdn-icons-png.flaticon.com/512/102/102643.png">
-                                    <label for="senha">senha</label>
-                                        @Html.PasswordFor(model => model.PasswordString, new {htmlAttributes = new {@class = "form-control", @name = "senha"}})
-                                </div>
-                                <div> 
-                                    <button type="submit" value="Cadastrar" class="cadastrar btn text-white rounded-pill">Cadastrar</button>
-                                </div> 
-                            }
+                            <div class="form-group last mb-4">
+                                <label for="senha">senha</label>
+                                @Html.PasswordFor(model => model.PasswordString, new {htmlAttributes = new {@class = "form-control",@name = "senha"}})
+                            </div>
+                            <button type="submit" value="Cadastrar" class="cadastrar btn text-white rounded-pill">Cadastrar</button>
+                            <span class="d-block text-left my-4 text-muted">— or login with —</span>
+                        }
+                        <form action="#" method="post">
+                            
+                            <input type="submit" value="Log In" class="btn btn-block btn-primary">
+                            
+                        </form>
+                    </div>
                 </div>
-        </section>
+            </div>
+        </div>
+    </div>
 </div>
 
 
-                            
 
 
 
 
-                            <!--<form action="/Cliente/Autenticar" method="post">
+
+
+
+
+
+
+
+
+<!--<form action="/Cliente/Autenticar" method="post">
                                 <div class="form-group">
                                     <input type="text" id="nome" name="nome" value="Cliente.NomeCliente">
                                     <label for="nome">Nome:</label>
@@ -105,8 +100,3 @@
                                Exemplo de Link (Texto, View, Controller) 
                                     Html.ActionLink("Retornar", "index", "Home", null, new {  class = "btn text-white rounded-pill" })
                             </div>-->
-
-
-
-
-
