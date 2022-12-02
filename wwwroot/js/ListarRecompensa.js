@@ -9,6 +9,7 @@
   });
 });
 */
+/*
 function abrirModalCodigo(id){
   //alert(id);
   $.ajax({
@@ -19,6 +20,7 @@ function abrirModalCodigo(id){
     }
 });
 }
+*/
 
 /*$(document).ready(function(){
   $(".btnResgate").click(function(){
@@ -43,7 +45,7 @@ function abrirModalCodigo(id){
   });
 });
 */
- /*$(document).ready(function(){
+ $(document).ready(function(){
             $(".btnResgate").click(function(){
 
                 var id = $(this).data("value");
@@ -55,4 +57,4 @@ function abrirModalCodigo(id){
                 });
             });
         }); 
-*/
+

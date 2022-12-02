@@ -59,9 +59,7 @@ Exibir mensagem
             <td>@Html.DisplayFor(modelItem => item.custodePontos)</td>
             <td>@Html.DisplayFor(modelItem => item.qtdeRecomepensas)</td>
             <td>
-              @Html.ActionLink("Resgatar", "Resgatar", new{id = item.idRecompensa},new { @class = "btn btn-primary btnResgate", onclick="abrirModalCodigo(@item.idRecompensa)"})
-
-              <!--<a href="#" class="btn btn-default btnResgate" data-value="@item.idRecompensa" onclick="abrirModalCodigo(@item.idRecompensa)">Resgatar</a>-->
+              <a href="#" class="btn btn-default btnResgate" data-value="@item.idRecompensa" onclick="abrirModalCodigo(@item.idRecompensa)">Resgatar</a>
             </td>
         </tr>
     }
