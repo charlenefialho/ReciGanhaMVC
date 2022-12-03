@@ -28,14 +28,17 @@
     }
 
     async function getPostos() {
-        @* var e = document.getElementById("produto");
-        var value = e.value;  *@
-        let url = "http://ReciGanha.somee.com/API/Cliente/ScanPostos";
-        
+         var e = document.getElementById("produto");
+        var value = e.value;
+        console.log(value);  
+        let url = "http://localhost:5000/Cliente/ScanPostos"; 
+        //let url = "http://localhost:5000/Cliente/ScanPostos/" + value;
+        //let url = "http://ReciGanha.somee.com/API/Cliente/ScanPostos";
+        console.log(url);  
 
         const response = await fetch(url);
         const data = await response.json();
-        //console.log(data);
+        console.log(data);
         return data;
     }
 
@@ -50,7 +53,7 @@
         var mapOptions = {
             center: meuEndereco,
             zoom: 15,
-            //minZoom: 15,
+            minZoom: 13,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
 
@@ -58,12 +61,12 @@
 
         if(postos == null)
             console.log("Posto: " + postos);
-
+        console.log(postos.length);
         for (let i = 0; i < postos.length; i++) {
             //console.log("Latitude: " + parseFloat(postos[i].latitude));
 
             const latLng = new google.maps.LatLng(parseFloat(postos[i].latitude), parseFloat(postos[i].longitude));
-
+            console.log("latLng: " + latLng);
             const contentString = `
                 <h2 style="color: black; background-color: aliceblue;" id="nomePosto)">` + postos[i].nomePosto + `</h2>
                 <label style="color: black; background-color: aliceblue;" id="enderecoPosto">`+ postos[i].endereco +`</label>
@@ -86,7 +89,7 @@
                     shouldFocus: true
                 });
             });
-
+            marker.setMap(map);
             @* const infoWindow = new google.maps.infoWindow(infoWindowOptions);
             infoWindow.open(infoWindowOpenOptions); *@
         }
@@ -116,9 +119,9 @@
                 <select name="produto" id="produto">
                     <optgroup>
                         <option value="0">TODOS</option>
-                        <option value="3">Papel</option>
-                        <option value="2">Metal</option>
                         <option value="1">Plástico</option>
+                        <option value="2">Metal</option>
+                        <option value="3">Papel</option>
                     </optgroup>
                 </select>
             </div>
