@@ -37,6 +37,27 @@
                 <label for="senha">Senha</label>
                 @Html.PasswordFor(model => model.PasswordString, new {htmlAttributes= new {@class = "form-control", @name ="senha"} })
             </div>
+
+            <div class="form-group">
+                <label for="Numero">Numero</label>
+                @Html.TextBoxFor(model => model.NumeroRua, new {htmlAttributes= new {@class = "form-control", @name ="Numero", @type= "number"} })
+            </div>
+
+            <div class="form-group">
+                <label for="Rua">Rua</label>
+                @Html.TextBoxFor(model => model.Rua, new {htmlAttributes= new {@class = "form-control", @name ="Rua"} })
+            </div>
+
+            <div class="form-group">
+                <label for="Bairro">Bairro</label>
+                @Html.TextBoxFor(model => model.Bairro, new {htmlAttributes= new {@class = "form-control", @name ="Bairro"} })
+            </div>
+
+            <div class="form-group">
+                <label for="CEP">CEP</label>
+                @Html.TextBoxFor(model => model.CEP, new {htmlAttributes= new {@class = "form-control", @name ="CEP"} })
+            </div>
+
             <div class="form-group">
                 <label for="Plastico">Plástico</label>
                 @Html.CheckBoxFor(model => model.SelecionadoPlastico, new {htmlAttributes= new {@id="Plastico", @name ="Plastico"} })

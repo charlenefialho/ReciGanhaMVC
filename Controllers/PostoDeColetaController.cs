@@ -74,7 +74,7 @@ namespace ReciGanhaMVC.Controllers
                 if(Validacoes.IsCnpj(p.CNPJ) == false)
                     throw new Exception("Insira um CNPJ Válido");
 
-
+                
                 p.MateriaisAceitos = new List<MateriaisAceitos>();
                 if(p.SelecionadoPlastico == true)
                 {
@@ -103,6 +103,7 @@ namespace ReciGanhaMVC.Controllers
                     itemVidro.TipoMaterialId = (int)Models.Enuns.TipoMaterialEnum.Vidro;
                     p.MateriaisAceitos.Add(itemVidro);
                 }
+                
                 
                 HttpClient httpClient = new HttpClient();
                 string uriComplementar = "Registrar";
