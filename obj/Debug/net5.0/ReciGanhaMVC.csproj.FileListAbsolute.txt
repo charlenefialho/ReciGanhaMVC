@@ -263,3 +263,4 @@ D:\Projetos\Gabriel\TCC\ReciGanhaMVC\obj\Debug\net5.0\refint\ReciGanhaMVC.dll
 D:\Projetos\Gabriel\TCC\ReciGanhaMVC\obj\Debug\net5.0\ReciGanhaMVC.pdb
 D:\Projetos\Gabriel\TCC\ReciGanhaMVC\obj\Debug\net5.0\ReciGanhaMVC.genruntimeconfig.cache
 D:\Projetos\Gabriel\TCC\ReciGanhaMVC\obj\Debug\net5.0\ref\ReciGanhaMVC.dll
+D:\TCC\ReciGanhaMVC\bin\Debug\net5.0\package-lock.json
