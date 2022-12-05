@@ -45,6 +45,7 @@ function abrirModalCodigo(id){
   });
 });
 */
+/*
  $(document).ready(function(){
             $(".btnResgate").click(function(){
 
@@ -58,3 +59,4 @@ function abrirModalCodigo(id){
             });
         }); 
 
+*/

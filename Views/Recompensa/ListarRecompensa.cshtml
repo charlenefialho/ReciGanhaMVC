@@ -38,8 +38,16 @@
 <h2>recompensas</h2>
 
 <button class="btn btn-primary" data-toggle="modal" data-target="#modal-mensagem" asp-controller="Recompensa" asp-action="Resgatar">
-Exibir mensagem
+Exibir codigo
 </button>
+
+@if (@TempData["CodigoRecompensa"] != null)
+    {
+        <div class="alert alert-succes" role="alert"> <p style="color: black;">
+            Codigo : @TempData["CodigoRecompensa"]
+        </p>
+        </div>
+    }
 
 <table class="table">
     <tr>
@@ -59,7 +67,7 @@ Exibir mensagem
             <td>@Html.DisplayFor(modelItem => item.custodePontos)</td>
             <td>@Html.DisplayFor(modelItem => item.qtdeRecomepensas)</td>
             <td>
-              <a href="#" class="btn btn-default btnResgate" data-value="@item.idRecompensa" onclick="abrirModalCodigo(@item.idRecompensa)">Resgatar</a>
+              @Html.ActionLink("Resgatar", "Resgatar", new{id = item.idRecompensa},new { @class = "btn btn-primary btnResgate"})
             </td>
         </tr>
     }

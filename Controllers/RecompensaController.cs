@@ -13,7 +13,7 @@ namespace ReciGanhaMVC.Controllers
     public class RecompensaController : Controller
     {
         public string uriBase = "http://reciganha.somee.com/API/Recompensa/";
-        //public string uriBase = "http://localhost:5000/Recompensa/";]
+        //public string uriBase = "http://localhost:5000/Recompensa/";
 
         
 
