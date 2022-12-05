@@ -1,4 +1,4 @@
-@model ReciGanhaMVC.Models.PostoDeColetaViewModel;
+@model ReciGanhaMVC.Models.PostoDeColetaViewModel 
 
 @{
     ViewBag.Title = "RegistrarPostoDeColeta";
@@ -20,26 +20,60 @@
 
 <main id="viewRegistrarPosto">
     <article id="Registro">
-        @using (Html.BeginForm("Registrar", "PostoDeColeta",FormMethod.Post,  new {hmlAttributes= new {@id="formRegistro"} }))
+        @using (Html.BeginForm("Registrar", "PostoDeColeta",FormMethod.Post,  new {htmlAttributes= new {@id="formRegistro"} }))
         {
             @Html.AntiForgeryToken()
             <div class="form-group">
                 <label for="nomePosto">Nome do Posto</label>
-                @Html.TextBoxFor(model => model.NomePosto, new {hmlAttributes= new {@class = "form-control", @name ="nomePosto"} })
+                @Html.TextBoxFor(model => model.NomePosto, new {htmlAttributes= new {@class = "form-control", @name ="nomePosto"} })
             </div>
 
             <div class="form-group">
                 <label for="CNPJ">CNPJ</label>
-                @Html.TextBoxFor(model => model.CNPJ, new {hmlAttributes= new {@placeholder="XX.XXX.XXX/YYYY-ZZ", @class = "form-control",@name ="CNPJ", @maxlength="14", @id="CNPJ", onfocus="cnpj(this.value)"} })
+                @Html.TextBoxFor(model => model.CNPJ, new {htmlAttributes= new { @class = "form-control",@name ="CNPJ", @maxlength="14", @id="CNPJ"} })
             </div>
 
             <div class="form-group">
                 <label for="senha">Senha</label>
-                @Html.PasswordFor(model => model.PasswordString, new {hmlAttributes= new {@class = "form-control", @name ="senha"} })
+                @Html.PasswordFor(model => model.PasswordString, new {htmlAttributes= new {@class = "form-control", @name ="senha"} })
+            </div>
+
+            <div class="form-group">
+                <label for="Numero">Numero</label>
+                @Html.TextBoxFor(model => model.NumeroRua, new {htmlAttributes= new {@class = "form-control", @name ="Numero", @type= "number"} })
+            </div>
+
+            <div class="form-group">
+                <label for="Rua">Rua</label>
+                @Html.TextBoxFor(model => model.Rua, new {htmlAttributes= new {@class = "form-control", @name ="Rua"} })
+            </div>
+
+            <div class="form-group">
+                <label for="Bairro">Bairro</label>
+                @Html.TextBoxFor(model => model.Bairro, new {htmlAttributes= new {@class = "form-control", @name ="Bairro"} })
+            </div>
+
+            <div class="form-group">
+                <label for="CEP">CEP</label>
+                @Html.TextBoxFor(model => model.CEP, new {htmlAttributes= new {@class = "form-control", @name ="CEP"} })
+            </div>
+
+            <div class="form-group">
+                <label for="Plastico">Plástico</label>
+                @Html.CheckBoxFor(model => model.SelecionadoPlastico, new {htmlAttributes= new {@id="Plastico", @name ="Plastico"} })
+
+                 <label for="Metal">Metal</label>
+                @Html.CheckBoxFor(model => model.SelecionadoMetal , new {htmlAttributes= new {@id="Metal", @name ="Metal"} })
+
+                 <label for="Papel">Papel</label>
+                @Html.CheckBoxFor(model => model.SelecionadoPapel , new {htmlAttributes= new {@id="Papel", @name ="Papel"} })
+
+                 <label for="Vidro">Vidro</label>
+                @Html.CheckBoxFor(model => model.SelecionadoVidro , new {htmlAttributes= new {@id="Vidro", @name ="Vidro"} })
             </div>
 
             <div>
-                <button type="submit" value="Cadastrar" class="cadastrar btn text-white rounded-pill">Cadastrar</button>
+                <button type="submit" value="Cadastrar" class="cadastrar btn text-white rounded-pill" id="botaoDialog">Cadastrar</button>
             </div>
 
             <div>

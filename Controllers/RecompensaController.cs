@@ -13,7 +13,7 @@ namespace ReciGanhaMVC.Controllers
     public class RecompensaController : Controller
     {
         public string uriBase = "http://reciganha.somee.com/API/Recompensa/";
-        //public string uriBase = "http://localhost:5000/Recompensa/";]
+        //public string uriBase = "http://localhost:5000/Recompensa/";
 
         
 
@@ -27,7 +27,7 @@ namespace ReciGanhaMVC.Controllers
                 string token = HttpContext.Session.GetString("SessionTokenCliente");
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
-                HttpResponseMessage response = await httpClient.GetAsync("http://reciganha.somee.com/API/Recompensa/"+ uriComplementar + id.ToString());
+                HttpResponseMessage response = await httpClient.GetAsync(uriBase + uriComplementar + id.ToString());
                 string serialized = await response.Content.ReadAsStringAsync();
 
                 //get recompensas
@@ -38,13 +38,13 @@ namespace ReciGanhaMVC.Controllers
 
                 //&& response.StatusCode == System.Net.HttpStatusCode.BadRequest
 
-                if(responseInfo.StatusCode == System.Net.HttpStatusCode.OK)
+                if(response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
                     List<RecompensaViewModel> listaRecompensas= await Task.Run(() =>
                     
                     JsonConvert.DeserializeObject<List<RecompensaViewModel>>(serializedInfo));
 
-                    TempData["CodigoRecompensa"] = serialized;
+                    TempData["CodigoRecompensa"] = string.Format(serialized);
 
                     return View("ListarRecompensa", listaRecompensas);
                 }
@@ -54,7 +54,7 @@ namespace ReciGanhaMVC.Controllers
             catch(Exception ex)
             {
                 TempData["MensagemErro"] = ex.Message;
-                return View("ListarRecompensa");
+                return RedirectToAction("IndexPageCliente", "Clientes");
             }
         }
 
@@ -89,7 +89,7 @@ namespace ReciGanhaMVC.Controllers
             catch(Exception ex)
             {
                 TempData["MensagemErro"] = ex.Message;
-                return View("ListarRecompensa");
+                return RedirectToAction("IndexPageCliente", "Clientes");
             }
         }
     }

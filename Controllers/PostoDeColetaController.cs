@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using ReciGanhaMVC.Models;
+using System.Collections.Generic;
 using System.Threading.Tasks;//Uso para Try/Catch
 using System.Net.Http;//Using para JsonConvert
 using Newtonsoft.Json;//Using para HttpClient
@@ -73,7 +74,37 @@ namespace ReciGanhaMVC.Controllers
                 if(Validacoes.IsCnpj(p.CNPJ) == false)
                     throw new Exception("Insira um CNPJ Válido");
 
+                
+                p.MateriaisAceitos = new List<MateriaisAceitos>();
+                if(p.SelecionadoPlastico == true)
+                {
+                    MateriaisAceitos itemPlastico = new MateriaisAceitos();
+                    itemPlastico.TipoMaterialId = (int)Models.Enuns.TipoMaterialEnum.Plastico;
+                    p.MateriaisAceitos.Add(itemPlastico);
+                }
 
+                 if(p.SelecionadoMetal == true)
+                {
+                    MateriaisAceitos itemMetal = new MateriaisAceitos();
+                    itemMetal.TipoMaterialId = (int)Models.Enuns.TipoMaterialEnum.Metal;
+                    p.MateriaisAceitos.Add(itemMetal);
+                }
+
+                if(p.SelecionadoPapel == true)
+                {
+                    MateriaisAceitos itemPapel = new MateriaisAceitos();
+                    itemPapel.TipoMaterialId = (int)Models.Enuns.TipoMaterialEnum.Papel;
+                    p.MateriaisAceitos.Add(itemPapel);
+                }
+
+                if(p.SelecionadoVidro == true)
+                {
+                    MateriaisAceitos itemVidro = new MateriaisAceitos();
+                    itemVidro.TipoMaterialId = (int)Models.Enuns.TipoMaterialEnum.Vidro;
+                    p.MateriaisAceitos.Add(itemVidro);
+                }
+                
+                
                 HttpClient httpClient = new HttpClient();
                 string uriComplementar = "Registrar";
                 var content = new StringContent(JsonConvert.SerializeObject(p));//serialização do objeto c
@@ -84,7 +115,7 @@ namespace ReciGanhaMVC.Controllers
 
                 if(response.StatusCode == System.Net.HttpStatusCode.OK)//Consultando qual foi o status da requisição, se foi Ok
                 {
-                    TempData["Mensagem"] = string.Format("{0} foi registrado com sucesso! Faça o login para acessar.", p.NomePosto);//exibir mensagem temporaria
+                    TempData["Mensagem"] = string.Format("{0} foi registrado com sucesso! Faça o login para acessar", p.NomePosto);//exibir mensagem temporaria
                     return View("AutenticarPostoDeColeta"); //redirecionar para a view de login
                 }
                 else

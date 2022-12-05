@@ -1,4 +1,3 @@
-
 <!-- Titulo da view-->
 @{
     ViewBag.Title = "BuscarPostos";
@@ -12,39 +11,115 @@
     </div>
 }
 
+@section Scripts{
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDELCWZC3lZFYbHhvblR3jwUWJUO_W0N0A"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+<script type="text/javascript">
 
+    async function getCoord() {
+        var input = document.querySelector("#cepInput");
+        var texto = input.value;
+        let url = "http://ReciGanha.somee.com/API/Cliente/GetCoords/" + texto;
+
+        const response = await fetch(url);
+        const data = await response.json();
+        return data;
+    }
+
+    async function getPostos() {
+         var e = document.getElementById("produto");
+        var value = e.value;
+        //let url = "http://localhost:5000/Cliente/ScanPostos"; 
+        //let url = "http://localhost:5000/Cliente/ScanPostos/" + value;
+        let url = "http://ReciGanha.somee.com/API/Cliente/ScanPostos/" + value;
+
+        const response = await fetch(url);
+        const data = await response.json();
+        return data;
+    }
+
+    async function ExibirGoogleMaps() {
+
+        const coors = await getCoord();
+        let postos = await getPostos();
+
+        var meuEndereco = new google.maps.LatLng(coors.lat, coors.lng);
+        //Cria opções ou um conjunto de recursos no Google Map
+
+        var mapOptions = {
+            center: meuEndereco,
+            zoom: 15,
+            minZoom: 13,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        var map = new google.maps.Map(document.getElementById("macDiv"), mapOptions);
+
+        for (let i = 0; i < postos.length; i++) {
+
+            const latLng = new google.maps.LatLng(postos[i].latitude, postos[i].longitude);
+            const contentString = `
+                <h2 style="color: black; background-color: aliceblue;" id="nomePosto)">` + postos[i].nomePosto + `</h2>
+                <label style="color: black; background-color: aliceblue;" id="enderecoPosto">`+ postos[i].endereco +`</label>
+            `;
+
+            const infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+
+            const marker = new google.maps.Marker({
+                position: latLng,
+                map: map,
+
+            });
+
+            marker.addListener("click", () => {
+                infowindow.open({
+                    anchor: marker,
+                    map,
+                    shouldFocus: true
+                });
+            });
+            marker.setMap(map);
+            @* const infoWindow = new google.maps.infoWindow(infoWindowOptions);
+            infoWindow.open(infoWindowOpenOptions); *@
+        }
+
+        var marcador = new google.maps.Marker({
+            position: meuEndereco,
+            animation: google.maps.Animation.BOUNCE,
+        });
+        marcador.setMap(map);
+    }
+
+</script>
+}
 
 <main id="viewBuscarPostos">
-        <article class="row" id="article">
-            <section id="inputs" class="col-md-6">
-                <h2 class="titulosPostos">Encontre o ponto mais próximo de você</h2>
-                <h5 class="titulosPostos">Digite o seu CEP para bscarmos o posto mais proximo de você!</h5>
-                <div class="cep">
-                        <label for="cep" id="textCep">CEP</label>
-                    <input type="text" id="cepInput" name="cep"placeholder="000-000-000-00" maxlength="14">
-                </div>
-                <div class="opcaoProduto">
-                    <label for="produto" id="textProduto">Produto</label>
-                    <select name="produto" id="produto">
-                        <optgroup>
-                            <option value="papel">Papel</option>
-                            <option value="metal">Metal</option>
-                            <option value="plastico">Plástico</option>
-                        </optgroup>
-                    </select>
-                </div>
-            </section>
-            <section id="map" class="col-md-6">
-                                <iframe
-                width="600"
-                height="450"
-                style="border:0"
-                loading="lazy"
-                allowfullscreen
-                referrerpolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDJ5hajTuoPhXvvlj7Sd97xEi7g7SDaPdc
-                    &q=Space+Needle,Seattle+WA">
-                </iframe>
-            </section>
-        </article>
-    </main>
+    <article class="row" id="article">
+        <section id="inputs" class="col-md-6">
+            <h2 class="titulosPostos">Encontre o ponto mais próximo de você</h2>
+            <h5 class="titulosPostos">Digite o seu CEP para bscarmos o posto mais proximo de você!</h5>
+            <div class="cep">
+                <label for="cep" id="textCep">CEP</label>
+                <input type="text" id="cepInput" class="form-control" onkeypress="$(this).mask('00000-000')" required>
+                @* <input type="number" id="cepInput" name="cep" placeholder="00000000" maxlength="8"> *@
+            </div>
+            <div class="opcaoProduto">
+                <label for="produto" id="textProduto">Produto</label>
+                <select name="produto" id="produto">
+                    <optgroup>
+                        <option value="0">TODOS</option>
+                        <option value="1">Plástico</option>
+                        <option value="2">Metal</option>
+                        <option value="3">Papel</option>
+                    </optgroup>
+                </select>
+            </div>
+        </section>
+        <section id="map" class="col-md-6">
+            <input type="button" value="Clique para Exibir o Mapa" onclick="ExibirGoogleMaps()" />
+            <div id="macDiv" style="width:100%;height:500px;"></div>
+        </section>
+    </article>
+</main>

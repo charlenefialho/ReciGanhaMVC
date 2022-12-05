@@ -8,7 +8,7 @@
     background-size: cover;
 }
 
-.darkgreenbox{
+/*.darkgreenbox{
     background-color: rgba(000, 000, 000, 0.58);
     position: relative;
     top: 10vh;
@@ -26,7 +26,7 @@
     top: 2vh;
     right: 2vw;
 }
-
+*/
 .form-group{
     font-family: 'Ubuntu', sans-serif;
     width: 80%;
