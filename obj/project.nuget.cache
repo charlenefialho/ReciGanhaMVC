@@ -1,20 +1,25 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "B20EHVfYpsArrWIClJlIYB3cEMbbCjqEEVny6xya1sBWxptC4m0V5m/Ha9r5lRGy+K7HfIzxVi7kkzLK+M9Qwg==",
+  "dgSpecHash": "9lCWWW4ll9boknWxKkhG1tlC/5G86OFONplB+X49EPfkn3rW8k/rsSPVv1YknlXdtvw4SDZxoKYb36xk5xh+fA==",
   "success": true,
-  "projectFilePath": "D:\\TCC\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
-=======
-  "dgSpecHash": "WNksfhl0+jCrMy/7zF0ZfhqrtPAB1T4n4DrN/ouEx/2V92uzd/rWWSSkWKA6QYtflryTTsA4o4GP+QPMu1KZMg==",
-  "success": true,
-  "projectFilePath": "D:\\Tcc2811\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
->>>>>>> 132e309fd36d971698a1d0edb967ef710f69c55f
+  "projectFilePath": "C:\\Users\\AttTCC0512\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\gmbel\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.15\\microsoft.aspnetcore.jsonpatch.5.0.15.nupkg.sha512",
-    "C:\\Users\\gmbel\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\5.0.15\\microsoft.aspnetcore.mvc.newtonsoftjson.5.0.15.nupkg.sha512",
-    "C:\\Users\\gmbel\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
-    "C:\\Users\\gmbel\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
-    "C:\\Users\\gmbel\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512"
+    "C:\\Users\\yurif\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.15\\microsoft.aspnetcore.jsonpatch.5.0.15.nupkg.sha512",
+    "C:\\Users\\yurif\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\5.0.15\\microsoft.aspnetcore.mvc.newtonsoftjson.5.0.15.nupkg.sha512",
+    "C:\\Users\\yurif\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\yurif\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\yurif\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
+    "C:\\Users\\yurif\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\yurif\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\yurif\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\yurif\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache C:\\Users\\AttTCC0512\\ReciGanhaMVC\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
