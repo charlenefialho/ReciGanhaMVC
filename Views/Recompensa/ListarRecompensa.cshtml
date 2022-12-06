@@ -36,11 +36,6 @@
 </style>
 
 <h2>recompensas</h2>
-
-<button class="btn btn-primary" data-toggle="modal" data-target="#modal-mensagem" asp-controller="Recompensa" asp-action="Resgatar">
-Exibir codigo
-</button>
-
 @if (@TempData["CodigoRecompensa"] != null)
     {
         <div class="alert alert-succes" role="alert"> <p style="color: black;">
@@ -67,7 +62,9 @@ Exibir codigo
             <td>@Html.DisplayFor(modelItem => item.custodePontos)</td>
             <td>@Html.DisplayFor(modelItem => item.qtdeRecomepensas)</td>
             <td>
-              @Html.ActionLink("Resgatar", "Resgatar", new{id = item.idRecompensa},new { @class = "btn btn-primary btnResgate"})
+              <button onclick="AbrirModalCodigo(@item.idRecompensa);" type="button" class="btn btn-primary">
+                Resgatar
+              </button>
             </td>
         </tr>
     }
@@ -84,10 +81,7 @@ Exibir codigo
                     </button>
                 </div>
                 <div class="modal-body" id="conteudo-modal">
-                     <p id="mensagem-modal" >@TempData["CodigoRecompensa"]</p>
-                 
-
-
+                     
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -95,3 +89,52 @@ Exibir codigo
                 </div>
             </div>
             </div>
+
+<script type="text/javascript">
+
+    function AbrirModal()
+    {
+        $("#modal-mensagem").modal("show");       
+    }
+
+
+
+     function AbrirModalCodigo(idRecompensa) {
+        
+        $.ajax({
+
+            url: "@Url.Action("Resgatar", "Recompensa")",
+            data: { id: idRecompensa },//id é o parametro que a controller espera qu está sendo atribuído pelo parametro da função.
+            success: function (retorno) {
+                //Se não achar a palavra erro quer dizer que não passou pelo catch da controller
+                //E assim como retornou um objeto, as propriedades poderão ser lidas.
+                var p = document.createElement("p");
+                    p.innerHTML = retorno
+                    $(".modal .modal-dialog .modal-content .modal-body").html(p);                
+                    $("#modal-mensagem").modal("show");
+                /*
+                if(retorno.indexOf("erro") != -1)
+                {
+                     
+                    "Código: " + retorno.idRecompensa + " Descrição: " + retorno.nomeRecompensa;
+                    alert("Custo de Pontos: " + retorno.descricao);
+
+                    //Na variável dados você pode montar um html na mão. Também poderia criar uma partial View
+                    //Ou pode inserir Temp Data no método da controller e chamálos dentro do body do modal. 
+                    //Veja exemplos do projeto que mandei.       
+                }
+                else 
+                {
+                    //Se vier pra cá passou pelo catch na controller e provavelmente conterá uma mensagem.
+                    //Perceba que tem uma concatenção no catch.                    
+                    alert(retorno);
+                }*/
+            }
+            
+        });
+    }
+
+</script>
+
+
+
