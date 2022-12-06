@@ -15,7 +15,6 @@ namespace ReciGanhaMVC.Controllers
         public string uriBase = "http://reciganha.somee.com/API/Parceiro/";
 
         
-        
         [HttpGet]
         public ActionResult IndexPageParceiro()
         {

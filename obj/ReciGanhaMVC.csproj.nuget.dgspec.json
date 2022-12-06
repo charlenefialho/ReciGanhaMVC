@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "D:\\TCC\\ReciGanhaMVC\\ReciGanhaMVC.csproj": {}
   },
   "projects": {
@@ -13,19 +12,6 @@
         "projectPath": "D:\\TCC\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
         "packagesPath": "C:\\Users\\gmbel\\.nuget\\packages\\",
         "outputPath": "D:\\TCC\\ReciGanhaMVC\\obj\\",
-=======
-    "D:\\Tcc2811\\ReciGanhaMVC\\ReciGanhaMVC.csproj": {}
-  },
-  "projects": {
-    "D:\\Tcc2811\\ReciGanhaMVC\\ReciGanhaMVC.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\Tcc2811\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
-        "projectName": "ReciGanhaMVC",
-        "projectPath": "D:\\Tcc2811\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
-        "packagesPath": "C:\\Users\\etechas\\.nuget\\packages\\",
-        "outputPath": "D:\\Tcc2811\\ReciGanhaMVC\\obj\\",
->>>>>>> 132e309fd36d971698a1d0edb967ef710f69c55f
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gmbel\\AppData\\Roaming\\NuGet\\NuGet.Config",

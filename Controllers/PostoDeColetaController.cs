@@ -110,7 +110,8 @@ namespace ReciGanhaMVC.Controllers
                 var content = new StringContent(JsonConvert.SerializeObject(p));//serialização do objeto c
                 content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
                 HttpResponseMessage response = await httpClient.PostAsync(uriBase + uriComplementar,content);//envio dos dados para API
-
+                
+                TempData["Mensagem"] += JsonConvert.SerializeObject(p);
                 string PostoSerialized = await response.Content.ReadAsStringAsync();//Buscando e armazenando dados de de retorno dentro do retorno da requisição
 
                 if(response.StatusCode == System.Net.HttpStatusCode.OK)//Consultando qual foi o status da requisição, se foi Ok
