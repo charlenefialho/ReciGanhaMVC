@@ -10,10 +10,9 @@ namespace ReciGanhaMVC.Models
         public int IdPosto { get; set; }
         public string NomePosto { get; set; }
         public string CNPJ { get; set; }
+        public int NumeroRua{get;set;}
         #nullable enable
         public string? EmailPosto { get; set; }
-    
-        public int? NumeroRua{get;set;}
     
         public string? Rua {get; set;}
     
@@ -24,7 +23,7 @@ namespace ReciGanhaMVC.Models
         public string? TelefonePosto { get; set; }
     
         public string? WebSite { get; set; }
-    
+        #nullable disable
         public double Latitude { get; set; }
         
         public double Longitude { get; set; }
