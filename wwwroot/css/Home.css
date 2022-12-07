@@ -5,10 +5,6 @@ for details on configuring this project to bundle and minify static web assets. 
   padding-top: 40vh;
 }
 
-p{
-  font-family: Arial, Helvetica, sans-serif;
-  color: white;
-}
 
 footer{
   background-color: gray;
@@ -18,7 +14,7 @@ footer{
   color: white;
 }
 
-img{
+#logoNav{
   height: 40px;
   width: 100px;
 }

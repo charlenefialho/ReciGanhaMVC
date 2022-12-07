@@ -1,5 +1,9 @@
-a {
+.nav-link{
     color: inherit;
+  }
+
+  #btn-login-nav{
+    width: 100%;
   }
   
   .navbar {

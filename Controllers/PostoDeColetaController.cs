@@ -13,7 +13,8 @@ namespace ReciGanhaMVC.Controllers
 {
     public class PostoDeColetaController : Controller
     {
-        public string uriBase = "http://reciganha.somee.com/API/PostoDeColeta/";
+        //public string uriBase = "http://reciganha.somee.com/API/PostoDeColeta/";
+        public string uriBase = "http://reciganha-001-site1.gtempurl.com/PostoDeColeta/";
 
 
         [HttpPost]

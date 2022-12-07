@@ -1,34 +1,20 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "D:\\charlene\\ReciGanhaMVC\\ReciGanhaMVC.csproj": {}
+    "C:\\ReciGanhaMVC\\ReciGanhaMVC.csproj": {}
   },
   "projects": {
-    "D:\\charlene\\ReciGanhaMVC\\ReciGanhaMVC.csproj": {
+    "C:\\ReciGanhaMVC\\ReciGanhaMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\charlene\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
+        "projectUniqueName": "C:\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
         "projectName": "ReciGanhaMVC",
-        "projectPath": "D:\\charlene\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
-        "packagesPath": "C:\\Users\\etechas\\.nuget\\packages\\",
-        "outputPath": "D:\\charlene\\ReciGanhaMVC\\obj\\",
-=======
-    "D:\\Projetos\\Gabriel\\TCC\\ReciGanhaMVC\\ReciGanhaMVC.csproj": {}
-  },
-  "projects": {
-    "D:\\Projetos\\Gabriel\\TCC\\ReciGanhaMVC\\ReciGanhaMVC.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\Projetos\\Gabriel\\TCC\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
-        "projectName": "ReciGanhaMVC",
-        "projectPath": "D:\\Projetos\\Gabriel\\TCC\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
-        "packagesPath": "C:\\Users\\etechas\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\Gabriel\\TCC\\ReciGanhaMVC\\obj\\",
->>>>>>> 0a2238807914662444f3a6a85106fbba14f383e6
+        "projectPath": "C:\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
+        "packagesPath": "C:\\Users\\chazi\\.nuget\\packages\\",
+        "outputPath": "C:\\ReciGanhaMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\etechas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\chazi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -69,12 +55,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[5.0.17, 5.0.17]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -83,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

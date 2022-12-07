@@ -12,7 +12,6 @@ namespace ReciGanhaMVC.Models
         public string CNPJ { get; set; }
         #nullable enable
         public string? EmailPosto { get; set; }
-<<<<<<< HEAD
     
         public int? NumeroRua{get;set;}
     
@@ -22,23 +21,11 @@ namespace ReciGanhaMVC.Models
     
         public string? CEP {get;set;}
     
-=======
->>>>>>> 0a2238807914662444f3a6a85106fbba14f383e6
         public string? TelefonePosto { get; set; }
     
         public string? WebSite { get; set; }
-<<<<<<< HEAD
     
         public double Latitude { get; set; }
-=======
-        #nullable disable
-
-        public int NumeroRua{get;set;}
-        public string Rua {get; set;}
-        public string Bairro {get;set;}
-        public string CEP {get;set;}
-        public string Latitude { get; set; }
->>>>>>> 0a2238807914662444f3a6a85106fbba14f383e6
         
         public double Longitude { get; set; }
         public DateTime DataLimiteExibicao { get; set; }
