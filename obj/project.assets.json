@@ -229,11 +229,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "D:\\charlene\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
       "projectName": "ReciGanhaMVC",
       "projectPath": "D:\\charlene\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
       "packagesPath": "C:\\Users\\etechas\\.nuget\\packages\\",
       "outputPath": "D:\\charlene\\ReciGanhaMVC\\obj\\",
+=======
+      "projectUniqueName": "D:\\Projetos\\Gabriel\\TCC\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
+      "projectName": "ReciGanhaMVC",
+      "projectPath": "D:\\Projetos\\Gabriel\\TCC\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
+      "packagesPath": "C:\\Users\\etechas\\.nuget\\packages\\",
+      "outputPath": "D:\\Projetos\\Gabriel\\TCC\\ReciGanhaMVC\\obj\\",
+>>>>>>> 0a2238807914662444f3a6a85106fbba14f383e6
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\etechas\\AppData\\Roaming\\NuGet\\NuGet.Config",

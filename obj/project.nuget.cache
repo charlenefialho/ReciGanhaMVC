@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "3oQWKvRPt2WZuzTKgr+UEMUct+A3HBH/DEwlWVhVYmyVXnei9+n/tTYzg3S6+eJMD336i22570z1SZCvnqtT7Q==",
   "success": true,
   "projectFilePath": "D:\\charlene\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
+=======
+  "dgSpecHash": "gSQLGqJqXIPKT4oujgmnDqw2KLra/LTpDcI1CUgxuDmDdastz5SNz4mnxCqXs7LDafWe2PkxHJZOGocznJvh0A==",
+  "success": true,
+  "projectFilePath": "D:\\Projetos\\Gabriel\\TCC\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
+>>>>>>> 0a2238807914662444f3a6a85106fbba14f383e6
   "expectedPackageFiles": [
     "C:\\Users\\etechas\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.15\\microsoft.aspnetcore.jsonpatch.5.0.15.nupkg.sha512",
     "C:\\Users\\etechas\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\5.0.15\\microsoft.aspnetcore.mvc.newtonsoftjson.5.0.15.nupkg.sha512",
