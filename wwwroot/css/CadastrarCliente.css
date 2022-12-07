@@ -1,47 +1,86 @@
-p {
-    color: #b3b3b3;
-    font-weight: 300; }
-  
-  h1, h2, h3, h4, h5, h6,
-  .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: "Roboto", sans-serif; }
-  
-  a {
-    -webkit-transition: .3s all ease;
-    -o-transition: .3s all ease;
-    transition: .3s all ease; }
-    a:hover {
-      text-decoration: none !important; }
-  
+
   .content {
-    padding: 7rem 0; }
+    padding: 11rem 0; }
   
   h2 {
     font-size: 20px; }
 
+.img-cadastro{
+    max-width: 300px;
+    margin:auto;
+    margin-top: 50px;
+}
+
+.btn-success{
+    background-color: blue;
+}
+
+
+
     @media (max-width: 768px){
-    .img-cadastro{
+    .img-cadastro, .col-img ,.botao-logar-cadastro{
         display: none;
     }
+
+    .div-botao-logar-cadastro{
+        margin-top: 18vh;
+        margin-left: 30px; 
+    }
+
+    .cadastro{
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding: 0;
+    }
+
+    .contents{
+        background-color: white;
+    }
 }
+
+.form-font{
+color: white;}
+
+.div-botao-logar-cadastro{
+    margin-top: 18vh;
+    margin-left: 40%;
+}
+
 .darkgreenboxCadastro{
-    background-color: rgba(000, 000, 000, 0.58);
+    border-radius: 20px;
+    background-color: rgb(28,60,52);
     /*border-radius: 50px;*/
 }
 .greenBoxCadastro{
+    border-radius: 20px;
     background-color: rgba(89, 174, 51, 0.6);
     /*border-radius: 10px;*/
 }
 
   @media (max-width: 991.98px) {
+
+    .cadastro{
+        margin-top: 18px;
+        margin-bottom: 20px;
+    }
     .content .bg {
       height: 500px; } }
   
   .content .contents, .content .bg {
     width: 50%; }
-    @media (max-width: 1199.98px) {
+    @media (max-width: 1880px) {
+        .cadastro{
+            margin-top: 18px;
+            margin-bottom: 20px;
+        }
+
+
       .content .contents, .content .bg {
         width: 100%; } }
+
+
+
+
     .content .contents .form-group, .content .bg .form-group {
       overflow: hidden;
       /*margin-bottom: 0;*/

@@ -30,7 +30,7 @@
       <!--<form action="POST">-->
       <section id="botao">
         <button type="submit" class="btnInserir btn btn-primary">Inserir coleta</button>
-        @Html.TextBoxFor(model => model.EmailCliente, new { htmlAttributes = new { @class = "form-control" , @placeholder="Digite o email do cliente"} })
+        @Html.TextBoxFor(model => model.EmailCliente, new { htmlAttributes = new { @class = "form-control input-coleta" , @placeholder="Digite o email do cliente"} })
       </section>
 
       <section class="cards">
@@ -38,14 +38,9 @@
           <img href="https://en-br.ecolab.com/-/media/Ecolab/Ecolab-Home/Images/Solutions/NalcoWPS/550x310-blow-molding.jpg?h=310&iar=0&w=550&hash=1CC8E1FC83932001713195C007302B29" class="card-img-top " alt="garrafas de plastico">
           <div class="card-body">
             <h5 class="card-title text-dark">Plastico</h5>
-            <select>
-              <option value="1">
-                Plastico
-              </option>
-            </select>
             <span>Insira o peso em Kg</span>
             <!--<input type="number" name="Peso" id="plastico">-->
-            @Html.TextBoxFor(model => model.Plastico, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.TextBoxFor(model => model.Plastico, new { htmlAttributes = new { @class = "form-control input-coleta" } })
           </div>
         </div>
 
@@ -53,13 +48,8 @@
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkpRb2UCBOqSK7b3nzT5MnyRZ7Z4ydv-UzAhaRcJ1n-1hejFlU" class="card-img-top " alt="latas de refrigerante">
           <div class="card-body">
             <h5 class="card-title text-dark">Metal</h5>
-            <select>
-              <option value="2">
-                Metal
-              </option>
-            </select>
             <span>Insira o peso em Kg</span>
-            @Html.TextBoxFor(model => model.Metal, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.TextBoxFor(model => model.Metal, new { htmlAttributes = new { @class = "form-control input-coleta" } })
             <!--<input type="number" name="Peso" id="aluminio">-->
           </div>
         </div>
@@ -68,13 +58,8 @@
           <img href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm__hkXq6_V-pGMYhzDHUrQgOC9JlRa-S0FxFufkJGPhTSfwOL "class="card-img-top " alt="papel">
           <div class="card-body">
             <h5 class="card-title text-dark">Papel</h5>
-            <select>
-              <option value="3">
-                Papel
-              </option>
-            </select>
             <span>Insira o peso em Kg</span>
-            @Html.TextBoxFor(model => model.Papel, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.TextBoxFor(model => model.Papel, new { htmlAttributes = new { @class = "form-control input-coleta" } })
             <!--<input type="number" name="Peso" id="aluminio">-->
           </div>
         </div>
@@ -83,13 +68,8 @@
           <img href="https://deresiduos.s3.amazonaws.com/uploads/news/image/9075/large_2486209026_bceb057dbc_b.jpg" class="card-img-top " alt="caixa com vidro">
           <div class="card-body">
             <h5 class="card-title text-dark">vidro</h5>
-            <select>
-              <option value="4">
-                Vidro
-              </option>
-            </select>
             <span>Insira o peso em Kg</span>
-            @Html.TextBoxFor(model => model.Vidro, new { htmlAttributes = new { @class = "form-control vidro" } })
+            @Html.TextBoxFor(model => model.Vidro, new { htmlAttributes = new { @class = "form-control input-coleta vidro" } })
             <!--<input type="number" name="Peso" id="aluminio">-->
           </div>
         </div>

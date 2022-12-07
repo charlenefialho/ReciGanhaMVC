@@ -39,7 +39,7 @@ span{
     justify-content: space-evenly;
 }
 
-input{
+.input-coleta{
     height: 2.5rem;
     border-color: rgba(0, 0, 255, 0.479);
     border-width: 2px;
