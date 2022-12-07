@@ -1,0 +1,111 @@
+
+.titulosPostos{
+    color: black;
+}
+
+main#viewBuscarPostos{
+    /*background-color: rgb(201, 89, 89);*/
+    width: 100%;
+    height: 100vh;
+    padding-top: 9vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    
+}
+
+#inputs > h5{
+    margin-top: 0px;
+}
+
+#inputs{
+    /*background-color: brown;*/
+    padding-left: 5vw;
+    padding-right: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.cep,#textCep, #textProduto, .opcaoProduto
+{
+    border-radius: 50px 0px 50px 0px;
+}
+
+.cep , .opcaoProduto{
+    display: flex;
+    height: 4.5vh;
+    background-color: rgb(19, 211, 19);
+}
+
+.opcaoProduto{
+    padding-left: 0px;
+}
+
+#textCep, #textProduto{
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    height: 2.6em;
+    text-align: center;
+    padding-top: 7px;
+    background-color: green;
+    margin: 0px;
+    font-size: 15.3px;
+    width: 150px;
+}
+
+
+optgroup{
+    background-color: rgb(19, 211, 19);
+}
+
+#produto{
+    padding-left: 14px;
+    width: 100%;
+    margin-bottom: 7px;
+    margin-top: 9px;
+    margin-left: 14px;
+    margin-right: 14px;
+}
+
+#cepInput ,#produto{
+    background-color: rgba(0, 255, 98, 0);
+    width: 100%;
+    border-width: 0px;
+    margin-top: 2px;
+    position: relative;
+    color: white;
+    border-bottom-right-radius: 50px;
+    
+}
+#cepInput, select:focus{
+    outline: 0px;
+}
+
+#cepInput::placeholder{
+    color: white;
+    font-weight: 500;
+}
+
+#textCep, #textProduto{
+    width: 2vh;
+    background-color: green;
+}
+
+#map{
+    /*background-color: coral;*/
+    /*margin: 2vw 2vw 2vw 2vw;*/
+    display: flex;
+    align-items: center;
+}
+
+#article{
+    /*background-color: aquamarine;*/
+    height: 89vh;
+    margin: 0vh 2vh 0vh 2vh;
+    padding: 2vh 2vw 2vh 2vw;
+    /*display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-self: flex-end;*/
+}
