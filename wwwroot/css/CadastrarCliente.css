@@ -40,37 +40,14 @@
   }
   
   /*---------------------------------------------*/
-  a {
-      font-family: Poppins-Regular;
-      font-size: 14px;
-      line-height: 1.7;
-      color: #666666;
-      margin: 0px;
-      transition: all 0.4s;
-      -webkit-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-  }
   
   a:focus {
       outline: none !important;
   }
-  
-  a:hover {
-      text-decoration: none;
-    color: #57b846;
-  }
+ 
   
   /*---------------------------------------------*/
   h1,h2,h3,h4,h5,h6 {
-      margin: 0px;
-  }
-  
-  p {
-      font-family: Poppins-Regular;
-      font-size: 14px;
-      line-height: 1.7;
-      color: #666666;
       margin: 0px;
   }
   
@@ -81,7 +58,7 @@
   
   
   /*---------------------------------------------*/
-  input {
+  .input100 {
       outline: none;
       border: none;
   }
@@ -91,24 +68,24 @@
     border: none;
   }
   
-  textarea:focus, input:focus {
+  textarea:focus, .input100:focus {
     border-color: transparent !important;
   }
   
-  input:focus::-webkit-input-placeholder { color:transparent; }
-  input:focus:-moz-placeholder { color:transparent; }
-  input:focus::-moz-placeholder { color:transparent; }
-  input:focus:-ms-input-placeholder { color:transparent; }
+  .input100:focus::-webkit-input-placeholder { color:transparent; }
+  .input100:focus:-moz-placeholder { color:transparent; }
+  .input100:focus::-moz-placeholder { color:transparent; }
+  .input100:focus:-ms-input-placeholder { color:transparent; }
   
   textarea:focus::-webkit-input-placeholder { color:transparent; }
   textarea:focus:-moz-placeholder { color:transparent; }
   textarea:focus::-moz-placeholder { color:transparent; }
   textarea:focus:-ms-input-placeholder { color:transparent; }
   
-  input::-webkit-input-placeholder { color: #999999; }
-  input:-moz-placeholder { color: #999999; }
-  input::-moz-placeholder { color: #999999; }
-  input:-ms-input-placeholder { color: #999999; }
+  .input100::-webkit-input-placeholder { color: #999999; }
+  .input100:-moz-placeholder { color: #999999; }
+  .input100::-moz-placeholder { color: #999999; }
+  .input100:-ms-input-placeholder { color: #999999; }
   
   textarea::-webkit-input-placeholder { color: #999999; }
   textarea:-moz-placeholder { color: #999999; }
@@ -198,6 +175,7 @@
   [  ]*/
   .login100-pic {
     width: 316px;
+    padding-top: 9%;
   }
   
   .login100-pic img {
@@ -220,7 +198,7 @@
   
     width: 100%;
     display: block;
-    padding-bottom: 11px;
+    padding-bottom: 14px;
   }
 
   .login100-form-subtitle{
@@ -232,7 +210,7 @@
   
     width: 100%;
     display: block;
-    padding-bottom: 43px;
+    padding-bottom: 54px;
   }
   
   

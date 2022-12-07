@@ -1,11 +1,8 @@
 @model ReciGanhaMVC.Models.ClienteViewModel
 @{
-ViewBag.Title = "Autenticar" ; }
-
-
-
-<div class="background">
-    <div class="container-fluid">
+ViewBag.Title = "Autenticar" ; 
+}
+    <div class="limiter-2">
         @if (@TempData["Mensagem"] != null)
         {
             <div class="alert alert-succes" role="alert">
@@ -19,32 +16,48 @@ ViewBag.Title = "Autenticar" ; }
                 @TempData["MensagemErro"]
             </div>
         }
+            <div class="container-login100-2">
+                <div class="wrap-login100-2">
 
-        <section>
-            <div class="darkgreenbox row">
-                <div class="col-6 text-center">
-                     <!--LOGO-->
-                        <img id="logo" src="~/assets/img/Logo.png" alt="Logo ReciGanha">
-
-<h2 id="h2" >Área de login do Cliente</h2>
-@using (Html.BeginForm("Autenticar", "Clientes", FormMethod.Post))
-{
-    @Html.AntiForgeryToken()
-    <div class="container-b1">
-        <div class="form-group">
-            <label for="email">Email</label>
-                @Html.TextBoxFor(model => model.EmailCliente, new { htmlAttributes = new { @class = "form-control", @type="email",@name="email"}} )
-        </div>
-        <div class="form-group">
-            <label for="senha">senha</label>
-                @Html.PasswordFor(model => model.PasswordString, new {  htmlAttributes = new {@class = "form-control",@name="senha"}})
-        </div>
-        <button type="submit" value="Acessar" class="btn btn-success"  >Acessar</button>
-        <div class="form-group">
-            <!--Outra forma de incluir um link para uma View-->
-             <p><a asp-area="CadastrarCliente" asp-controller="Clientes" asp-action="IndexCadastro" > Nunca acessou o sistema? Clique aqui para registrar-se!</a> </p> 
-            
-        </div>
-      </div>
+                    @using (Html.BeginForm("Autenticar", "Clientes", FormMethod.Post, new{@class="login100-form-2 validate-form"}))
+                    {
+                        @Html.AntiForgeryToken()
+                        <span class="login100-form-title-2">
+                            Log in
+                        </span>
     
-}
+                        <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                            @Html.TextBoxFor(model => model.EmailCliente, new{@placeholder="Email" , @class="input100"})
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </span>
+                        </div>
+    
+                        <div class="wrap-input100 validate-input" data-validate = "Password is required">
+                            @Html.PasswordFor(model => model.PasswordString, new{@placeholder="Senha", @class="input100"})
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-lock" aria-hidden="true"></i>
+                            </span>
+                        </div>
+    
+                        <div class="container-login100-form-btn-2">
+                            <button class="login100-form-btn-2">
+                                Logar
+                            </button>
+                        </div>
+    
+                        <div class="flex-col">
+                            <span class="link-2" >
+                                Não  possui uma conta?
+                            </span>
+    
+                            <a asp-area="Cadastrar" asp-controller="Clientes" asp-action="IndexCadastro" class="link-2">
+                                Cadastre-se
+                            </a>
+                        </div>
+                    }
+                    
+                </div>
+       
