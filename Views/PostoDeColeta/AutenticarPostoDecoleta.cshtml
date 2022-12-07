@@ -3,56 +3,62 @@
 @{
     ViewBag.Title = "AutenticarPostoDeColeta";
 }
+    <div class="limiter-2">
+            <div class="container-login100-2">
+                @if (@TempData["Mensagem"] != null)
+                {
+                    <div class="alert alert-succes" role="alert">
+                    @TempData["Mensagem"]</div>
+                }
 
-@if (@TempData["Mensagem"] != null)
-{
-    <dialog open id="dialog">
-        @TempData["Mensagem"]
-         <menu>
-            <button id="cancel" type="reset">Cancel</button>
-        </menu>
-    </dialog>
-   
-}
+                <!--Configuração para exibir mensagem de erro -->
+                @if (@TempData["MensagemErro"] != null)
+                {
+                    <div class="alert alert-danger" role="alert">
+                        @TempData["MensagemErro"]
+                    </div>
+                }
+                <div class="wrap-login100-2">
 
-<!--Configuração da mensagem Temporaria-->
-@if (@TempData["MensagemErro"] != null)
-{
-    <div class="alert alert-danger" role="alert">
-        @TempData["MensagemErro"]
-    </div>
-}
-
-<main id="viewAutenticarPosto">
-    <article id="Autenticacao">
-        @using (Html.BeginForm("Autenticar", "PostoDeColeta",FormMethod.Post,  new {hmlAttributes= new {@id="formLogin"} }))
-        {
-            @Html.AntiForgeryToken()
-            <div class="form-group">
-                <label for="CNPJ">CNPJ</label>
-                @Html.EditorFor(model => model.CNPJ, new {hmlAttributes= new {@class = "form-control", @name ="CNPJ", @maxlength="14"} })
-            </div>
-
-            //XX.XXX.XXX/0001-XX
-            // \d{2}\.\d{3}\.\d{3}\/\000\d{*}\-\d{2}
-
-            <div class="form-group">
-                <label for="senha">Senha</label>
-                @Html.PasswordFor(model => model.PasswordString, new {hmlAttributes= new {@class = "form-control", @name ="senha"} })
-            </div>
-
-            <div>
-                <button type="submit" value="Logar" class="cadastrar btn text-white rounded-pill">Logar</button>
-            </div>
-
-            <div>
-                <p>
-                    <a  asp-area="AutenticarPostoDeColeta" asp-controller="PostoDeColeta" asp-action="IndexLogin">
-                     Ja é cadastrado?Faça o login
-                    </a>
-                </p>
-            </div>
-        }
-    </article>
-</main>
+                    @using (Html.BeginForm("Autenticar", "PostoDeColeta",FormMethod.Post,  new {@class="login100-form-2 validate-form"} ))
+                    {
+                        @Html.AntiForgeryToken()
+                        <span class="login100-form-title-2">
+                           LOGIN
+                        </span>
+    
+                        <div class="wrap-input100 validate-input">
+                            @Html.TextBoxFor(model => model.CNPJ, new {@placeholder="CNPJ",@class="input100", @name ="CNPJ", @onkeypress="$(this).mask('00.000.000/0000-00')"} )
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </span>
+                        </div>
+    
+                        <div class="wrap-input100 validate-input" data-validate = "Password is required">
+                            @Html.PasswordFor(model => model.PasswordString, new{@placeholder="Senha", @class="input100"})
+                            <span class="focus-input100"></span>
+                            <span class="symbol-input100">
+                                <i class="fa fa-lock" aria-hidden="true"></i>
+                            </span>
+                        </div>
+    
+                        <div class="container-login100-form-btn-2">
+                            <button class="login100-form-btn-2">
+                                Logar
+                            </button>
+                        </div>
+    
+                        <div class="flex-col">
+                            <span class="link-2" >
+                                Não  possui uma conta?
+                            </span>
+    
+                            <a asp-area="" asp-controller="PostoDeColeta" asp-action="IndexCadastroPosto" class="link-2">
+                                Cadastre-se
+                            </a>
+                        </div>
+                    }
+                    
+                </div>
 
