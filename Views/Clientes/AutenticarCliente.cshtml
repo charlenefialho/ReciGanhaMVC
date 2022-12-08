@@ -4,12 +4,6 @@ ViewBag.Title = "Autenticar" ;
 }
     <div class="limiter-2">
             <div class="container-login100-2">
-                @if (@TempData["Mensagem"] != null)
-                {
-                    <div class="alert alert-succes" role="alert">
-                    @TempData["Mensagem"]</div>
-                }
-
                 <!--Configuração para exibir mensagem de erro -->
                 @if (@TempData["MensagemErro"] != null)
                 {

@@ -2,6 +2,54 @@
 @model ReciGanhaMVC.Models.ParceiroViewModel
 
 
+
+<style>
+  #tituloParceiro{
+    color: white;
+  }
+
+  #parceiros-cad{
+    background-color: #003829;
+  }
+
+  .textolateral{
+    color: #003829;
+  }
+
+  .footer-parceiros{
+    display:flex;
+    background-color: #003829;
+  }
+
+  .footerFluid{
+    padding-left: 0px;
+    padding-right: 0px;
+    height: 3vh;
+  }
+
+  #imagens{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 4vh;
+    padding-left: 15vw;
+    flex-wrap: wrap;
+  }
+
+  #bkimg{
+      width: 159px;
+      height: 156px;
+      margin-right: 15vw;
+  }
+
+  .ajustepd{
+    padding-top: 3vh;
+  }
+
+  #imgparceiro{
+    width: 342px;
+    padding-top: 3%;
+  }
+</style>
 <!-- Erro not found-->
 
 
@@ -20,87 +68,60 @@
 
 <div class="content">
     <div class="container">
-        <div class="row greenBoxCadastro">
-            <div class="col-md-6 ">
-                
-                <h3 class="textolateral">
-                    Acreditamos em transformar o mundo em um lugar melhor e mais sustentável
-                    para nós. Mas mudar o mundo não é algo que se faça sozinho, não é mesmo?!
-                    Com tecnologias sociais e soluções personalizadas para nossos parceiros com foco no 
-                    desenvolvimento sustentável das comunidades e territórios, acreditamos que podemos 
-                    contribuir um pouco mais juntando nossas forças!
+      <div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100" id="parceiros-cad">
+          <div class="login100-pic js-tilt" id="imgparceiro" data-tilt>
+            <img src="assets/img/imageParceiroDois.png" alt="mão parceria">
+          </div>
 
-                    #SoJuntos criaremos uma sociedade mais sustentável para todos.
-                </h3>
+          @using (Html.BeginForm("Registrar", "Parceiro", FormMethod.Post, new{@class="login100-form validate-form"}))
+                  {
+            <!--É um método que gera e insere no HTML gerado na view um código para evitar que se falsifique o envio de dados para o servidor.-->
+            @Html.AntiForgeryToken()
+            <h3 class="login100-form-title" id="tituloParceiro">
+              SEJA ASSOCIADA
+            </h3>
+            <div class="wrap-input100 validate-input" data-validate = "nome de usuario requerido">
+              @Html.TextBoxFor(model => model.NomeParceiro, new { @class = "form-control",@placeholder="Nome da empresa", @name = "nome"} )
             </div>
-            <div class="col-md-6 contents">
-                <div class="row justify-content-center">
-                    <div class="col-md-8 darkgreenboxCadastro">
-                        <div class="mb-4">
-                            <h3>SEJA ASSOCIADO</h3>
-                            <p class="mb-4">Preencha com dados da sua empresa</p>
-                        </div>
-
-                        @using (Html.BeginForm("Registrar", "Parceiro", FormMethod.Post))
-                        {
-                           @Html.AntiForgeryToken()
-                                <!--É um método que gera e insere no HTML gerado na view um código para evitar que se falsifique o envio de dados para o servidor.-->
-
-                            <div class="form-group nome">
-                                <label for="nome">Empresa</label>
-                                    @Html.TextBoxFor(model => model.NomeParceiro, new { htmlAttributes = new { @class = "form-control", @name = "nome"} })
-                            </div>
-                            <div class="form-group cnpj mb-4">
-                                <label for="cnpj">CNPJ</label>  
-                                    @Html.TextBoxFor(model => model.CnpjParceiro, new { htmlAttributes= new{ @class = "form-control", @name = "cnpj", @type="cnpj"}})
-                            </div>
-
-                            <div class="form-group email mb-4">
-                                <label for="EmailParceiro">Email</label>  
-                                    @Html.TextBoxFor(model => model.EmailParceiro, new { htmlAttributes= new{ @class = "form-control", @name = "EmailParceiro", @type="email"}})
-                            </div>
-
-                                <div class="form-group senha mb-4">
-                                    <label for="senha">Senha</label>  
-                                    @Html.TextBoxFor(model => model.PasswordString, new { htmlAttributes= new{ @class = "form-control", @name = "senha", @type="senha"}})
-
-                                </div>
-
-                            <button type="submit" value="Cadastrar" class="cadastrar btn text-white rounded-pill">Cadastrar</button>
-                            <span class="d-block text-left my-4 text-muted">— or login with —</span>
-                        }
-                    </div>
-                </div>
+            <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+              @Html.TextBoxFor(model => model.CnpjParceiro, new {@class = "form-control", @placeholder="CNPJ",@name = "cnpj"})
+              <span class="focus-input100"></span>
             </div>
-        </div>
-    </div>
+            <div class="wrap-input100 validate-input" data-validate = "Password is required">
+              @Html.TextBoxFor(model => model.EmailParceiro, new {@class = "form-control", @name = "EmailParceiro", @placeholder="EmailParceiro"})
+              <span class="focus-input100"></span>
+            </div>
+          
+                    <div class="wrap-input100 validate-input" data-validate = "Password is required">
+              @Html.TextBoxFor(model => model.PasswordString, new{@class = "form-control", @name = "senha", @placeholder="Senha",@type="senha"})
+              <span class="focus-input100"></span>
+            </div>
+            <div class="container-login100-form-btn">
+              <button class="login100-form-btn">
+                Cadastrar
+              </button>
+            </div>
+          }
+			</div>
+		</div>
+</div>
 </div>
 
-<footer class="sectionC">
-    <div class="cards">
-      <div class="card">
-        <a href="https://www.burgerking.com.br/" target="blank" ><img src="assets/img/logoBK-removebg-preview.png" alt=""></a>
-      </div>
-      <div class="card">
-        <a href="https://www.cea.com.br/?utm_source=delorean&utm_medium=minhacea&utm_campaign=poupenaweb22&gclid=Cj0KCQiAkMGcBhCSARIsAIW6d0BleoEFJcN7USAI5OA9FHeBmpiPFqBTQPBbA26FTnCLXoTY0f1JMrQaAuzTEALw_wcB" target="blank"><img src="assets/img/c_a-removebg-preview.png" alt=""></a>
-      </div>
-      <div class="card">
-        <a href="https://www.underarmour.com.br/?utm_source=google&utm_medium=cpc&utm_campaign=brand&gclid=Cj0KCQiAkMGcBhCSARIsAIW6d0BzbhSmqhWZ7MhA3nHb03_5biPct1g29rwdMvrowNmFPKlrjjruEfMaAl9FEALw_wcB" target="blank"><img src="assets/img/Under_armour_logopng-removebg-preview.png" alt=""></a>
-      </div>
-    </div>
-    <div class="cards">
-      <div class="card">
-        <a href="https://www.carrefour.com.br/?utm_medium=sem&utm_source=google_branding&utm_campaign=branding&gclid=Cj0KCQiAkMGcBhCSARIsAIW6d0BrHw2rTCpLy0UXG8xVQmyG616Omd3Z1j_XMCNWy_wjefpqEFAObXAaAhXXEALw_wcB&gclsrc=aw.ds" target="blank" ><img src="assets/img/crf2-removebg-preview.png" alt=""></a>
-      </div>
-      <div class="card">
-        <a href="https://www.capital.sp.gov.br/" target="blank"><img src="assets/img/transferir_1-removebg-preview.png" alt=""></a>
-      </div>
-      <div class="card">
-        <a href="https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript" target="blank"><img src="assets/img/espaco-removebg-preview.png" alt=""></a>
+<div class="container-fluid footerFluid">
+  <footer class="footer-parceiros">
+    <div id="imagens">
 
-      </div>
-      <div class="card">
-        <a href="https://developer.mozilla.org/pt-BR/docs/Glossary/PHP" target="blank"><img src="assets/img/nature-removebg-preview.png" alt=""></a>
-      </div>
-    </div>
-  </footer >
+        <a href="https://www.burgerking.com.br/" target="blank"><img src="assets/img/logoBK-removebg-preview.png" class="d-flex"  id="bkimg"></a>
+      
+        <a href="https://www.cea.com.br/?utm_source=delorean&utm_medium=minhacea&utm_campaign=poupenaweb22&gclid=Cj0KCQiAkMGcBhCSARIsAIW6d0BleoEFJcN7USAI5OA9FHeBmpiPFqBTQPBbA26FTnCLXoTY0f1JMrQaAuzTEALw_wcB" target="blank"><img src="assets/img/c_a-removebg-preview.png" class="ajustepd d-flex w-25" ></a>
+
+         <a href="https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript" target="blank"><img src="assets/img/espaco-removebg-preview.png" class="ajustepd d-flex w-25" ></a>
+
+  </div>
+  </footer>
+</div>
+
+
+

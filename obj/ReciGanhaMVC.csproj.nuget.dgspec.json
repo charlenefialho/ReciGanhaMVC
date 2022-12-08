@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ttc-main\\ReciGanhaMVC\\ReciGanhaMVC.csproj": {}
+    "C:\\ReciGanhaMVC\\ReciGanhaMVC.csproj": {}
   },
   "projects": {
-    "C:\\ttc-main\\ReciGanhaMVC\\ReciGanhaMVC.csproj": {
+    "C:\\ReciGanhaMVC\\ReciGanhaMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ttc-main\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
+        "projectUniqueName": "C:\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
         "projectName": "ReciGanhaMVC",
-        "projectPath": "C:\\ttc-main\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
+        "projectPath": "C:\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
         "packagesPath": "C:\\Users\\chazi\\.nuget\\packages\\",
-        "outputPath": "C:\\ttc-main\\ReciGanhaMVC\\obj\\",
+        "outputPath": "C:\\ReciGanhaMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\chazi\\AppData\\Roaming\\NuGet\\NuGet.Config",

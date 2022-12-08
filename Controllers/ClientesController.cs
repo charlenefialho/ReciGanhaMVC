@@ -35,7 +35,7 @@ namespace ReciGanhaMVC.Controllers
                 string token = HttpContext.Session.GetString("SessionTokenCliente");
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
-                HttpResponseMessage response = await httpClient.GetAsync("http://reciganha.somee.com/API/Coleta/" + uriComplementar);
+                HttpResponseMessage response = await httpClient.GetAsync("http://reciganha-001-site1.gtempurl.com/Coleta/" + uriComplementar);
                 string serialized = await response.Content.ReadAsStringAsync();
 
                 //Get pontos do cliente

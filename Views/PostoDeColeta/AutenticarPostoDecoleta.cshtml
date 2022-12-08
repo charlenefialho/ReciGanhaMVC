@@ -4,7 +4,8 @@
     ViewBag.Title = "AutenticarPostoDeColeta";
 }
     <div class="limiter-2">
-        @if (@TempData["Mensagem"] != null)
+            <div class="container-login100-2">
+                @if (@TempData["Mensagem"] != null)
                 {
                     <div class="alert alert-succes" role="alert">
                     @TempData["Mensagem"]</div>
@@ -17,7 +18,6 @@
                         @TempData["MensagemErro"]
                     </div>
                 }
-            <div class="container-login100-2">
                 <div class="wrap-login100-2">
 
                     @using (Html.BeginForm("Autenticar", "PostoDeColeta",FormMethod.Post,  new {@class="login100-form-2 validate-form"} ))
