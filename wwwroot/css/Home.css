@@ -11,7 +11,7 @@ for details on configuring this project to bundle and minify static web assets. 
 }
 
 #TituloHome{
-  padding-top: 50vh;
+  padding-top: 0vh;
   font-size: 50px;
   font-weight: 800;
   text-shadow: 4px 4px 5px black; /*sombreamento*/
