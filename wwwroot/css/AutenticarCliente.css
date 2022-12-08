@@ -61,11 +61,12 @@
     align-items: center;
     padding: 15px;
     position: relative;
-    background: #1D5943;
+    background-color: white;
+    /*background: #1D5943;
     background: -webkit-linear-gradient(-135deg, #81D959, #024029);
     background: -o-linear-gradient(-135deg, #81D959, #024029);
     background: -moz-linear-gradient(-135deg, #81D959, #024029);
-    background: linear-gradient(-135deg, #81D959, #024029);;
+    background: linear-gradient(-135deg, #81D959, #024029);;*/
   }
   
   .wrap-login100-2 {
