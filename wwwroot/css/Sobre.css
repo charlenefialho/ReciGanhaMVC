@@ -3,14 +3,24 @@
     src: url("assets/Fonts/Roboto-Medium.ttf") format('truetype');
 }
 
-.container-fluid{
+.backgroundDois{
+width: 100%;
+height: 100vh;
+background-image:rgba(0, 0, 0, 0.45) url("assets/img/ImageSobre.jpg");
+background-size: cover;
+background-blend-mode: darken;
+}
+
+
+
+/*.container-fluid{
     background: rgba(0, 0, 0, 0.45) url("assets/img/ImageSobre.jpg");
     height: 100vh;
     max-height: 100%;
     width: 100vw;
     background-size: cover;
     background-blend-mode: darken;
-}
+}*/
 
 #row1{
     height: 25vh;
