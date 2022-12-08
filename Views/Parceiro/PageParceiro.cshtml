@@ -1,13 +1,13 @@
+<!-- Namespace da classe de Modelo-->
 @model ReciGanhaMVC.Models.ParceiroViewModel
 
+
+<!-- Erro not found-->
+
+
+<!-- Titulo da view-->
 @{
     ViewBag.Title = "ParceiroHome";
-}
-
-@if (@TempData["Mensagem"] != null)
-{
-    <div class="alert alert-succes" role="alert">
-    @TempData["Mensagem"]</div>
 }
 
 <!--Configuração da mensagem Temporaria-->
@@ -18,75 +18,89 @@
     </div>
 }
 
-<div class="background container-fluid  d-flex flex-sm-wrap ">
-    @if (@TempData["Mensagem"] != null)
-        {
-            <div class="alert alert-succes" role="alert">
-            @TempData["Mensagem"]</div>
-        }
+<div class="content">
+    <div class="container">
+        <div class="row greenBoxCadastro">
+            <div class="col-md-6 ">
+                
+                <h3 class="textolateral">
+                    Acreditamos em transformar o mundo em um lugar melhor e mais sustentável
+                    para nós. Mas mudar o mundo não é algo que se faça sozinho, não é mesmo?!
+                    Com tecnologias sociais e soluções personalizadas para nossos parceiros com foco no 
+                    desenvolvimento sustentável das comunidades e territórios, acreditamos que podemos 
+                    contribuir um pouco mais juntando nossas forças!
 
-        <img  alt="" class="imagemcentral" src="../assets/img/Parceiros.jpeg">
+                    #SoJuntos criaremos uma sociedade mais sustentável para todos.
+                </h3>
+            </div>
+            <div class="col-md-6 contents">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 darkgreenboxCadastro">
+                        <div class="mb-4">
+                            <h3>SEJA ASSOCIADO</h3>
+                            <p class="mb-4">Preencha com dados da sua empresa</p>
+                        </div>
 
-        <section class="darkgreenbox">
-                <div class="divisao ">
-                     <!--LOGO-->
-                        <!--<div><img class="w-25" id="logo" src="wwwroot/assets/img/Logo.png" alt="Logo ReciGanha"></div> -->
+                        @using (Html.BeginForm("Registrar", "Parceiro", FormMethod.Post))
+                        {
+                           @Html.AntiForgeryToken()
+                                <!--É um método que gera e insere no HTML gerado na view um código para evitar que se falsifique o envio de dados para o servidor.-->
 
-                        <h1 class="bem-vindo " >Seja associado</h1>
-
-                        <!--<p >Acreditamos em transformar o mundo em um lugar melhor e mais sustentável.
-                            Mas mudar o mundo não é algo que se faça sozinho, não é mesmo?! Com tecnologias sociais e soluções personalizadas
-                            para nossos parceiros com foco no desenvolvimento sustentável das comunidades e territórios, acreditamos que podemos
-                            contribuir um pouco mais juntando nossas forças!
-
-                        </p> -->
-                </div>
-                <div class="cadastro">
-                   
-                            <!--método que será chamado/ controller/tipo Post-->
-                            @using(Html.BeginForm("Registrar", "Parceiro", FormMethod.Post))
-                            {
-                                @Html.AntiForgeryToken()<!--É um método que gera e insere no HTML gerado na view um código para evitar que se falsifique o envio de dados para o servidor.-->
-
-                                <div class="form-group">
-                                    <img  alt="" class="icon" src="">
-                                    <label for="nome">Empresa</label>
+                            <div class="form-group nome">
+                                <label for="nome">Empresa</label>
                                     @Html.TextBoxFor(model => model.NomeParceiro, new { htmlAttributes = new { @class = "form-control", @name = "nome"} })
-                                </div>
-
-                                <div class="form-group">
-                                    <img  alt="" class="icon" src="https://cdn-icons-png.flaticon.com/512/4213/4213922.png">
-                                    <label for="EmailParceiro">email</label>  
-                                    @Html.TextBoxFor(model => model.EmailParceiro, new { htmlAttributes= new{ @class = "form-control", @name = "EmailParceiro", @type="email"}})
-                                    
-                                </div>
-
-                                <div class="form-group">
-                                    <img  alt="" class="icon" src="">
-                                    <label for="cnpj">CNPJ</label>  
+                            </div>
+                            <div class="form-group cnpj mb-4">
+                                <label for="cnpj">CNPJ</label>  
                                     @Html.TextBoxFor(model => model.CnpjParceiro, new { htmlAttributes= new{ @class = "form-control", @name = "cnpj", @type="cnpj"}})
-                                    
-                                </div>
+                            </div>
 
-                                <div class="form-group">
-                                    <img  alt="" class="icon" src="">
-                                     <label for="senha">Senha</label>  
+                            <div class="form-group email mb-4">
+                                <label for="EmailParceiro">Email</label>  
+                                    @Html.TextBoxFor(model => model.EmailParceiro, new { htmlAttributes= new{ @class = "form-control", @name = "EmailParceiro", @type="email"}})
+                            </div>
+
+                                <div class="form-group senha mb-4">
+                                    <label for="senha">Senha</label>  
                                     @Html.TextBoxFor(model => model.PasswordString, new { htmlAttributes= new{ @class = "form-control", @name = "senha", @type="senha"}})
-                                    
+
                                 </div>
 
-                                <div> 
-                                    <button type="submit" value="Cadastrar" class="cadastrar btn text-white rounded-pill">Cadastrar</button>
-                                </div> 
-                            }
+                            <button type="submit" value="Cadastrar" class="cadastrar btn text-white rounded-pill">Cadastrar</button>
+                            <span class="d-block text-left my-4 text-muted">— or login with —</span>
+                        }
+                    </div>
                 </div>
-        </section>
-
-        <p >Acreditamos em transformar o mundo em um lugar melhor e mais sustentável.
-                            Mas mudar o mundo não é algo que se faça sozinho, não é mesmo?! Com tecnologias sociais e soluções personalizadas
-                            para nossos parceiros com foco no desenvolvimento sustentável das comunidades e territórios, acreditamos que podemos
-                            contribuir um pouco mais juntando nossas forças!
-
-                        </p>
-                        
+            </div>
+        </div>
+    </div>
 </div>
+
+<footer class="sectionC">
+    <div class="cards">
+      <div class="card">
+        <a href="https://www.burgerking.com.br/" target="blank" ><img src="assets/img/logoBK-removebg-preview.png" alt=""></a>
+      </div>
+      <div class="card">
+        <a href="https://www.cea.com.br/?utm_source=delorean&utm_medium=minhacea&utm_campaign=poupenaweb22&gclid=Cj0KCQiAkMGcBhCSARIsAIW6d0BleoEFJcN7USAI5OA9FHeBmpiPFqBTQPBbA26FTnCLXoTY0f1JMrQaAuzTEALw_wcB" target="blank"><img src="assets/img/c_a-removebg-preview.png" alt=""></a>
+      </div>
+      <div class="card">
+        <a href="https://www.underarmour.com.br/?utm_source=google&utm_medium=cpc&utm_campaign=brand&gclid=Cj0KCQiAkMGcBhCSARIsAIW6d0BzbhSmqhWZ7MhA3nHb03_5biPct1g29rwdMvrowNmFPKlrjjruEfMaAl9FEALw_wcB" target="blank"><img src="assets/img/Under_armour_logopng-removebg-preview.png" alt=""></a>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <a href="https://www.carrefour.com.br/?utm_medium=sem&utm_source=google_branding&utm_campaign=branding&gclid=Cj0KCQiAkMGcBhCSARIsAIW6d0BrHw2rTCpLy0UXG8xVQmyG616Omd3Z1j_XMCNWy_wjefpqEFAObXAaAhXXEALw_wcB&gclsrc=aw.ds" target="blank" ><img src="assets/img/crf2-removebg-preview.png" alt=""></a>
+      </div>
+      <div class="card">
+        <a href="https://www.capital.sp.gov.br/" target="blank"><img src="assets/img/transferir_1-removebg-preview.png" alt=""></a>
+      </div>
+      <div class="card">
+        <a href="https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript" target="blank"><img src="assets/img/espaco-removebg-preview.png" alt=""></a>
+
+      </div>
+      <div class="card">
+        <a href="https://developer.mozilla.org/pt-BR/docs/Glossary/PHP" target="blank"><img src="assets/img/nature-removebg-preview.png" alt=""></a>
+      </div>
+    </div>
+  </footer >

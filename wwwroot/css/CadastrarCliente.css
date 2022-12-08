@@ -72,10 +72,12 @@
     border-color: transparent !important;
   }
   
-  .input100:focus::-webkit-input-placeholder { color:transparent; }
-  .input100:focus:-moz-placeholder { color:transparent; }
-  .input100:focus::-moz-placeholder { color:transparent; }
-  .input100:focus:-ms-input-placeholder { color:transparent; }
+  .content .btn {
+    height: 54px;
+    padding-left: 30px;
+    padding-right: 30px; }
+
+    
   
   textarea:focus::-webkit-input-placeholder { color:transparent; }
   textarea:focus:-moz-placeholder { color:transparent; }
