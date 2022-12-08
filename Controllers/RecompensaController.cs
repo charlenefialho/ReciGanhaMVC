@@ -12,7 +12,8 @@ namespace ReciGanhaMVC.Controllers
 {
     public class RecompensaController : Controller
     {
-        public string uriBase = "http://reciganha.somee.com/API/Recompensa/";
+        //public string uriBase = "http://reciganha.somee.com/API/Recompensa/";
+        public string uriBase = "http://reciganha-001-site1.gtempurl.com/Recompensa/";
         //public string uriBase = "http://localhost:5000/Recompensa/";
 
         
@@ -43,18 +44,20 @@ namespace ReciGanhaMVC.Controllers
                     List<RecompensaViewModel> listaRecompensas= await Task.Run(() =>
                     
                     JsonConvert.DeserializeObject<List<RecompensaViewModel>>(serializedInfo));
+                    RecompensaViewModel rec = listaRecompensas.Find(x => x.idRecompensa == id); 
 
-                    TempData["CodigoRecompensa"] = string.Format(serialized);
+                    TempData["CodigoRecompensa"] = serialized;
 
-                    return View("ListarRecompensa", listaRecompensas);
+                    //return View("ListarRecompensa", listaRecompensas);
+                    return Json(serialized);
                 }
                 else
                     throw new Exception(serialized);
             }
             catch(Exception ex)
             {
-                TempData["MensagemErro"] = ex.Message;
-                return RedirectToAction("IndexPageCliente", "Clientes");
+                TempData["MensagemErro"] = "Erro: " + ex.Message;
+                return Json(ex.Message);
             }
         }
 
@@ -80,7 +83,10 @@ namespace ReciGanhaMVC.Controllers
                     
                     JsonConvert.DeserializeObject<List<RecompensaViewModel>>(serialized));
 
+                    
+
                     return View("ListarRecompensa", listaRecompensas);
+                    
                 }
                 else
                     throw new Exception(serialized);
@@ -90,6 +96,7 @@ namespace ReciGanhaMVC.Controllers
             {
                 TempData["MensagemErro"] = ex.Message;
                 return RedirectToAction("IndexPageCliente", "Clientes");
+                
             }
         }
     }

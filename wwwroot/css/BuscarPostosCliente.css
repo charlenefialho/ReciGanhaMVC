@@ -14,7 +14,7 @@ main#viewBuscarPostos{
 }
 
 #inputs > h5{
-    margin-top: 0px;
+    margin-top: -58px;
 }
 
 #inputs{
@@ -34,27 +34,39 @@ main#viewBuscarPostos{
 .cep , .opcaoProduto{
     display: flex;
     height: 4.5vh;
-    background-color: rgb(19, 211, 19);
+    background-color: #9BCE84;
+    /*background-color: rgb(19, 211, 19);*/
+}
+
+.opcaoProduto{
+    padding-left: 0px;
 }
 
 #textCep, #textProduto{
     color: white;
     font-weight: bold;
     font-size: 18px;
-    width: 25%;
-    height: 2.5em;
+    height: 2.8em;
     text-align: center;
     padding-top: 7px;
-    background-color: green;
+    background-color: #025918;
     margin: 0px;
+    font-size: 15.3px;
+    width: 150px;
 }
+
 
 optgroup{
     background-color: rgb(19, 211, 19);
 }
 
 #produto{
-    width: 70% !important;
+    padding-left: 14px;
+    width: 100%;
+    margin-bottom: 7px;
+    margin-top: 9px;
+    margin-left: 1px;;
+    margin-right: 14px;
 }
 
 #cepInput ,#produto{
@@ -65,19 +77,15 @@ optgroup{
     position: relative;
     color: white;
     border-bottom-right-radius: 50px;
+    
 }
-input, select:focus{
+#cepInput, select:focus{
     outline: 0px;
 }
 
-input::placeholder{
+#cepInput::placeholder{
     color: white;
     font-weight: 500;
-}
-
-.label{
-    width: 2vh;
-    background-color: green;
 }
 
 #map{
@@ -86,11 +94,6 @@ input::placeholder{
     display: flex;
     align-items: center;
 }
-
-label{
-    background-color: green;
-}
-
 
 #article{
     /*background-color: aquamarine;*/
@@ -101,4 +104,9 @@ label{
     flex-direction: row;
     flex-wrap: wrap;
     justify-self: flex-end;*/
+}
+
+#buscar-maps{
+    margin-left: 7vw;
+    margin-top: -6vh;
 }

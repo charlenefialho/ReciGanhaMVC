@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Reciganha_MVC</title>
+    <title>@ViewData["Title"] - Reciganha</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/Style.css" />
@@ -30,27 +30,18 @@
                 <a class="nav-link text-white"  asp-area="" asp-controller="Home" asp-action="Index" >Home</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link text-white " asp-area="" asp-controller="" asp-action="">Sobre</a>
+                <a class="nav-link text-white " asp-area="" asp-controller="Sobre" asp-action="IndexSobre">Sobre</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link text-white " asp-area="" asp-controller="Clientes" asp-action="IndexBuscarPostos">Postos de Coleta</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link text-white " asp-area="Cadastrar" asp-controller="PostoDeColeta" asp-action="IndexCadastroPosto">Coleta</a>
-            </li>
-            <li class="nav-item active">
                 <a class="nav-link text-white " asp-area="Cadastrar" asp-controller="Parceiro" asp-action="IndexPageParceiro">Parceiros</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link text-white " asp-area="" asp-controller="" asp-action="">Consultar Pontos</a>
             </li>
         </ul>
     </div>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav align-items-center">
-            <li class="nav-item active">
-                <a class="nav-link text-white " asp-area="" asp-controller="" asp-action="">Faça sua doação</a>
-            </li>
             <li class="nav-item">
                 <partial name="_LoginPartialCliente"></partial>
             </li>

@@ -11,6 +11,40 @@
     </div>
 }
 
+
+
+<main id="viewBuscarPostos">
+    <article class="row" id="article">
+        <section id="inputs" class="col-md-6">
+            <h2 class="titulosPostos">Encontre o ponto mais próximo de você</h2>
+            <h5 class="titulosPostos">Digite o seu CEP para buscarmos o posto mais próximo de você!</h5>
+            <div class="cep">
+                <label for="cep" id="textCep">CEP</label>
+                <input type="text" id="cepInput" class="form-control" onkeypress="$(this).mask('00000-000')" required>
+                @* <input type="number" id="cepInput" name="cep" placeholder="00000000" maxlength="8"> *@
+            </div>
+            <div class="opcaoProduto">
+                <label for="produto" id="textProduto">Material</label>
+                <select name="produto" id="produto">
+                    <optgroup>
+                        <option value="0">TODOS</option>
+                        <option value="1">Plástico</option>
+                        <option value="2">Metal</option>
+                        <option value="3">Papel</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div id="buscar-maps">
+                 <input class="login100-form-btn" type="button" value="Clique para Exibir o Mapa" onclick="ExibirGoogleMaps()" />
+            </div>
+        </section>
+        <section id="map" class="col-md-6">
+            <div id="macDiv" style="width:100%;height:500px;"></div>
+        </section>
+    </article>
+</main>
+
+
 @section Scripts{
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDELCWZC3lZFYbHhvblR3jwUWJUO_W0N0A"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
@@ -19,7 +53,7 @@
     async function getCoord() {
         var input = document.querySelector("#cepInput");
         var texto = input.value;
-        let url = "http://ReciGanha.somee.com/API/Cliente/GetCoords/" + texto;
+        let url = "http://reciganha-001-site1.gtempurl.com/Cliente/GetCoords/" + texto;
 
         const response = await fetch(url);
         const data = await response.json();
@@ -31,7 +65,7 @@
         var value = e.value;
         //let url = "http://localhost:5000/Cliente/ScanPostos"; 
         //let url = "http://localhost:5000/Cliente/ScanPostos/" + value;
-        let url = "http://ReciGanha.somee.com/API/Cliente/ScanPostos/" + value;
+        let url = "http://reciganha-001-site1.gtempurl.com/Cliente/ScanPostos/" + value;
 
         const response = await fetch(url);
         const data = await response.json();
@@ -94,32 +128,3 @@
 
 </script>
 }
-
-<main id="viewBuscarPostos">
-    <article class="row" id="article">
-        <section id="inputs" class="col-md-6">
-            <h2 class="titulosPostos">Encontre o ponto mais próximo de você</h2>
-            <h5 class="titulosPostos">Digite o seu CEP para bscarmos o posto mais proximo de você!</h5>
-            <div class="cep">
-                <label for="cep" id="textCep">CEP</label>
-                <input type="text" id="cepInput" class="form-control" onkeypress="$(this).mask('00000-000')" required>
-                @* <input type="number" id="cepInput" name="cep" placeholder="00000000" maxlength="8"> *@
-            </div>
-            <div class="opcaoProduto">
-                <label for="produto" id="textProduto">Produto</label>
-                <select name="produto" id="produto">
-                    <optgroup>
-                        <option value="0">TODOS</option>
-                        <option value="1">Plástico</option>
-                        <option value="2">Metal</option>
-                        <option value="3">Papel</option>
-                    </optgroup>
-                </select>
-            </div>
-        </section>
-        <section id="map" class="col-md-6">
-            <input type="button" value="Clique para Exibir o Mapa" onclick="ExibirGoogleMaps()" />
-            <div id="macDiv" style="width:100%;height:500px;"></div>
-        </section>
-    </article>
-</main>

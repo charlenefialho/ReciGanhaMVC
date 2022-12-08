@@ -7,14 +7,14 @@
    <div class="container-fluid  text-center">
         <div class="linhaUm row justify-content-end" >
             <div class="col-6">
-                <p>O nosso planeta conta com você!</p>
+                <h1 id="TituloHome">O nosso planeta conta com você!</h1>
             </div>
         </div>
         <div class="row mt-3 justify-content-end">
             <div class="col-6 ">
-                <p>
+                <h2 id="subtituloHome">
                     Faça sua parte!
-                </p>
+                </h2>
             </div>
         </div>
    </div>
@@ -26,12 +26,12 @@
            <div id ="rowFooter"class="row justify-content-around ">
             <div class="col-3">
                 <ul>
-                    <li>Home</li>
-                    <li>Sobre</li>
-                    <li>Postos de Coleta</li>
-                    <li>Parceiros</li>
-                    <li>Notícia</li>
-                    <li>Consultar Pontos</li>
+                    <li><a class="linkFooter" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a class="linkFooter" asp-area="" asp-controller="Sobre" asp-action="IndexSobre">Sobre</a></li>
+                    <li><a class="linkFooter" asp-area="" asp-controller="Clientes" asp-action="IndexBuscarPostos">Postos de Coleta</a></li>
+                    <li><a class="linkFooter" asp-area="Cadastrar" asp-controller="PostoDeColeta" asp-action="IndexCadastroPosto">Registrar Posto de coleta</a></li>
+                    <li><a class="linkFooter" asp-area="Cadastrar" asp-controller="Parceiro" asp-action="IndexPageParceiro">Parceiros</a></li>
+                    <li><a class="linkFooter" asp-area="" asp-controller="Clientes" asp-action="IndexLogin">Consultar Pontos</a></li>
                 </ul>
             </div>
             <div class="col-2">

@@ -4,6 +4,10 @@
     ViewBag.Title = "RegistrarPostoDeColeta";
 }
 
+
+<main id="viewRegistrarPosto">
+    <div class="page-wrapper bg p-t-130 p-b-100 font-poppins">
+        
 @if (@TempData["Mensagem"] != null)
 {
     <div class="alert alert-succes" role="alert">
@@ -17,72 +21,94 @@
         @TempData["MensagemErro"]
     </div>
 }
+        <div class="wrapper wrapper--w680">
+            <div class="card card-4">
+                <div class="card-body">
+                    <h2 class="title">Cadastro posto de coleta</h2>
+                    @using (Html.BeginForm("Registrar", "PostoDeColeta",FormMethod.Post, new {@id="formRegistro"} ))
+                    {
+                        @Html.AntiForgeryToken()
+                        <div class="row row-space">
+                            <div class="col-lg-6">
+                                <div class="input-group">
+                                    <label class="label">Nome do Posto</label>
+                                    @Html.TextBoxFor(model => model.NomePosto,new{@class="input--style-4"})
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="input-group">
+                                    <label class="label">CNPJ</label>
+                                    @Html.TextBoxFor(model => model.CNPJ,new{@class="input--style-4"})
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-lg-6">
+                                <div class="input-group">
+                                    <label class="label">Senha</label>
+                                    @Html.PasswordFor(model => model.PasswordString, new {@class="input--style-4"})
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="input-group">
+                                    <label class="label">Número</label>
+                                    @Html.TextBoxFor(model => model.NumeroRua,new{@class="input--style-4"})
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-lg-4">
+                                <div class="input-group">
+                                    <label class="label">Rua</label>
+                                     @Html.TextBoxFor(model => model.Rua, new {@class="input--style-4"})
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="input-group">
+                                    <label class="label">Bairro</label>
+                                    @Html.TextBoxFor(model => model.Bairro, new {@class="input--style-4"})
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="input-group">
+                                    <label class="label">CEP</label>
+                                    @Html.TextBoxFor(model => model.CEP, new {@class="input--style-4"})
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                        <div>
+                            <label for="Plastico">Plástico</label>
+                               @Html.CheckBoxFor(model => model.SelecionadoPlastico, new {@id="Plastico", @name ="Plastico"} )
+                        </div>
 
-<main id="viewRegistrarPosto">
-    <article id="Registro">
-        @using (Html.BeginForm("Registrar", "PostoDeColeta",FormMethod.Post,  new {htmlAttributes= new {@id="formRegistro"} }))
-        {
-            @Html.AntiForgeryToken()
-            <div class="form-group">
-                <label for="nomePosto">Nome do Posto</label>
-                @Html.TextBoxFor(model => model.NomePosto, new {htmlAttributes= new {@class = "form-control", @name ="nomePosto"} })
+                            <div>
+                                <label for="Metal">Metal</label>
+                                @Html.CheckBoxFor(model => model.SelecionadoMetal ,  new {@id="Metal", @name ="Metal"} )
+                            </div>
+
+                            <div>
+                                <label for="Papel">Papel</label>
+                                @Html.CheckBoxFor(model => model.SelecionadoPapel ,  new {@id="Papel", @name ="Papel"} )
+                            </div>
+
+                            <div>
+                                <label for="Vidro">Vidro</label>
+                                @Html.CheckBoxFor(model => model.SelecionadoVidro ,  new {@id="Vidro", @name ="Vidro"} )
+                            </div>
+                        </div>
+                        
+                        <div class="p-t-15">
+                            <button type="submit" value="Cadastrar" class="btn btn-success text-white rounded-pill" id="botaoDialog">Cadastrar</button>
+                            <p>
+                                <a  asp-area="AutenticarPostoDeColeta" asp-controller="PostoDeColeta" asp-action="IndexAutenticarPosto">
+                                Ja é cadastrado?Faça o login
+                                </a>
+                            </p>
+                        </div>
+                    }
+                </div>
             </div>
-
-            <div class="form-group">
-                <label for="CNPJ">CNPJ</label>
-                @Html.TextBoxFor(model => model.CNPJ, new {htmlAttributes= new { @class = "form-control",@name ="CNPJ", @maxlength="14", @id="CNPJ"} })
-            </div>
-
-            <div class="form-group">
-                <label for="senha">Senha</label>
-                @Html.PasswordFor(model => model.PasswordString, new {htmlAttributes= new {@class = "form-control", @name ="senha"} })
-            </div>
-
-            <div class="form-group">
-                <label for="Numero">Numero</label>
-                @Html.TextBoxFor(model => model.NumeroRua, new {htmlAttributes= new {@class = "form-control", @name ="Numero", @type= "number"} })
-            </div>
-
-            <div class="form-group">
-                <label for="Rua">Rua</label>
-                @Html.TextBoxFor(model => model.Rua, new {htmlAttributes= new {@class = "form-control", @name ="Rua"} })
-            </div>
-
-            <div class="form-group">
-                <label for="Bairro">Bairro</label>
-                @Html.TextBoxFor(model => model.Bairro, new {htmlAttributes= new {@class = "form-control", @name ="Bairro"} })
-            </div>
-
-            <div class="form-group">
-                <label for="CEP">CEP</label>
-                @Html.TextBoxFor(model => model.CEP, new {htmlAttributes= new {@class = "form-control", @name ="CEP"} })
-            </div>
-
-            <div class="form-group">
-                <label for="Plastico">Plástico</label>
-                @Html.CheckBoxFor(model => model.SelecionadoPlastico, new {htmlAttributes= new {@id="Plastico", @name ="Plastico"} })
-
-                 <label for="Metal">Metal</label>
-                @Html.CheckBoxFor(model => model.SelecionadoMetal , new {htmlAttributes= new {@id="Metal", @name ="Metal"} })
-
-                 <label for="Papel">Papel</label>
-                @Html.CheckBoxFor(model => model.SelecionadoPapel , new {htmlAttributes= new {@id="Papel", @name ="Papel"} })
-
-                 <label for="Vidro">Vidro</label>
-                @Html.CheckBoxFor(model => model.SelecionadoVidro , new {htmlAttributes= new {@id="Vidro", @name ="Vidro"} })
-            </div>
-
-            <div>
-                <button type="submit" value="Cadastrar" class="cadastrar btn text-white rounded-pill" id="botaoDialog">Cadastrar</button>
-            </div>
-
-            <div>
-                <p>
-                    <a  asp-area="AutenticarPostoDeColeta" asp-controller="PostoDeColeta" asp-action="IndexAutenticarPosto">
-                     Ja é cadastrado?Faça o login
-                    </a>
-                </p>
-            </div>
-        }
-    </article>
+        </div>
+    </div>
 </main>

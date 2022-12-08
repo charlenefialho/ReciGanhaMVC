@@ -1,9 +1,13 @@
-a {
+.nav-link{
     color: inherit;
   }
+
+  #btn-login-nav{
+    width: 100%;
+  }
   
-  .navbar {
-    background-color: rgb(37, 70, 22);
+  .navbar{
+    background-color: #003829;
   }
   
   #teste{

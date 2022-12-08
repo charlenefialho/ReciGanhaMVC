@@ -9,11 +9,43 @@
 }
 
 
+<style>
+
+    .btn{
+        margin-bottom: 1vh;
+        border-radius: 40px;
+    }
+    .historico{
+        text-align: center;
+        margin-bottom: 6vh;
+    }
+
+    .pageClienet{
+            padding-top: 9vh;
+            height: 100%;
+            background-color: white;
+    }
+
+    .thead-dark{
+        background-color: darkgreen;
+    }
+
+    .pts{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .head-hiscoletas{
+        background-color: darkgreen;
+        color: white;
+    }
+</style>
+
 <!--Configuração da mensagem Temporaria-->
 
 
-<main id="viewHomeCliente">
-    <article id="acoesAmbiente">
+<div class="pageClienet">
+    <div class="container">
         @if (@TempData["Mensagem"] != null)
         {
             <div class="alert alert-succes" role="alert">
@@ -27,43 +59,38 @@
             </div>
         }
 
-        <div class="pts">
-            <label class="pts1">Pontos: </label>
-            <label class="pts1">@ViewBag.Message</label>
-        </div>
+        
 
         <h2 class="historico">Histórico de coletas</h2>
 
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>@Html.DisplayNameFor(model => model.IdColeta)</th>
-                    <th>@Html.DisplayNameFor(model => model.dataColeta)</th>
-                    <th>@Html.DisplayNameFor(model => model.resultadoDePontos)</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    @foreach (var item in Model)
-                    {
-                    <tr>
-                        <td>@Html.DisplayFor(modelItem => item.IdColeta)</td>
-                        <td>@Convert.ToDateTime(item.dataColeta).ToString("dd/MM/yyyy")</td>
-                        <td>@Html.DisplayFor(modelItem => item.resultadoDePontos) <i class='fas fa-money-bill-wave'></i></td>
-                        
-
-                    </tr>
-                    }
-            </tbody>
-        </table>
-
-        <div>
+        <div class="pts">
+            <label class="pts1">Pontos Totais: @ViewBag.Message </label>
             <a asp-area="" asp-controller="Recompensa" asp-action="IndexRecompensa"><button type="button "
-                    class="btn-resgate bg-secondary text-white rounded-pill ">Resgatar Recompensas</button></a>
+                    class="btn btn-primary">Resgatar Recompensas</button></a>
+        </div>
+        
+            <table class="table table-striped histcoletas">
+                <thead class="head-hiscoletas">
+                    <tr>
+                        <th>Código coleta</th>
+                        <th>Data da coleta</th>
+                        <th>Resultado de pontos da coleta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        @foreach (var item in Model)
+                        {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.IdColeta)</td>
+                            <td>@Convert.ToDateTime(item.dataColeta).ToString("dd/MM/yyyy")</td>
+                            <td>@Html.DisplayFor(modelItem => item.resultadoDePontos) <i class='fas fa-money-bill-wave'></i></td>
+
+                        </tr>
+                        }
+                </tbody>
+            </table>
         </div>
 
-       
-
-    </article>
+        
 </main>

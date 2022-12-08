@@ -5,20 +5,37 @@ for details on configuring this project to bundle and minify static web assets. 
   padding-top: 40vh;
 }
 
-p{
-  font-family: Arial, Helvetica, sans-serif;
+.linkFooter{
+  text-decoration: none;
   color: white;
 }
 
+#TituloHome{
+  padding-top: 50vh;
+  font-size: 50px;
+  font-weight: 800;
+  text-shadow: 4px 4px 5px black; /*sombreamento*/
+  color: white; 
+}
+
+
+#subtituloHome{
+  padding-top: 0vh;
+  font-size: 50px;
+  font-weight: 800;
+  text-shadow: 2px 1px 2px white; /*sombreamento*/
+  color: #0E531D;
+}
+
 footer{
-  background-color: gray;
+  background-color: #003829;
 }
 
 .row{
   color: white;
 }
 
-img{
+#logoNav{
   height: 40px;
   width: 100px;
 }
