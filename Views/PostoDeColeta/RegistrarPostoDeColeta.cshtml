@@ -24,20 +24,20 @@
         <div class="wrapper wrapper--w680">
             <div class="card card-4">
                 <div class="card-body">
-                    <h2 class="title">Cadastro posto de coleta</h2>
+                    <h2 class="title" id="font">Cadastro posto de coleta</h2>
                     @using (Html.BeginForm("Registrar", "PostoDeColeta",FormMethod.Post, new {@id="formRegistro"} ))
                     {
                         @Html.AntiForgeryToken()
                         <div class="row row-space">
                             <div class="col-lg-6">
                                 <div class="input-group">
-                                    <label class="label">Nome do Posto</label>
+                                    <label class="label" >Nome do Posto</label>
                                     @Html.TextBoxFor(model => model.NomePosto,new{@class="input--style-4"})
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="input-group">
-                                    <label class="label">CNPJ</label>
+                                    <label class="label" >CNPJ</label>
                                     @Html.TextBoxFor(model => model.CNPJ,new{@class="input--style-4"})
                                 </div>
                             </div>
@@ -45,13 +45,13 @@
                         <div class="row row-space">
                             <div class="col-lg-6">
                                 <div class="input-group">
-                                    <label class="label">Senha</label>
+                                    <label class="label" >Senha</label>
                                     @Html.PasswordFor(model => model.PasswordString, new {@class="input--style-4"})
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="input-group">
-                                    <label class="label">Número</label>
+                                    <label class="label" >Número</label>
                                     @Html.TextBoxFor(model => model.NumeroRua,new{@class="input--style-4"})
                                 </div>
                             </div>
@@ -59,41 +59,41 @@
                         <div class="row row-space">
                             <div class="col-lg-4">
                                 <div class="input-group">
-                                    <label class="label">Rua</label>
+                                    <label class="label" >Rua</label>
                                      @Html.TextBoxFor(model => model.Rua, new {@class="input--style-4"})
                                 </div>
                             </div>
                             <div class="col-lg-4">
                                 <div class="input-group">
-                                    <label class="label">Bairro</label>
+                                    <label class="label" >Bairro</label>
                                     @Html.TextBoxFor(model => model.Bairro, new {@class="input--style-4"})
                                 </div>
                             </div>
                             <div class="col-lg-4">
                                 <div class="input-group">
-                                    <label class="label">CEP</label>
+                                    <label class="label" >CEP</label>
                                     @Html.TextBoxFor(model => model.CEP, new {@class="input--style-4"})
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                         <div>
-                            <label for="Plastico">Plástico</label>
+                            <label for="Plastico" class="font">Plástico</label>
                                @Html.CheckBoxFor(model => model.SelecionadoPlastico, new {@id="Plastico", @name ="Plastico"} )
                         </div>
 
                             <div>
-                                <label for="Metal">Metal</label>
+                                <label for="Metal" class="font">Metal</label>
                                 @Html.CheckBoxFor(model => model.SelecionadoMetal ,  new {@id="Metal", @name ="Metal"} )
                             </div>
 
                             <div>
-                                <label for="Papel">Papel</label>
+                                <label for="Papel" class="font">Papel</label>
                                 @Html.CheckBoxFor(model => model.SelecionadoPapel ,  new {@id="Papel", @name ="Papel"} )
                             </div>
 
                             <div>
-                                <label for="Vidro">Vidro</label>
+                                <label for="Vidro" class="font">Vidro</label>
                                 @Html.CheckBoxFor(model => model.SelecionadoVidro ,  new {@id="Vidro", @name ="Vidro"} )
                             </div>
                         </div>
@@ -101,7 +101,7 @@
                         <div class="p-t-15">
                             <button type="submit" value="Cadastrar" class="btn btn-success text-white rounded-pill" id="botaoDialog">Cadastrar</button>
                             <p>
-                                <a  asp-area="AutenticarPostoDeColeta" asp-controller="PostoDeColeta" asp-action="IndexAutenticarPosto">
+                                <a class="font" asp-area="AutenticarPostoDeColeta" asp-controller="PostoDeColeta" asp-action="IndexAutenticarPosto">
                                 Ja é cadastrado?Faça o login
                                 </a>
                             </p>

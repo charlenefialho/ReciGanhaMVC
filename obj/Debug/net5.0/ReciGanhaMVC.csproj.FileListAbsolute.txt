@@ -108,3 +108,9 @@ C:\ReciGanhaMVC\obj\Debug\net5.0\refint\ReciGanhaMVC.dll
 C:\ReciGanhaMVC\obj\Debug\net5.0\ReciGanhaMVC.pdb
 C:\ReciGanhaMVC\obj\Debug\net5.0\ReciGanhaMVC.genruntimeconfig.cache
 C:\ReciGanhaMVC\obj\Debug\net5.0\ref\ReciGanhaMVC.dll
+C:\ReciGanhaMVC\bin\Debug\net5.0\publish\web.config
+C:\ReciGanhaMVC\bin\Debug\net5.0\publish\appsettings.Development.json
+C:\ReciGanhaMVC\bin\Debug\net5.0\publish\appsettings.json
+C:\ReciGanhaMVC\bin\Debug\net5.0\publish\package-lock.json
+C:\ReciGanhaMVC\bin\Debug\net5.0\publish\ReciGanhaMVC.deps.json
+C:\ReciGanhaMVC\bin\Debug\net5.0\publish\ReciGanhaMVC.runtimeconfig.json

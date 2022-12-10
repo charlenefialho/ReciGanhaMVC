@@ -2,6 +2,11 @@
     color: inherit;
   }
 
+  .btn-nav {
+    background-color: #00557A;
+    width: 100%;
+  }
+
   #btn-login-nav{
     width: 100%;
   }

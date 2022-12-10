@@ -136,7 +136,7 @@ namespace ReciGanhaMVC.Controllers
                 if(response.StatusCode == System.Net.HttpStatusCode.OK)//Consultando qual foi o status da requisição, se foi Ok
                 {
                     HttpContext.Session.SetString("SessionTokenCliente", serialized);
-                    TempData["Mensagem"] = string.Format("Bem-vindo {0} !!", c.NomeCliente);
+                    TempData["Mensagem"] = string.Format("Bem-Vindo {0} !!", c.NomeCliente);
                     return RedirectToAction("IndexPageCliente");
                 }
                 else

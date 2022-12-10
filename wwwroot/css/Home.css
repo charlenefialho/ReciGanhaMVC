@@ -18,6 +18,10 @@ for details on configuring this project to bundle and minify static web assets. 
   color: white; 
 }
 
+#chat{
+  background-color: #006122;
+}
+
 
 #subtituloHome{
   padding-top: 0vh;
