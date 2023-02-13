@@ -1,0 +1,20 @@
+.nav-link{
+    color: inherit;
+  }
+
+  .btn-nav {
+    background-color: #00557A;
+    width: 100%;
+  }
+
+  #btn-login-nav{
+    width: 100%;
+  }
+  
+  .navbar{
+    background-color: #003829;
+  }
+  
+  #teste{
+    color: white;
+  }

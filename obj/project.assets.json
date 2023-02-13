@@ -229,11 +229,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
+      "projectUniqueName": "C:\\Users\\chazi\\siteTCC\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
       "projectName": "ReciGanhaMVC",
-      "projectPath": "C:\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
+      "projectPath": "C:\\Users\\chazi\\siteTCC\\ReciGanhaMVC\\ReciGanhaMVC.csproj",
       "packagesPath": "C:\\Users\\chazi\\.nuget\\packages\\",
-      "outputPath": "C:\\ReciGanhaMVC\\obj\\",
+      "outputPath": "C:\\Users\\chazi\\siteTCC\\ReciGanhaMVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\chazi\\AppData\\Roaming\\NuGet\\NuGet.Config",

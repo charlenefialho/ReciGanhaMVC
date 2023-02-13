@@ -13,7 +13,8 @@ namespace ReciGanhaMVC.Controllers
     public class ParceiroController : Controller
     {
         //public string uriBase = "http://reciganha.somee.com/API/Parceiro/";
-        public string uriBase = "http://reciganha-001-site1.gtempurl.com/Parceiro/";
+        //public string uriBase = "http://reciganha-001-site1.gtempurl.com/Parceiro/";
+        public string uriBase = "http://ReciganhaHAS.somee.com/publishAPI/Parceiro/";
 
         
         

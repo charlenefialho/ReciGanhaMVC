@@ -14,8 +14,8 @@ namespace ReciGanhaMVC.Controllers
     public class PostoDeColetaController : Controller
     {
         //public string uriBase = "http://reciganha.somee.com/API/PostoDeColeta/";
-        public string uriBase = "http://reciganha-001-site1.gtempurl.com/PostoDeColeta/";
-
+        //public string uriBase = "http://reciganha-001-site1.gtempurl.com/PostoDeColeta/";
+        public string uriBase = "http://ReciganhaHAS.somee.com/publishAPI/PostoDeColeta/";
 
         [HttpPost]
         public async Task<ActionResult> AutenticarAsync(PostoDeColetaViewModel p)
